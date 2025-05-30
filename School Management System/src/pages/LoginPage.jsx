@@ -1,11 +1,11 @@
 import React from 'react'
+import Button from '../components/Button'
 
 const LoginPage = () => {
     return (
         <section className='h-screen flex bg-white'>
             {/* Background-image */}
             <div className='bg-[url("/Background.png")] bg-no-repeat bg-center bg-cover w-[50%]'>
-                dfef
             </div>
 
             {/* Login-section */}
@@ -13,9 +13,8 @@ const LoginPage = () => {
                 <div className='flex flex-col items-center gap-5'>
 
                     {/* Logo */}
-                    <div className='text-btn text-5xl font-header font-bold'>
-                        <h1>LOGO</h1>
-                    </div>
+
+                    <h1 className='text-btn text-5xl font-header font-bold'>LOGO</h1>
 
                     {/* header-text */}
                     <div className='flex flex-col gap-3 text-center font-header'>
@@ -27,22 +26,20 @@ const LoginPage = () => {
                         {/* Email-input */}
                         <div className='flex flex-col'>
                             <label className='m-0'>Email</label>
-                            <input className="border-2 focus:border-red-500 outline-0 rounded-sm py-2.5 px-3 w-90 border-[#D1D5DB]" type="email" name="" id="" placeholder='Email' />
+                            <input className="border-2 focus:border-red-500 outline-0 rounded-sm py-2.5 px-3 w-full border-[#D1D5DB]" type="email" name="" id="" placeholder='Email' />
                         </div>
 
                         {/* Password-input */}
                         <div className='flex flex-col'>
                             <label>Password</label>
-                            <input className="border-2 focus:border-red-500 outline-0 rounded-sm py-2.5 px-3 w-90 border-[#D1D5DB]" type="password" name="" id="" placeholder='Password' />
+                            <input className="border-2 focus:border-red-500 outline-0 rounded-sm py-2.5 px-3 w-full border-[#D1D5DB]" type="password" name="" id="" placeholder='Password' />
                         </div>
 
                         <div className='flex justify-end text-btn'>
                             <span>Forgot Password</span>
                         </div>
 
-                        <div className='flex justify-center text-white text-base font-semibold'>
-                            <button className='bg-btn py-5 px-4.5 w-90 rounded-sm'>Login</button>
-                        </div>
+                        <Button text="Login" className="bg-btn py-5 px-4.5 w-90 rounded-sm text-white" />
                     </form>
                 </div>
             </div>
