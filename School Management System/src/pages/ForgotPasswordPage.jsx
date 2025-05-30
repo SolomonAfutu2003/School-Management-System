@@ -1,5 +1,5 @@
 import React from 'react'
-import PasswordIcon from "../assets/icons/Featured icon.png"
+import PasswordIcon from "../assets/icons/Password icon.png"
 import left from "../assets/icons/left-arrow Icon.png"
 import Button from '../components/Button'
 

@@ -18,8 +18,8 @@ const LoginPage = () => {
 
                     {/* header-text */}
                     <div className='flex flex-col gap-3 text-center font-header'>
-                        <h2 className='font-semibold text-3xl'>Log in to your account</h2>
-                        <p className='font-normal text-base'>Welcome back! Please enter your details.</p>
+                        <h2 className='font-semibold text-display text-3xl'>Log in to your account</h2>
+                        <p className='font-normal text-sub-display text-base'>Welcome back! Please enter your details.</p>
                     </div>
                     <form className='flex flex-col gap-5'>
 
