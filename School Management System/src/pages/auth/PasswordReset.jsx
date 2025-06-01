@@ -1,10 +1,10 @@
 import React from 'react'
-import Button from '../components/Button'
-import EmailIcon from "../assets/icons/Email icon.png"
-import left from "../assets/icons/left-arrow Icon.png"
+import Button from '../../components/Button'
+import EmailIcon from "../../assets/icons/Email icon.png"
+import left from "../../assets/icons/left-arrow Icon.png"
 
 
-const PasswordRest = () => {
+const PasswordReset = () => {
   return (
     <div>
       <section className='h-screen flex justify-center bg-white'>
@@ -28,4 +28,4 @@ const PasswordRest = () => {
   )
 }
 
-export default PasswordRest
+export default PasswordReset

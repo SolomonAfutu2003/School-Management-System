@@ -1,5 +1,7 @@
 import React from 'react'
-import Button from '../components/Button'
+import Button from '../../components/Button'
+import { Link } from 'react-router'
+
 
 const LoginPage = () => {
     return (
@@ -36,7 +38,9 @@ const LoginPage = () => {
                         </div>
 
                         <div className='flex justify-end text-btn'>
-                            <span>Forgot Password</span>
+                            <Link to="/auth/forgot-password">
+                                <span>Forgot Password</span>
+                            </Link>
                         </div>
 
                         <Button text="Login" className="bg-btn py-5 px-4.5 w-90 rounded-sm text-white" />

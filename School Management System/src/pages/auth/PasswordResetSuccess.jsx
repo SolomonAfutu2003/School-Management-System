@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '../components/Button'
-import Success from "../assets/icons/Success icon.png"
+import Button from '../../components/Button'
+import Success from "../../assets/icons/Success icon.png"
 
 const PasswordResetSuccess = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
-import Button from '../components/Button'
-import PasswordIcon from "../assets/icons/Password icon.png"
-import left from "../assets/icons/left-arrow Icon.png"
+import Button from '../../components/Button'
+import PasswordIcon from "../../assets/icons/Password icon.png"
+import left from "../../assets/icons/left-arrow Icon.png"
 
 const SetNewPassword = () => {
   return (
