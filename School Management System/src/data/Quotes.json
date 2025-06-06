@@ -1,0 +1,54 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "text": "Learning is not a spectator sport.",
+      "author": "D. Blocher"
+    },
+    {
+      "id": 2,
+      "text": "The beautiful thing about learning is that no one can take it away from you.",
+      "author": "B.B. King"
+    },
+    {
+      "id": 3,
+      "text": "Change is the end result of all true learning.",
+      "author": "Leo Buscaglia"
+    },
+    {
+      "id": 4,
+      "text": "I am always doing that which I cannot do, in order that I may learn how to do it.",
+      "author": "Pablo Picasso"
+    },
+    {
+      "id": 5,
+      "text": "The more I live, the more I learn. The more I learn, the more I realize, the less I know.",
+      "author": "Michel Legrand"
+    },
+    {
+      "id": 6,
+      "text": "Learning is the only thing the mind never exhausts, never fears, and never regrets.",
+      "author": "Leonardo da Vinci"
+    },
+    {
+      "id": 7,
+      "text": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+      "author": "Mahatma Gandhi"
+    },
+    {
+      "id": 8,
+      "text": "The expert in anything was once a beginner.",
+      "author": "Helen Hayes"
+    },
+    {
+      "id": 9,
+      "text": "Learning never exhausts the mind.",
+      "author": "Leonardo da Vinci"
+    },
+    {
+      "id": 10,
+      "text": "You don't learn to walk by following rules. You learn by doing, and by falling over.",
+      "author": "Richard Branson"
+    }
+  ]
+}

@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 
 const SideNav = () => {
     return (
-        <div className='bg-nav sticky top-0 w-[312px] h-screen pt-8 text-left flex flex-col gap-3 px-4'>
+        <div className='bg-nav sticky top-0  h-screen pt-8 text-left flex flex-col gap-3 px-4'>
             <h1 className='text-white text-3xl font-header font-bold'>LOGO</h1>
 
             <div>

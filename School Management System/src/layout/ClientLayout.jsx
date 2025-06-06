@@ -6,13 +6,19 @@ import TopNav from '../components/TopNav'
 
 const ClientLayout = () => {
     return (
-        <div className='flex bg-white'>
-            <SideNav />
-            <main className='w-full'>
+
+        <div className="grid grid-cols-5 grid-rows-[60px,1fr]">
+            <div className="row-span-5">
+                <SideNav />
+            </div>
+            <div className="col-start-2 col-span-4">
                 <TopNav />
+            </div>
+            <div className="col-start-2 col-span-4 row-span-4 ">
                 <Outlet />
-            </main>
+            </div>
         </div>
+
     )
 }
 

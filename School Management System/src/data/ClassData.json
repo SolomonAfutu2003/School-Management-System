@@ -1,0 +1,40 @@
+{
+    "classData": {
+      "className": "10-A",
+      "totalStudents": 32,
+      "genderBreakdown": {
+        "male": 15,
+        "female": 17
+      },
+      "grades": [
+        {
+          "student": "Alex Johnson",
+          "gender": "male",
+          "math": 88,
+          "science": 92,
+          "english": 85
+        },
+        {
+          "student": "Priya Patel",
+          "gender": "female",
+          "math": 95,
+          "science": 89,
+          "english": 93
+        },
+        {
+          "student": "Jamal Smith",
+          "gender": "male",
+          "math": 78,
+          "science": 82,
+          "english": 80
+        },
+        {
+          "student": "Emily Chen",
+          "gender": "female",
+          "math": 91,
+          "science": 94,
+          "english": 96
+        }
+      ]
+    }
+  }
