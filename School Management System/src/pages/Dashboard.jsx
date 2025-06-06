@@ -117,7 +117,6 @@ const Dashboard = () => {
                         <Pie
                             data={genderData}
                             options={{
-                                responsive: true,
                                 maintainAspectRatio: true,
                                 plugins: {
                                     legend: {
@@ -171,7 +170,7 @@ const Dashboard = () => {
                         dayHeaderFormat={{ weekday: 'short' }}
                         dayHeaderClassNames="text-sm font-medium"
                         dayMaxEvents={3} // Limits visible events per day
-                        weekends={false} // Hide weekends
+                        weekends={true} // Hide weekends
                         headerToolbar={{
                             left: 'prev',
                             center: 'title',

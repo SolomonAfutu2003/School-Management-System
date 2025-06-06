@@ -1,0 +1,189 @@
+{
+    "exams": [
+      {
+        "id": "EX2023-001",
+        "subject": "Mathematics",
+        "examType": "Midterm",
+        "date": "2023-10-15",
+        "startTime": "09:00",
+        "duration": 120,
+        "classes": ["10-A", "10-B", "10-C"],
+        "room": "Room 101",
+        "maxMarks": 100,
+        "syllabus": "Chapters 1-5"
+      },
+      {
+        "id": "EX2023-002",
+        "subject": "Physics",
+        "examType": "Quiz",
+        "date": "2023-10-17",
+        "startTime": "10:30",
+        "duration": 45,
+        "classes": ["11-A", "11-B"],
+        "room": "Lab 3",
+        "maxMarks": 50,
+        "syllabus": "Newton's Laws"
+      },
+      {
+        "id": "EX2023-003",
+        "subject": "Chemistry",
+        "examType": "Practical",
+        "date": "2023-10-19",
+        "startTime": "13:00",
+        "duration": 90,
+        "classes": ["12-A"],
+        "room": "Chemistry Lab",
+        "maxMarks": 30,
+        "syllabus": "Titration Experiments"
+      },
+      {
+        "id": "EX2023-004",
+        "subject": "Biology",
+        "examType": "Final",
+        "date": "2023-10-22",
+        "startTime": "09:00",
+        "duration": 180,
+        "classes": ["12-A", "12-B", "12-C"],
+        "room": "Room 201-203",
+        "maxMarks": 150,
+        "syllabus": "Full Year Syllabus"
+      },
+      {
+        "id": "EX2023-005",
+        "subject": "English Literature",
+        "examType": "Midterm",
+        "date": "2023-10-25",
+        "startTime": "11:00",
+        "duration": 90,
+        "classes": ["9-A", "9-B", "9-C"],
+        "room": "Room 301",
+        "maxMarks": 80,
+        "syllabus": "Poetry Section"
+      },
+      {
+        "id": "EX2023-006",
+        "subject": "History",
+        "examType": "Quiz",
+        "date": "2023-10-27",
+        "startTime": "14:00",
+        "duration": 40,
+        "classes": ["10-A", "10-B"],
+        "room": "Room 102",
+        "maxMarks": 30,
+        "syllabus": "World War II"
+      },
+      {
+        "id": "EX2023-007",
+        "subject": "Computer Science",
+        "examType": "Practical",
+        "date": "2023-10-30",
+        "startTime": "10:00",
+        "duration": 120,
+        "classes": ["11-A", "11-C"],
+        "room": "Computer Lab 1",
+        "maxMarks": 100,
+        "syllabus": "Python Programming"
+      },
+      {
+        "id": "EX2023-008",
+        "subject": "Geography",
+        "examType": "Midterm",
+        "date": "2023-11-02",
+        "startTime": "09:30",
+        "duration": 90,
+        "classes": ["9-B", "9-D"],
+        "room": "Room 205",
+        "maxMarks": 75,
+        "syllabus": "Physical Geography"
+      },
+      {
+        "id": "EX2023-009",
+        "subject": "Economics",
+        "examType": "Final",
+        "date": "2023-11-05",
+        "startTime": "13:30",
+        "duration": 150,
+        "classes": ["12-A", "12-D"],
+        "room": "Room 303",
+        "maxMarks": 120,
+        "syllabus": "Macroeconomics"
+      },
+      {
+        "id": "EX2023-010",
+        "subject": "Art",
+        "examType": "Practical",
+        "date": "2023-11-08",
+        "startTime": "10:00",
+        "duration": 180,
+        "classes": ["11-B", "11-D"],
+        "room": "Art Studio",
+        "maxMarks": 100,
+        "syllabus": "Portfolio Submission"
+      },
+      {
+        "id": "EX2023-011",
+        "subject": "Physical Education",
+        "examType": "Practical",
+        "date": "2023-11-10",
+        "startTime": "08:30",
+        "duration": 60,
+        "classes": ["10-C", "10-D"],
+        "room": "Sports Field",
+        "maxMarks": 50,
+        "syllabus": "Basketball Skills"
+      },
+      {
+        "id": "EX2023-012",
+        "subject": "Music",
+        "examType": "Performance",
+        "date": "2023-11-12",
+        "startTime": "14:00",
+        "duration": 45,
+        "classes": ["9-A", "9-C"],
+        "room": "Music Room",
+        "maxMarks": 50,
+        "syllabus": "Vocal Performance"
+      },
+      {
+        "id": "EX2023-013",
+        "subject": "French",
+        "examType": "Oral",
+        "date": "2023-11-15",
+        "startTime": "11:30",
+        "duration": 30,
+        "classes": ["10-A", "10-B", "10-D"],
+        "room": "Language Lab",
+        "maxMarks": 40,
+        "syllabus": "Conversational French"
+      },
+      {
+        "id": "EX2023-014",
+        "subject": "Business Studies",
+        "examType": "Case Study",
+        "date": "2023-11-18",
+        "startTime": "10:00",
+        "duration": 120,
+        "classes": ["12-B", "12-C"],
+        "room": "Room 202",
+        "maxMarks": 80,
+        "syllabus": "Marketing Strategies"
+      },
+      {
+        "id": "EX2023-015",
+        "subject": "Psychology",
+        "examType": "Final",
+        "date": "2023-11-20",
+        "startTime": "09:00",
+        "duration": 180,
+        "classes": ["12-A", "12-B"],
+        "room": "Room 304",
+        "maxMarks": 150,
+        "syllabus": "Full Year Curriculum"
+      }
+    ],
+    "metadata": {
+      "academicYear": "2023-2024",
+      "term": "Fall Semester",
+      "lastUpdated": "2023-09-01"
+    }
+  }
