@@ -1,7 +1,8 @@
 import React from 'react'
-import Button from '../../components/Button'
+import LinksBtn from '../../components/LinksBtn'
 import EmailIcon from "../../assets/icons/Email icon.png"
-import left from "../../assets/icons/left-arrow Icon.png"
+import { FaArrowLeft } from "react-icons/fa";
+import Button from '../../components/Button'
 
 
 const PasswordReset = () => {
@@ -18,9 +19,9 @@ const PasswordReset = () => {
           </div>
 
           <div className='flex flex-col items-center gap-4'>
-            <Button text="Open email app" className='bg-btn py-5 px-4.5 w-90 rounded-sm text-white' />
+            <Button text="Open email app" className="bg-btn py-5 px-4.5 w-90 rounded-sm text-base font-semibold text-white"  />
             <p className='text-base text-sub-display font-normal'>Didn't receive the email? <span className='text-btn font-semibold'>Click to resend</span></p>
-            <Button text="Back to log in" className="text-sub-display my-5 flex gap-2 items-center" icon={left} />
+            <LinksBtn text="Back to log in" to="/auth/login-page" className="text-gray-600 my-5 flex gap-2 items-center" icon={<FaArrowLeft className=' w-5 h-5' />} />
           </div>
         </div>
       </section>

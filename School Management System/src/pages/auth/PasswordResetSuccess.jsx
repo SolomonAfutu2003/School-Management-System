@@ -1,6 +1,7 @@
 import React from 'react'
-import Button from '../../components/Button'
+import LinksBtn from '../../components/LinksBtn'
 import Success from "../../assets/icons/Success icon.png"
+
 
 const PasswordResetSuccess = () => {
   return (
@@ -14,7 +15,7 @@ const PasswordResetSuccess = () => {
             <p className='text-base text-sub-display font-medium'>Your password has been successfully reset.</p>
             <p className='text-base text-sub-display font-medium'>Click below to log in magically. </p>
           </div>
-          <Button text="Back to login" className='bg-btn py-5 px-4.5 w-90 rounded-sm text-white' />
+          <LinksBtn text="Back to login" to="/auth/login-page" className='bg-btn py-5 px-4.5 w-90 rounded-sm text-white' />
         </div>
       </section>
     </div>

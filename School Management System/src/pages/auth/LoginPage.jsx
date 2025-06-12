@@ -43,7 +43,7 @@ const LoginPage = () => {
                             </Link>
                         </div>
 
-                        <Button text="Login" className="bg-btn py-5 px-4.5 w-90 rounded-sm text-white" />
+                        <Button text="Login" className="bg-btn py-5 px-4.5 w-90 rounded-sm text-base font-semibold text-white" />
                     </form>
                 </div>
             </div>

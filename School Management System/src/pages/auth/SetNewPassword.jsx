@@ -1,7 +1,8 @@
 import React from 'react'
-import Button from '../../components/Button'
+import LinksBtn from '../../components/LinksBtn'
 import PasswordIcon from "../../assets/icons/Password icon.png"
-import left from "../../assets/icons/left-arrow Icon.png"
+import { FaArrowLeft } from "react-icons/fa";
+import Button from '../../components/Button'
 
 const SetNewPassword = () => {
   return (
@@ -28,9 +29,9 @@ const SetNewPassword = () => {
                   <input className="border-2 focus:border-red-500 outline-0 rounded-sm py-2.5 px-3 w-full border-[#D1D5DB]" type="password" name="" id="Password" />
                 </div>
               </div>
-              <Button text="Reset Password" className='bg-btn py-5 px-4.5 w-full rounded-sm text-white' />
+              <Button text="Reset Password" className="bg-btn py-5 px-4.5 w-90 rounded-sm text-base font-semibold text-white"  />
             </form>
-            <Button text="Back to log in" className="text-gray-600 my-5 flex gap-2 items-center" icon={left} />
+            <LinksBtn text="Back to log in" to="/auth/login-page" className="text-gray-600 my-5 flex gap-2 items-center" icon={<FaArrowLeft className=' w-5 h-5' />} />
           </div>
         </div>
       </section>

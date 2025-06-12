@@ -1,13 +1,11 @@
 import React from 'react'
 
-const Button = ({ text, className, icon }) => {
+const Button = ({ icon, text, className,onClick }) => {
     return (
-        <div>
-            <button className={`flex justify-center text-base font-semibold ${className}`}>
-                {icon && <img className="w-5 h-5" src={icon} alt="" />}
-                {text}
-            </button>
-        </div>
+        <button className={className} onClick={onClick}>
+            {text}
+            {icon}
+        </button>
     )
 }
 

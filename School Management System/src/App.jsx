@@ -1,5 +1,5 @@
 import './App.css'
-import { Route, Routes } from 'react-router'
+import { Route, Routes } from 'react-router-dom'
 import ForgotPasswordPage from './pages/auth/ForgotPasswordPage'
 import PasswordResetSuccess from './pages/auth/PasswordResetSuccess'
 import PasswordReset from './pages/auth/PasswordReset'
@@ -11,6 +11,10 @@ import Dashboard from './pages/Dashboard'
 import MySubjects from './pages/MySubjects'
 import MyClasses from './pages/MyClasses'
 import Exams from './pages/Exams'
+import MyStudents from './pages/MyStudents'
+import Assignments from './pages/Assignments'
+import Quiz from './pages/Quiz'
+import Examinations from './pages/Examinations'
 
 
 
@@ -31,7 +35,10 @@ function App() {
         <Route path='/my-subjects' element={<MySubjects />} />
         <Route path='/my-classes' element={<MyClasses />} />
         <Route path='/exams' element={<Exams />} />
-        <Route path='/my-students' element={<MySubjects />} />
+        <Route path='/my-students' element={<MyStudents />} />
+        <Route path='/assignment' element={<Assignments />} />
+        <Route path='/quiz' element={<Quiz />} />
+        <Route path='/examination' element={<Examinations />} />
       </Route>
     </Routes>
   )
