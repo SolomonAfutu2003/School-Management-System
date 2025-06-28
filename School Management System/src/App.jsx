@@ -15,6 +15,20 @@ import MyStudents from './pages/MyStudents'
 import Assignments from './pages/Assignments'
 import Quiz from './pages/Quiz'
 import Examinations from './pages/Examinations'
+import ProtectRoute from './components/ProtectRoute'
+import Admin from "./pages/admin/Admin"
+import AssignmentsAndQuizzes from "./pages/admin/AssignmentsAndQuizzes"
+import Attendance from "./pages/admin/Attendance"
+import Classes from "./pages/admin/Classes"
+import AdminExams from "./pages/admin/AdminExams"
+import Guardians from "./pages/admin/Guardians"
+import MessagingPage from "./pages/admin/MessagingPage"
+import Teachers from "./pages/admin/Teachers"
+import Subjects from "./pages/admin/Subjects"
+import Students from "./pages/admin/Students"
+import SMS from "./pages/admin/SMS"
+
+
 
 
 
@@ -30,15 +44,28 @@ function App() {
         <Route path='password-reset-success' element={<PasswordResetSuccess />} />
       </Route>
 
-      <Route element={<ClientLayout />}>
-        <Route path='/' element={<Dashboard />} />
-        <Route path='/my-subjects' element={<MySubjects />} />
-        <Route path='/my-classes' element={<MyClasses />} />
-        <Route path='/exams' element={<Exams />} />
-        <Route path='/my-students' element={<MyStudents />} />
-        <Route path='/assignment' element={<Assignments />} />
-        <Route path='/quiz' element={<Quiz />} />
-        <Route path='/examination' element={<Examinations />} />
+      <Route element={<ProtectRoute />}>
+        <Route element={<ClientLayout />}>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/my-subjects' element={<MySubjects />} />
+          <Route path='/my-classes' element={<MyClasses />} />
+          <Route path='/exams' element={<Exams />} />
+          <Route path='/my-students' element={<MyStudents />} />
+          <Route path='/assignment' element={<Assignments />} />
+          <Route path='/quiz' element={<Quiz />} />
+          <Route path='/examination' element={<Examinations />} />
+          <Route path='/admin/admin-page' element={<Admin />} />
+          <Route path='/admin/exams' element={<AdminExams />} />
+          <Route path='/admin/assignments-and-quizzes' element={<AssignmentsAndQuizzes />} />
+          <Route path='/admin/messaging-page' element={<MessagingPage />} />
+          <Route path='/admin/classes' element={<Classes />} />
+          <Route path='/admin/subjects' element={<Subjects />} />
+          <Route path='/admin/students' element={<Students/>} />
+          <Route path='/admin/teachers' element={<Teachers/>} />
+          <Route path='/admin/sms' element={<SMS />} />
+          <Route path='/admin/guardians' element={<Guardians />} />
+          <Route path='/admin/attendance' element={<Attendance />} />
+        </Route>
       </Route>
     </Routes>
   )

@@ -13,7 +13,7 @@ const Quiz = () => {
         <Button text={"Post Assignment"} className={"bg-nav text-white px-10 py-2 rounded-lg"} />
       </section>
 
-      <section className='space-y-5'>
+      <section className='space-y-7'>
         <h3>Post Quiz</h3>
         <form action="" className='space-y-5'>
           <section className='flex flex-col space-y-3'>
@@ -41,10 +41,10 @@ const Quiz = () => {
                 <option value=""></option>
               </select>
             </div>
-            <Button icon={<HiOutlinePlus className='w-3.5 h-3.5' />} text={"Add..."} className={"flex gap-1 justify-end items-center w-[451px]"} />
+            <Button icon={<HiOutlinePlus className='w-3.5 h-3.5' />} text={"Add..."} className={"flex gap-1 justify-end text-nav items-center w-[451px] font-semibold"} />
           </section>
 
-<hr className='text-gray-300' />
+          <hr className='text-gray-300' />
 
           <section className='flex flex-col space-y-3'>
             <div className='flex flex-col'>
@@ -56,7 +56,7 @@ const Quiz = () => {
               <label htmlFor="">Enter Answer</label>
               <input className='border border-gray-300 outline-0 text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='Enter answer' />
             </div>
-            <Button icon={<HiOutlinePlus className='w-3.5 h-3.5' />} text={"Add..."} className={"flex gap-1 justify-end items-center"} />
+            <Button icon={<HiOutlinePlus className='w-3.5 h-3.5' />} text={"Add..."} className={"flex gap-1 justify-end text-nav items-center font-semibold"} />
           </section>
 
           <hr className='text-gray-300' />
@@ -86,7 +86,13 @@ const Quiz = () => {
                 <option value=""></option>
               </select>
             </div>
-            <Button icon={<HiOutlinePlus className='w-3.5 h-3.5' />} text={"Add..."} className={"flex gap-1 justify-end items-center w-[451px]"} />
+            <Button icon={<HiOutlinePlus className='w-3.5 h-3.5' />} text={"Add..."} className={"flex gap-1 justify-end items-center text-nav w-[451px] font-semibold"} />
+          </section>
+
+          <section className='flex justify-end gap-3'>
+            <Button text={"Reorder Questions"} />
+            <Button icon={<HiOutlinePlus className='w-5 h-5' />} text={"New Question"} className={"flex gap-1 items-center border border-nav rounded-sm px-10 py-2 text-nav font-semibold"} />
+            <Button text={"Post Quiz"} className={"bg-nav text-white px-10 py-2 rounded-sm"} />
           </section>
 
         </form>
