@@ -16,7 +16,7 @@ const Quiz = () => {
     <div className='m-4 space-y-5'>
       <section className='flex justify-between'>
         <LinksBtn to="/my-subjects" text={"Back"} className={"text-base text-gray-600 font-medium flex gap-2 items-center"} icon={<FaArrowLeft className=' w-5 h-5' />} />
-        <Button text={"Post Assignment"} className={"bg-nav text-white px-10 py-2 rounded-lg"} />
+        <Button text={"Post Quiz"} className={"bg-nav text-white px-10 py-2 rounded-lg"} />
       </section>
 
       <section className='space-y-7'>
@@ -51,9 +51,9 @@ const Quiz = () => {
             {show &&
               <div className='w-60 bg-white absolute left-[736px] top-[678px] shadow-lg shadow-black'>
                 <div className="flex flex-col justify-between">
-                  <Button text={"Image"} className={"py-3 px-4 text-left"} />
+                  <Button text={"Image"} className={"py-3 px-4 text-left text-gray-600"} />
                   <hr />
-                  <Button text={"Add possible answer"} className={"py-3 px-4 text-left"} />
+                  <Button text={"Add possible answer"} className={"py-3 px-4 text-left text-gray-600"} />
                 </div>
               </div>}
           </section>
@@ -110,11 +110,11 @@ const Quiz = () => {
           {show &&
             <div className='w-60 h-36 bg-white absolute right-36 top-[1488px] shadow-lg shadow-black'>
               <div className="flex flex-col justify-between">
-                <Button text={"Fill in"} className={"py-3 px-4 text-left"} />
-                <hr />
-                <Button text={"Answer One"} className={"py-3 px-4 text-left"} />
-                <hr />
-                <Button text={"Multiple Answer"} className={"py-3 px-4 text-left"} />
+                <Button text={"Fill in"} className={"py-3 px-4 text-left text-gray-600"} />
+                <hr className='border border-gray-300'/>
+                <Button text={"Answer One"} className={"py-3 px-4 text-left text-gray-600"} />
+                <hr className='border border-gray-300'/>
+                <Button text={"Multiple Answer"} className={"py-3 px-4 text-left text-gray-600"} />
               </div>
             </div>}
           <Button text={"Post Quiz"} className={"bg-nav text-white px-10 py-2 rounded-sm"} />
@@ -132,7 +132,7 @@ const Quiz = () => {
                 <Button icon={<IoIosClose className="text-nav w-6 h-6 bg-gray-300 rounded-full cursor-pointer" />} onClick={()=> setReorderMenu(false)} />
               </div>
 
-              <hr />
+              <hr className='border border-gray-300' />
 
               {/* Questions List */}
               <div>
@@ -143,7 +143,7 @@ const Quiz = () => {
                         <input
                           type="text"
                           placeholder="What is force?"
-                          className="w-96 border rounded px-3 py-2"
+                          className="w-96 border border-gray-300 rounded px-3 py-2"
                         />
                         <IoMenu className="w-5 h-5 text-gray-600" />
                       </div>
