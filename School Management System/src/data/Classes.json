@@ -1,0 +1,234 @@
+[
+  {
+    "name": "Class 1A",
+    "studentCount": 25,
+    "teachers": [
+      {
+        "name": "Mrs. Johnson",
+        "subjects": ["Math", "English"]
+      },
+      {
+        "name": "Mr. Smith",
+        "subjects": ["Science", "History"]
+      }
+    ]
+  },
+  {
+    "name": "Class 1B",
+    "studentCount": 28,
+    "teachers": [
+      {
+        "name": "Ms. Davis",
+        "subjects": ["Math", "Science", "English"]
+      }
+    ]
+  },
+  {
+    "name": "Class 2A",
+    "studentCount": 30,
+    "teachers": [
+      {
+        "name": "Mr. Lee",
+        "subjects": ["Math", "Science"]
+      },
+      {
+        "name": "Mrs. Thompson",
+        "subjects": ["English", "History"]
+      }
+    ]
+  },
+  {
+    "name": "Class 2B",
+    "studentCount": 27,
+    "teachers": [
+      {
+        "name": "Mr. White",
+        "subjects": ["Math", "English", "Geography"]
+      }
+    ]
+  },
+  {
+    "name": "Class 3A",
+    "studentCount": 22,
+    "teachers": [
+      {
+        "name": "Ms. Green",
+        "subjects": ["Math", "Science"]
+      },
+      {
+        "name": "Mr. Carter",
+        "subjects": ["English", "Civic Education"]
+      }
+    ]
+  },
+  {
+    "name": "Class 3B",
+    "studentCount": 29,
+    "teachers": [
+      {
+        "name": "Mrs. Brown",
+        "subjects": ["Math", "English", "History"]
+      }
+    ]
+  },
+  {
+    "name": "Class 4A",
+    "studentCount": 33,
+    "teachers": [
+      {
+        "name": "Mr. Black",
+        "subjects": ["Science", "Geography"]
+      },
+      {
+        "name": "Mrs. Young",
+        "subjects": ["Math", "English"]
+      }
+    ]
+  },
+  {
+    "name": "Class 4B",
+    "studentCount": 24,
+    "teachers": [
+      {
+        "name": "Ms. Hill",
+        "subjects": ["Math", "Science", "English"]
+      }
+    ]
+  },
+  {
+    "name": "Class 5A",
+    "studentCount": 26,
+    "teachers": [
+      {
+        "name": "Mr. Grant",
+        "subjects": ["Math", "ICT", "English"]
+      }
+    ]
+  },
+  {
+    "name": "Class 5B",
+    "studentCount": 32,
+    "teachers": [
+      {
+        "name": "Mrs. Edwards",
+        "subjects": ["Science", "English"]
+      },
+      {
+        "name": "Ms. Diaz",
+        "subjects": ["Math", "History"]
+      }
+    ]
+  },
+  {
+    "name": "Class 6A",
+    "studentCount": 31,
+    "teachers": [
+      {
+        "name": "Mr. Robinson",
+        "subjects": ["Math", "Science", "Social Studies"]
+      }
+    ]
+  },
+  {
+    "name": "Class 6B",
+    "studentCount": 23,
+    "teachers": [
+      {
+        "name": "Ms. Baker",
+        "subjects": ["English", "History", "Geography"]
+      }
+    ]
+  },
+  {
+    "name": "Class 7A",
+    "studentCount": 27,
+    "teachers": [
+      {
+        "name": "Mr. King",
+        "subjects": ["Math", "English"]
+      },
+      {
+        "name": "Mrs. Clark",
+        "subjects": ["Science", "History"]
+      }
+    ]
+  },
+  {
+    "name": "Class 7B",
+    "studentCount": 21,
+    "teachers": [
+      {
+        "name": "Ms. Lewis",
+        "subjects": ["Math", "English", "Civic Education"]
+      }
+    ]
+  },
+  {
+    "name": "Class 8A",
+    "studentCount": 34,
+    "teachers": [
+      {
+        "name": "Mrs. Hall",
+        "subjects": ["Science", "English", "History"]
+      }
+    ]
+  },
+  {
+    "name": "Class 8B",
+    "studentCount": 22,
+    "teachers": [
+      {
+        "name": "Mr. Allen",
+        "subjects": ["Math", "ICT"]
+      },
+      {
+        "name": "Ms. Adams",
+        "subjects": ["English", "Social Studies"]
+      }
+    ]
+  },
+  {
+    "name": "Class 9A",
+    "studentCount": 25,
+    "teachers": [
+      {
+        "name": "Ms. Scott",
+        "subjects": ["Math", "Science", "Geography"]
+      }
+    ]
+  },
+  {
+    "name": "Class 9B",
+    "studentCount": 30,
+    "teachers": [
+      {
+        "name": "Mr. Evans",
+        "subjects": ["Math", "English", "Civic Education"]
+      }
+    ]
+  },
+  {
+    "name": "Class 10A",
+    "studentCount": 35,
+    "teachers": [
+      {
+        "name": "Mrs. Turner",
+        "subjects": ["English", "History"]
+      },
+      {
+        "name": "Mr. Hughes",
+        "subjects": ["Math", "Physics"]
+      }
+    ]
+  },
+  {
+    "name": "Class 10B",
+    "studentCount": 28,
+    "teachers": [
+      {
+        "name": "Ms. Phillips",
+        "subjects": ["Biology", "English", "Math"]
+      }
+    ]
+  }
+]

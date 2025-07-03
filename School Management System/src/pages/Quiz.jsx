@@ -52,7 +52,7 @@ const Quiz = () => {
               <div className='w-60 bg-white absolute left-[736px] top-[678px] shadow-lg shadow-black'>
                 <div className="flex flex-col justify-between">
                   <Button text={"Image"} className={"py-3 px-4 text-left text-gray-600"} />
-                  <hr />
+                  <hr className='border border-gray-300' />
                   <Button text={"Add possible answer"} className={"py-3 px-4 text-left text-gray-600"} />
                 </div>
               </div>}
