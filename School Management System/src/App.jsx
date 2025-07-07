@@ -15,6 +15,7 @@ import MyStudents from './pages/MyStudents'
 import Assignments from './pages/Assignments'
 import Quiz from './pages/Quiz'
 import Examinations from './pages/Examinations'
+import ViewDetail from "./pages/ViewDetail"
 import ProtectRoute from './components/ProtectRoute'
 import Admin from "./pages/admin/Admin"
 import AssignmentsAndQuizzes from "./pages/admin/AssignmentsAndQuizzes"
@@ -27,9 +28,6 @@ import Teachers from "./pages/admin/Teachers"
 import Subjects from "./pages/admin/Subjects"
 import Students from "./pages/admin/Students"
 import SMS from "./pages/admin/SMS"
-
-
-
 
 
 
@@ -54,6 +52,7 @@ function App() {
           <Route path='/assignment' element={<Assignments />} />
           <Route path='/quiz' element={<Quiz />} />
           <Route path='/examination' element={<Examinations />} />
+          <Route path='/view-detail/:id' element={<ViewDetail />} />
           <Route path='/admin/admin-page' element={<Admin />} />
           <Route path='/admin/exams' element={<AdminExams />} />
           <Route path='/admin/assignments-and-quizzes' element={<AssignmentsAndQuizzes />} />

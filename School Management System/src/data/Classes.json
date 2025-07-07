@@ -1,233 +1,1021 @@
 [
   {
+    "id": 1,
     "name": "Class 1A",
     "studentCount": 25,
     "teachers": [
       {
+        "id": 101,
         "name": "Mrs. Johnson",
         "subjects": ["Math", "English"]
       },
       {
+        "id": 102,
         "name": "Mr. Smith",
         "subjects": ["Science", "History"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1001,
+        "name": "Ama Mensah",
+        "gender": "Female",
+        "guardianName": "Mrs. Grace Mensah",
+        "phoneNumber": "+233247890123"
+      },
+      {
+        "id": 1002,
+        "name": "Kwame Asante",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Asante",
+        "phoneNumber": "+233244567890"
+      },
+      {
+        "id": 1003,
+        "name": "Esi Boateng",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Boateng",
+        "phoneNumber": "+233245678901"
+      },
+      {
+        "id": 1004,
+        "name": "Yaw Osei",
+        "gender": "Male",
+        "guardianName": "Mr. Kwaku Osei",
+        "phoneNumber": "+233246789012"
+      },
+      {
+        "id": 1005,
+        "name": "Adwoa Appiah",
+        "gender": "Female",
+        "guardianName": "Mrs. Akua Appiah",
+        "phoneNumber": "+233247890123"
       }
     ]
   },
   {
+    "id": 2,
     "name": "Class 1B",
     "studentCount": 28,
     "teachers": [
       {
+        "id": 103,
         "name": "Ms. Davis",
         "subjects": ["Math", "Science", "English"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1006,
+        "name": "Kofi Mensah",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Mensah",
+        "phoneNumber": "+233248901234"
+      },
+      {
+        "id": 1007,
+        "name": "Abena Agyeman",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Agyeman",
+        "phoneNumber": "+233249012345"
+      },
+      {
+        "id": 1008,
+        "name": "Yaa Nyarko",
+        "gender": "Female",
+        "guardianName": "Mrs. Efua Nyarko",
+        "phoneNumber": "+233250123456"
+      },
+      {
+        "id": 1009,
+        "name": "Kwabena Owusu",
+        "gender": "Male",
+        "guardianName": "Mr. Kwame Owusu",
+        "phoneNumber": "+233251234567"
+      },
+      {
+        "id": 1010,
+        "name": "Akosua Adjei",
+        "gender": "Female",
+        "guardianName": "Mrs. Yaa Adjei",
+        "phoneNumber": "+233252345678"
       }
     ]
   },
   {
+    "id": 3,
     "name": "Class 2A",
     "studentCount": 30,
     "teachers": [
       {
+        "id": 104,
         "name": "Mr. Lee",
         "subjects": ["Math", "Science"]
       },
       {
+        "id": 105,
         "name": "Mrs. Thompson",
         "subjects": ["English", "History"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1011,
+        "name": "Nana Kwaku",
+        "gender": "Male",
+        "guardianName": "Mr. Kwaku Boateng",
+        "phoneNumber": "+233253456789"
+      },
+      {
+        "id": 1012,
+        "name": "Serwaa Ampofo",
+        "gender": "Female",
+        "guardianName": "Mrs. Akosua Ampofo",
+        "phoneNumber": "+233254567890"
+      },
+      {
+        "id": 1013,
+        "name": "Kojo Anane",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Anane",
+        "phoneNumber": "+233255678901"
+      },
+      {
+        "id": 1014,
+        "name": "Ama Serwaa",
+        "gender": "Female",
+        "guardianName": "Mrs. Adwoa Serwaa",
+        "phoneNumber": "+233256789012"
+      },
+      {
+        "id": 1015,
+        "name": "Kwesi Baah",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Baah",
+        "phoneNumber": "+233257890123"
       }
     ]
   },
   {
+    "id": 4,
     "name": "Class 2B",
     "studentCount": 27,
     "teachers": [
       {
+        "id": 106,
         "name": "Mr. White",
         "subjects": ["Math", "English", "Geography"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1016,
+        "name": "Afia Kumi",
+        "gender": "Female",
+        "guardianName": "Mrs. Esi Kumi",
+        "phoneNumber": "+233258901234"
+      },
+      {
+        "id": 1017,
+        "name": "Yaw Bonsu",
+        "gender": "Male",
+        "guardianName": "Mr. Kwame Bonsu",
+        "phoneNumber": "+233259012345"
+      },
+      {
+        "id": 1018,
+        "name": "Adwoa Frimpong",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Frimpong",
+        "phoneNumber": "+233260123456"
+      },
+      {
+        "id": 1019,
+        "name": "Kofi Gyamfi",
+        "gender": "Male",
+        "guardianName": "Mr. Kwabena Gyamfi",
+        "phoneNumber": "+233261234567"
+      },
+      {
+        "id": 1020,
+        "name": "Akua Twumasi",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Twumasi",
+        "phoneNumber": "+233262345678"
       }
     ]
   },
   {
+    "id": 5,
     "name": "Class 3A",
     "studentCount": 22,
     "teachers": [
       {
+        "id": 107,
         "name": "Ms. Green",
         "subjects": ["Math", "Science"]
       },
       {
+        "id": 108,
         "name": "Mr. Carter",
         "subjects": ["English", "Civic Education"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1021,
+        "name": "Kwame Appiah",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Appiah",
+        "phoneNumber": "+233263456789"
+      },
+      {
+        "id": 1022,
+        "name": "Esi Mensah",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Mensah",
+        "phoneNumber": "+233264567890"
+      },
+      {
+        "id": 1023,
+        "name": "Yaa Asante",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Asante",
+        "phoneNumber": "+233265678901"
+      },
+      {
+        "id": 1024,
+        "name": "Kofi Ofori",
+        "gender": "Male",
+        "guardianName": "Mr. Kwaku Ofori",
+        "phoneNumber": "+233266789012"
+      },
+      {
+        "id": 1025,
+        "name": "Adwoa Boateng",
+        "gender": "Female",
+        "guardianName": "Mrs. Akua Boateng",
+        "phoneNumber": "+233267890123"
       }
     ]
   },
   {
+    "id": 6,
     "name": "Class 3B",
     "studentCount": 29,
     "teachers": [
       {
+        "id": 109,
         "name": "Mrs. Brown",
         "subjects": ["Math", "English", "History"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1026,
+        "name": "Yaw Agyeman",
+        "gender": "Male",
+        "guardianName": "Mr. Kwame Agyeman",
+        "phoneNumber": "+233268901234"
+      },
+      {
+        "id": 1027,
+        "name": "Akosua Nyarko",
+        "gender": "Female",
+        "guardianName": "Mrs. Efua Nyarko",
+        "phoneNumber": "+233269012345"
+      },
+      {
+        "id": 1028,
+        "name": "Kwabena Owusu",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Owusu",
+        "phoneNumber": "+233270123456"
+      },
+      {
+        "id": 1029,
+        "name": "Ama Adjei",
+        "gender": "Female",
+        "guardianName": "Mrs. Yaa Adjei",
+        "phoneNumber": "+233271234567"
+      },
+      {
+        "id": 1030,
+        "name": "Kojo Ampofo",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Ampofo",
+        "phoneNumber": "+233272345678"
       }
     ]
   },
   {
+    "id": 7,
     "name": "Class 4A",
     "studentCount": 33,
     "teachers": [
       {
+        "id": 110,
         "name": "Mr. Black",
         "subjects": ["Science", "Geography"]
       },
       {
+        "id": 111,
         "name": "Mrs. Young",
         "subjects": ["Math", "English"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1031,
+        "name": "Serwaa Anane",
+        "gender": "Female",
+        "guardianName": "Mrs. Akosua Anane",
+        "phoneNumber": "+233273456789"
+      },
+      {
+        "id": 1032,
+        "name": "Kwesi Serwaa",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Serwaa",
+        "phoneNumber": "+233274567890"
+      },
+      {
+        "id": 1033,
+        "name": "Afia Baah",
+        "gender": "Female",
+        "guardianName": "Mrs. Adwoa Baah",
+        "phoneNumber": "+233275678901"
+      },
+      {
+        "id": 1034,
+        "name": "Yaw Kumi",
+        "gender": "Male",
+        "guardianName": "Mr. Kwame Kumi",
+        "phoneNumber": "+233276789012"
+      },
+      {
+        "id": 1035,
+        "name": "Adwoa Bonsu",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Bonsu",
+        "phoneNumber": "+233277890123"
       }
     ]
   },
   {
+    "id": 8,
     "name": "Class 4B",
     "studentCount": 24,
     "teachers": [
       {
+        "id": 112,
         "name": "Ms. Hill",
         "subjects": ["Math", "Science", "English"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1036,
+        "name": "Kofi Frimpong",
+        "gender": "Male",
+        "guardianName": "Mr. Kwabena Frimpong",
+        "phoneNumber": "+233278901234"
+      },
+      {
+        "id": 1037,
+        "name": "Akua Gyamfi",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Gyamfi",
+        "phoneNumber": "+233279012345"
+      },
+      {
+        "id": 1038,
+        "name": "Kwame Twumasi",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Twumasi",
+        "phoneNumber": "+233280123456"
+      },
+      {
+        "id": 1039,
+        "name": "Esi Appiah",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Appiah",
+        "phoneNumber": "+233281234567"
+      },
+      {
+        "id": 1040,
+        "name": "Yaa Mensah",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Mensah",
+        "phoneNumber": "+233282345678"
       }
     ]
   },
   {
+    "id": 9,
     "name": "Class 5A",
     "studentCount": 26,
     "teachers": [
       {
+        "id": 113,
         "name": "Mr. Grant",
         "subjects": ["Math", "ICT", "English"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1041,
+        "name": "Yaw Asante",
+        "gender": "Male",
+        "guardianName": "Mr. Kwaku Asante",
+        "phoneNumber": "+233283456789"
+      },
+      {
+        "id": 1042,
+        "name": "Akosua Ofori",
+        "gender": "Female",
+        "guardianName": "Mrs. Efua Ofori",
+        "phoneNumber": "+233284567890"
+      },
+      {
+        "id": 1043,
+        "name": "Kwabena Boateng",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Boateng",
+        "phoneNumber": "+233285678901"
+      },
+      {
+        "id": 1044,
+        "name": "Ama Agyeman",
+        "gender": "Female",
+        "guardianName": "Mrs. Yaa Agyeman",
+        "phoneNumber": "+233286789012"
+      },
+      {
+        "id": 1045,
+        "name": "Kojo Nyarko",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Nyarko",
+        "phoneNumber": "+233287890123"
       }
     ]
   },
   {
+    "id": 10,
     "name": "Class 5B",
     "studentCount": 32,
     "teachers": [
       {
+        "id": 114,
         "name": "Mrs. Edwards",
         "subjects": ["Science", "English"]
       },
       {
+        "id": 115,
         "name": "Ms. Diaz",
         "subjects": ["Math", "History"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1046,
+        "name": "Serwaa Owusu",
+        "gender": "Female",
+        "guardianName": "Mrs. Akosua Owusu",
+        "phoneNumber": "+233288901234"
+      },
+      {
+        "id": 1047,
+        "name": "Kwesi Adjei",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Adjei",
+        "phoneNumber": "+233289012345"
+      },
+      {
+        "id": 1048,
+        "name": "Afia Ampofo",
+        "gender": "Female",
+        "guardianName": "Mrs. Adwoa Ampofo",
+        "phoneNumber": "+233290123456"
+      },
+      {
+        "id": 1049,
+        "name": "Yaw Anane",
+        "gender": "Male",
+        "guardianName": "Mr. Kwame Anane",
+        "phoneNumber": "+233291234567"
+      },
+      {
+        "id": 1050,
+        "name": "Adwoa Serwaa",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Serwaa",
+        "phoneNumber": "+233292345678"
       }
     ]
   },
   {
+    "id": 11,
     "name": "Class 6A",
     "studentCount": 31,
     "teachers": [
       {
+        "id": 116,
         "name": "Mr. Robinson",
         "subjects": ["Math", "Science", "Social Studies"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1051,
+        "name": "Kofi Baah",
+        "gender": "Male",
+        "guardianName": "Mr. Kwabena Baah",
+        "phoneNumber": "+233293456789"
+      },
+      {
+        "id": 1052,
+        "name": "Akua Kumi",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Kumi",
+        "phoneNumber": "+233294567890"
+      },
+      {
+        "id": 1053,
+        "name": "Kwame Bonsu",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Bonsu",
+        "phoneNumber": "+233295678901"
+      },
+      {
+        "id": 1054,
+        "name": "Esi Frimpong",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Frimpong",
+        "phoneNumber": "+233296789012"
+      },
+      {
+        "id": 1055,
+        "name": "Yaa Gyamfi",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Gyamfi",
+        "phoneNumber": "+233297890123"
       }
     ]
   },
   {
+    "id": 12,
     "name": "Class 6B",
     "studentCount": 23,
     "teachers": [
       {
+        "id": 117,
         "name": "Ms. Baker",
         "subjects": ["English", "History", "Geography"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1056,
+        "name": "Yaw Twumasi",
+        "gender": "Male",
+        "guardianName": "Mr. Kwaku Twumasi",
+        "phoneNumber": "+233298901234"
+      },
+      {
+        "id": 1057,
+        "name": "Akosua Appiah",
+        "gender": "Female",
+        "guardianName": "Mrs. Efua Appiah",
+        "phoneNumber": "+233299012345"
+      },
+      {
+        "id": 1058,
+        "name": "Kwabena Mensah",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Mensah",
+        "phoneNumber": "+233300123456"
+      },
+      {
+        "id": 1059,
+        "name": "Ama Asante",
+        "gender": "Female",
+        "guardianName": "Mrs. Yaa Asante",
+        "phoneNumber": "+233301234567"
+      },
+      {
+        "id": 1060,
+        "name": "Kojo Ofori",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Ofori",
+        "phoneNumber": "+233302345678"
       }
     ]
   },
   {
+    "id": 13,
     "name": "Class 7A",
     "studentCount": 27,
     "teachers": [
       {
+        "id": 118,
         "name": "Mr. King",
         "subjects": ["Math", "English"]
       },
       {
+        "id": 119,
         "name": "Mrs. Clark",
         "subjects": ["Science", "History"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1061,
+        "name": "Serwaa Boateng",
+        "gender": "Female",
+        "guardianName": "Mrs. Akosua Boateng",
+        "phoneNumber": "+233303456789"
+      },
+      {
+        "id": 1062,
+        "name": "Kwesi Agyeman",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Agyeman",
+        "phoneNumber": "+233304567890"
+      },
+      {
+        "id": 1063,
+        "name": "Afia Nyarko",
+        "gender": "Female",
+        "guardianName": "Mrs. Adwoa Nyarko",
+        "phoneNumber": "+233305678901"
+      },
+      {
+        "id": 1064,
+        "name": "Yaw Owusu",
+        "gender": "Male",
+        "guardianName": "Mr. Kwame Owusu",
+        "phoneNumber": "+233306789012"
+      },
+      {
+        "id": 1065,
+        "name": "Adwoa Adjei",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Adjei",
+        "phoneNumber": "+233307890123"
       }
     ]
   },
   {
+    "id": 14,
     "name": "Class 7B",
     "studentCount": 21,
     "teachers": [
       {
+        "id": 120,
         "name": "Ms. Lewis",
         "subjects": ["Math", "English", "Civic Education"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1066,
+        "name": "Kofi Ampofo",
+        "gender": "Male",
+        "guardianName": "Mr. Kwabena Ampofo",
+        "phoneNumber": "+233308901234"
+      },
+      {
+        "id": 1067,
+        "name": "Akua Anane",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Anane",
+        "phoneNumber": "+233309012345"
+      },
+      {
+        "id": 1068,
+        "name": "Kwame Serwaa",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Serwaa",
+        "phoneNumber": "+233310123456"
+      },
+      {
+        "id": 1069,
+        "name": "Esi Baah",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Baah",
+        "phoneNumber": "+233311234567"
+      },
+      {
+        "id": 1070,
+        "name": "Yaa Kumi",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Kumi",
+        "phoneNumber": "+233312345678"
       }
     ]
   },
   {
+    "id": 15,
     "name": "Class 8A",
     "studentCount": 34,
     "teachers": [
       {
+        "id": 121,
         "name": "Mrs. Hall",
         "subjects": ["Science", "English", "History"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1071,
+        "name": "Yaw Bonsu",
+        "gender": "Male",
+        "guardianName": "Mr. Kwaku Bonsu",
+        "phoneNumber": "+233313456789"
+      },
+      {
+        "id": 1072,
+        "name": "Akosua Frimpong",
+        "gender": "Female",
+        "guardianName": "Mrs. Efua Frimpong",
+        "phoneNumber": "+233314567890"
+      },
+      {
+        "id": 1073,
+        "name": "Kwabena Gyamfi",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Gyamfi",
+        "phoneNumber": "+233315678901"
+      },
+      {
+        "id": 1074,
+        "name": "Ama Twumasi",
+        "gender": "Female",
+        "guardianName": "Mrs. Yaa Twumasi",
+        "phoneNumber": "+233316789012"
+      },
+      {
+        "id": 1075,
+        "name": "Kojo Appiah",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Appiah",
+        "phoneNumber": "+233317890123"
       }
     ]
   },
   {
+    "id": 16,
     "name": "Class 8B",
     "studentCount": 22,
     "teachers": [
       {
+        "id": 122,
         "name": "Mr. Allen",
         "subjects": ["Math", "ICT"]
       },
       {
+        "id": 123,
         "name": "Ms. Adams",
         "subjects": ["English", "Social Studies"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1076,
+        "name": "Serwaa Mensah",
+        "gender": "Female",
+        "guardianName": "Mrs. Akosua Mensah",
+        "phoneNumber": "+233318901234"
+      },
+      {
+        "id": 1077,
+        "name": "Kwesi Asante",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Asante",
+        "phoneNumber": "+233319012345"
+      },
+      {
+        "id": 1078,
+        "name": "Afia Ofori",
+        "gender": "Female",
+        "guardianName": "Mrs. Adwoa Ofori",
+        "phoneNumber": "+233320123456"
+      },
+      {
+        "id": 1079,
+        "name": "Yaw Boateng",
+        "gender": "Male",
+        "guardianName": "Mr. Kwame Boateng",
+        "phoneNumber": "+233321234567"
+      },
+      {
+        "id": 1080,
+        "name": "Adwoa Agyeman",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Agyeman",
+        "phoneNumber": "+233322345678"
       }
     ]
   },
   {
+    "id": 17,
     "name": "Class 9A",
     "studentCount": 25,
     "teachers": [
       {
+        "id": 124,
         "name": "Ms. Scott",
         "subjects": ["Math", "Science", "Geography"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1081,
+        "name": "Kofi Nyarko",
+        "gender": "Male",
+        "guardianName": "Mr. Kwabena Nyarko",
+        "phoneNumber": "+233323456789"
+      },
+      {
+        "id": 1082,
+        "name": "Akua Owusu",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Owusu",
+        "phoneNumber": "+233324567890"
+      },
+      {
+        "id": 1083,
+        "name": "Kwame Adjei",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Adjei",
+        "phoneNumber": "+233325678901"
+      },
+      {
+        "id": 1084,
+        "name": "Esi Ampofo",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Ampofo",
+        "phoneNumber": "+233326789012"
+      },
+      {
+        "id": 1085,
+        "name": "Yaa Anane",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Anane",
+        "phoneNumber": "+233327890123"
       }
     ]
   },
   {
+    "id": 18,
     "name": "Class 9B",
     "studentCount": 30,
     "teachers": [
       {
+        "id": 125,
         "name": "Mr. Evans",
         "subjects": ["Math", "English", "Civic Education"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1086,
+        "name": "Yaw Serwaa",
+        "gender": "Male",
+        "guardianName": "Mr. Kwaku Serwaa",
+        "phoneNumber": "+233328901234"
+      },
+      {
+        "id": 1087,
+        "name": "Akosua Baah",
+        "gender": "Female",
+        "guardianName": "Mrs. Efua Baah",
+        "phoneNumber": "+233329012345"
+      },
+      {
+        "id": 1088,
+        "name": "Kwabena Kumi",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Kumi",
+        "phoneNumber": "+233330123456"
+      },
+      {
+        "id": 1089,
+        "name": "Ama Bonsu",
+        "gender": "Female",
+        "guardianName": "Mrs. Yaa Bonsu",
+        "phoneNumber": "+233331234567"
+      },
+      {
+        "id": 1090,
+        "name": "Kojo Frimpong",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Frimpong",
+        "phoneNumber": "+233332345678"
       }
     ]
   },
   {
+    "id": 19,
     "name": "Class 10A",
     "studentCount": 35,
     "teachers": [
       {
+        "id": 126,
         "name": "Mrs. Turner",
         "subjects": ["English", "History"]
       },
       {
+        "id": 127,
         "name": "Mr. Hughes",
         "subjects": ["Math", "Physics"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1091,
+        "name": "Serwaa Gyamfi",
+        "gender": "Female",
+        "guardianName": "Mrs. Akosua Gyamfi",
+        "phoneNumber": "+233333456789"
+      },
+      {
+        "id": 1092,
+        "name": "Kwesi Twumasi",
+        "gender": "Male",
+        "guardianName": "Mr. Kofi Twumasi",
+        "phoneNumber": "+233334567890"
+      },
+      {
+        "id": 1093,
+        "name": "Afia Appiah",
+        "gender": "Female",
+        "guardianName": "Mrs. Adwoa Appiah",
+        "phoneNumber": "+233335678901"
+      },
+      {
+        "id": 1094,
+        "name": "Yaw Mensah",
+        "gender": "Male",
+        "guardianName": "Mr. Kwame Mensah",
+        "phoneNumber": "+233336789012"
+      },
+      {
+        "id": 1095,
+        "name": "Adwoa Asante",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Asante",
+        "phoneNumber": "+233337890123"
       }
     ]
   },
   {
+    "id": 20,
     "name": "Class 10B",
     "studentCount": 28,
     "teachers": [
       {
+        "id": 128,
         "name": "Ms. Phillips",
         "subjects": ["Biology", "English", "Math"]
+      }
+    ],
+    "students": [
+      {
+        "id": 1096,
+        "name": "Kofi Ofori",
+        "gender": "Male",
+        "guardianName": "Mr. Kwabena Ofori",
+        "phoneNumber": "+233338901234"
+      },
+      {
+        "id": 1097,
+        "name": "Akua Boateng",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Boateng",
+        "phoneNumber": "+233339012345"
+      },
+      {
+        "id": 1098,
+        "name": "Kwame Agyeman",
+        "gender": "Male",
+        "guardianName": "Mr. Yaw Agyeman",
+        "phoneNumber": "+233340123456"
+      },
+      {
+        "id": 1099,
+        "name": "Esi Nyarko",
+        "gender": "Female",
+        "guardianName": "Mrs. Ama Nyarko",
+        "phoneNumber": "+233341234567"
+      },
+      {
+        "id": 1100,
+        "name": "Yaa Owusu",
+        "gender": "Female",
+        "guardianName": "Mrs. Abena Owusu",
+        "phoneNumber": "+233342345678"
       }
     ]
   }
