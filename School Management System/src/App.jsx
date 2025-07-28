@@ -20,7 +20,7 @@ import ViewProfile from "./pages/ViewProfile"
 import ProtectRoute from './components/ProtectRoute'
 import Admin from "./pages/admin/Admin"
 import AssignmentsAndQuizzes from "./pages/admin/AssignmentsAndQuizzes"
-import Attendance from "./pages/admin/Attendance"
+import Attendance from "./pages/Attendance"
 import Classes from "./pages/admin/Classes"
 import AdminExams from "./pages/admin/AdminExams"
 import Guardians from "./pages/admin/Guardians"
@@ -29,6 +29,8 @@ import Teachers from "./pages/admin/Teachers"
 import Subjects from "./pages/admin/Subjects"
 import Students from "./pages/admin/Students"
 import SMS from "./pages/admin/SMS"
+import AdminAttendance from './pages/admin/AdminAttendance'
+
 
 
 
@@ -61,11 +63,12 @@ function App() {
           <Route path='/admin/messaging-page' element={<MessagingPage />} />
           <Route path='/admin/classes' element={<Classes />} />
           <Route path='/admin/subjects' element={<Subjects />} />
-          <Route path='/admin/students' element={<Students/>} />
-          <Route path='/admin/teachers' element={<Teachers/>} />
+          <Route path='/admin/students' element={<Students />} />
+          <Route path='/admin/teachers' element={<Teachers />} />
           <Route path='/admin/sms' element={<SMS />} />
           <Route path='/admin/guardians' element={<Guardians />} />
-          <Route path='/admin/attendance' element={<Attendance />} />
+          <Route path='/admin/attendance' element={<AdminAttendance />} />
+          <Route path='/attendance' element={<Attendance />} />
         </Route>
       </Route>
     </Routes>

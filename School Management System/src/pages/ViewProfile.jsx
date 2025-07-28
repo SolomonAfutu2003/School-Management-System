@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import classes from "../data/Classes.json"
 import { FaArrowLeft } from "react-icons/fa";
 import LinksBtn from '../components/LinksBtn';
+import { FiEdit } from "react-icons/fi";
 
 const ViewProfile = () => {
     const { id } = useParams();
@@ -19,12 +20,18 @@ const ViewProfile = () => {
 
     return (
         <div className="m-4 space-y-5">
-            <section className='flex'>
+            <section className='flex justify-between items-center'>
                 <LinksBtn
                     to="/my-students"
                     text="Back"
                     className="text-base text-gray-600 font-medium flex gap-2 items-center"
                     icon={<FaArrowLeft className='w-5 h-5' />}
+                />
+                <LinksBtn
+                    to="/attendance"
+                    text="Edit Attendance"
+                    className="text-base text-gray-600 font-medium flex gap-2 items-center bg-nav text-white px-4 py-2 rounded-md"
+                    icon={<FiEdit className="w-5 h-5" />}
                 />
             </section>
 
