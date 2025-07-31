@@ -1,0 +1,31 @@
+{
+    "grade_series": [
+      {
+        "subject": "Mathematics",
+        "data": [
+          { "period": "Week 1", "average": 78 },
+          { "period": "Week 2", "average": 82 },
+          { "period": "Week 3", "average": 85 },
+          { "period": "Week 4", "average": 80 }
+        ]
+      },
+      {
+        "subject": "Science",
+        "data": [
+          { "period": "Week 1", "average": 85 },
+          { "period": "Week 2", "average": 83 },
+          { "period": "Week 3", "average": 88 },
+          { "period": "Week 4", "average": 90 }
+        ]
+      },
+      {
+        "subject": "English",
+        "data": [
+          { "period": "Week 1", "average": 75 },
+          { "period": "Week 2", "average": 78 },
+          { "period": "Week 3", "average": 82 },
+          { "period": "Week 4", "average": 85 }
+        ]
+      }
+    ]
+  }

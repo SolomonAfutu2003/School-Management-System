@@ -1,0 +1,79 @@
+{
+    "notices": [
+      {
+        "notice_id": "NOT001",
+        "title": "Math Curriculum Update",
+        "content": "Mr. Robert Smith is assigned to review and update the 9th grade math curriculum.",
+        "category": "Academic",
+        "priority": "High",
+        "published_date": "2023-09-01",
+        "due_date": "2023-09-30",
+        "published_by": "Academic Committee",
+        "assigned_teacher": "Robert Smith",
+        "subject": "Mathematics",
+        "status": "Pending",
+        "action_required": "Submit revised curriculum documents",
+        "location": "Math Department Office"
+      },
+      {
+        "notice_id": "NOT002",
+        "title": "Science Fair Preparation",
+        "content": "Ms. Jennifer Williams is responsible for organizing the annual science fair.",
+        "category": "Event",
+        "priority": "Medium",
+        "published_date": "2023-09-10",
+        "due_date": "2023-11-15",
+        "published_by": "Principal's Office",
+        "assigned_teacher": "Jennifer Williams",
+        "subject": "Science",
+        "status": "In Progress",
+        "action_required": "Submit event plan by October 1st",
+        "location": "Science Lab"
+      },
+      {
+        "notice_id": "NOT003",
+        "title": "Grade Submission Reminder",
+        "content": "Mr. Michael Brown needs to submit final grades for 10th grade biology.",
+        "category": "Administrative",
+        "priority": "High",
+        "published_date": "2023-12-01",
+        "due_date": "2023-12-15",
+        "published_by": "Examination Department",
+        "assigned_teacher": "Michael Brown",
+        "subject": "Biology",
+        "status": "Pending",
+        "action_required": "Upload grades to school portal",
+        "location": "Online"
+      },
+      {
+        "notice_id": "NOT004",
+        "title": "Parent Meeting Attendance",
+        "content": "Ms. Sarah Johnson is assigned to meet with parents of Class 9A students.",
+        "category": "Meeting",
+        "priority": "Medium",
+        "published_date": "2023-10-05",
+        "due_date": "2023-10-20",
+        "published_by": "Vice Principal",
+        "assigned_teacher": "Sarah Johnson",
+        "subject": "English",
+        "status": "Completed",
+        "action_required": "Submit meeting minutes",
+        "location": "Room 203"
+      },
+      {
+        "notice_id": "NOT005",
+        "title": "Professional Development",
+        "content": "Mr. David Wilson is selected to attend the STEM teaching conference.",
+        "category": "Training",
+        "priority": "Low",
+        "published_date": "2023-11-01",
+        "due_date": "2023-11-25",
+        "published_by": "Academic Development",
+        "assigned_teacher": "David Wilson",
+        "subject": "Physics",
+        "status": "Upcoming",
+        "action_required": "Register before November 10th",
+        "location": "City Convention Center"
+      }
+    ]
+  }

@@ -1,0 +1,64 @@
+{
+    "events": [
+      {
+        "event_id": "EVT001",
+        "title": "Parent-Teacher Conference",
+        "description": "Fall semester parent-teacher meetings",
+        "date": "2023-10-15",
+        "start_time": "15:00",
+        "end_time": "19:00",
+        "location": "School Auditorium",
+        "organizer": "Dr. Sarah Johnson"
+      },
+      {
+        "event_id": "EVT002",
+        "title": "Science Fair",
+        "description": "Annual school science competition and exhibition",
+        "date": "2023-11-03",
+        "start_time": "09:00",
+        "end_time": "14:00",
+        "location": "School Gymnasium",
+        "organizer": "Mr. Michael Brown"
+      },
+      {
+        "event_id": "EVT003",
+        "title": "Winter Concert",
+        "description": "Music department holiday performance",
+        "date": "2023-12-12",
+        "start_time": "18:30",
+        "end_time": "20:30",
+        "location": "School Auditorium",
+        "organizer": "Ms. Emily Wilson"
+      },
+      {
+        "event_id": "EVT004",
+        "title": "Career Day",
+        "description": "Professionals from various fields share their experiences",
+        "date": "2024-02-08",
+        "start_time": "10:00",
+        "end_time": "13:00",
+        "location": "Classrooms",
+        "organizer": "Mrs. Jennifer Williams"
+      },
+      {
+        "event_id": "EVT005",
+        "title": "Sports Day",
+        "description": "Annual inter-class athletic competition",
+        "date": "2024-03-22",
+        "start_time": "08:00",
+        "end_time": "15:00",
+        "location": "School Field",
+        "organizer": "Mr. Robert Smith"
+      },
+      {
+        "event_id": "EVT006",
+        "title": "Graduation Ceremony",
+        "description": "Class of 2024 graduation celebration",
+        "date": "2024-06-05",
+        "start_time": "17:00",
+        "end_time": "19:30",
+        "location": "Main Football Field",
+        "organizer": "Dr. Sarah Johnson"
+      }
+    ]
+  }
