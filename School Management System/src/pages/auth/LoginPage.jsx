@@ -26,7 +26,7 @@ const LoginPage = () => {
 
           if (email === fakeAdmin.email && password === fakeAdmin.password) {
             login({ email, role: 'admin' });
-            navigate('/');
+            navigate('/admin/dashboard');
           } else if (email === fakeUser.email && password === fakeUser.password) {
             login({ email, role: 'user' });
             navigate('/');

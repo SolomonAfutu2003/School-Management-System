@@ -23,7 +23,8 @@ const Day = () => {
                     nav_button_next: "text-gray-600",
                 
                     weekday:"text-black font-bold",
-                    day_button:'border border-gray-300 w-10 h-10 p-2 m-1 rounded-md hover:bg-indigo-100',
+                    day:"text-sm p-1",
+                    day_button:'border border-gray-300 text-center w-7 h-7 rounded-md hover:bg-indigo-100',
                     head_cell: "w-8 h-8 flex justify-center items-center ",
                 
                     day_selected: "bg-indigo-500 text-white",
