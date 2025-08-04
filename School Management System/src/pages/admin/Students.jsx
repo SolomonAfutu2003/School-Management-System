@@ -145,7 +145,7 @@ const Students = () => {
                   <div className='w-60 bg-white absolute right-0 z-20 shadow-lg shadow-black'>
                     <div className="flex flex-col justify-between">
                       <LinkBtn
-                        to={`/admin/view-detail/${student.student_id}`}
+                        to={`/admin/view-profile/${student.student_id}`}
                         icon={<IoEyeOutline className='w-5 h-5' />}
                         text={"View Detail"}
                         className={"py-3 px-4 text-left text-gray-600 flex items-center gap-2"}

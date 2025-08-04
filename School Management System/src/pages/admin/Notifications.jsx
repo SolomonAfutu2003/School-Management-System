@@ -8,9 +8,9 @@ import Button from '../../components/Button';
 
 
 const Notifications = () => {
-    return (
-        <div className="m-5 space-y-5">
-            <section className='flex justify-between items-center'>
+  return (
+    <div className="m-5 space-y-5">
+         <section className='flex justify-between items-center'>
                 <LinksBtn
                     to="/admin/students"
                     text="Back"
@@ -18,7 +18,7 @@ const Notifications = () => {
                     icon={<FaArrowLeft className='w-5 h-5' />}
                 />
             </section>
-            <section>
+         <section>
                 <div className='bg-white border-2 border-[#EDDFFF] w-full space-y-4 py-5 rounded-lg'>
                     <div className='px-5'>
                         <h3>ALL NOTIFICATION</h3>
@@ -67,8 +67,8 @@ const Notifications = () => {
                     </div>
                 </div>
             </section>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Notifications

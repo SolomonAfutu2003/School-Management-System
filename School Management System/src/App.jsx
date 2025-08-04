@@ -17,7 +17,6 @@ import Assignments from './pages/Assignments'
 import Quiz from './pages/Quiz'
 import Examinations from './pages/Examinations'
 import ViewDetail from "./pages/ViewDetail"
-import AdminViewDetail from "./pages/admin/AdminViewDetails"
 import ViewProfile from "./pages/ViewProfile"
 import AdminViewProfile from "./pages/admin/AdminViewProfile"
 import ProtectRoute from './components/ProtectRoute'
@@ -65,14 +64,13 @@ function App() {
           <Route path='/admin/dashboard' element={<AdminDashboard />} />
           <Route path='/admin/admin-page' element={<Admin />} />
           <Route path='/admin/exams' element={<AdminExams />} />
-          <Route path='/admin/edit-detail' element={<EditDetail />} />
+          <Route path='/admin/edit-detail/:id' element={<EditDetail />} />
           <Route path='/admin/assignments-and-quizzes' element={<AssignmentsAndQuizzes />} />
           <Route path='/admin/messaging-page' element={<MessagingPage />} />
           <Route path='/admin/classes' element={<Classes />} />
           <Route path='/admin/notifications' element={<Notifications />} />
           <Route path='/admin/subjects' element={<Subjects />} />
           <Route path='/admin/students' element={<Students />} />
-          <Route path='/admin/view-detail/:id' element={<AdminViewDetail />} />
           <Route path='/admin/view-profile/:id' element={<AdminViewProfile />} />
           <Route path='/admin/teachers' element={<Teachers />} />
           <Route path='/admin/sms' element={<SMS />} />
