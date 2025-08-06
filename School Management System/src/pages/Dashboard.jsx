@@ -182,7 +182,7 @@ const Dashboard = () => {
 
             <section className='grid grid-cols-3 gap-6'>
                 <div className='bg-white flex justify-between items-center border-2 border-[#EDDFFF] px-4 py-5 rounded-lg'>
-                    <div className='bg-[#F4EBFF] p-3 rounded-lg'>
+                    <div className='bg-[#F4EBFF] p-3 rounded-full'>
                         <PiCertificate className='w-6 h-6 text-nav' />
                     </div>
                     <div className='flex flex-col items-end'>
@@ -225,7 +225,7 @@ const Dashboard = () => {
             <section className='grid grid-cols-4 gap-6'>
                 <div className='bg-white border-2 border-[#EDDFFF] col-span-3 rounded-lg'>
                     <div className='flex justify-between items-center px-6 py-5'>
-                        <h3>GRADE DISTRIBUTION</h3>
+                        <h3 className='text-[#344054] text-base font-bold'>GRADE DISTRIBUTION</h3>
                         <div className='flex gap-5'>
                             <Button text={"Export"} icon={<RiDownloadCloud2Line />} className={"flex flex-row-reverse bg-[#EAECF0] p-2 rounded-sm items-center gap-2 justify-center"} />
                             <Button icon={<SlOptionsVertical />} />
@@ -241,7 +241,7 @@ const Dashboard = () => {
                 </div>
                 <div className='bg-white border-2 border-[#EDDFFF] rounded-lg'>
                     <div className='flex justify-between items-center px-6 py-5'>
-                        <h3>SEX</h3>
+                        <h3  className='text-[#344054] text-base font-bold'>SEX</h3>
                         <div className='flex gap-5'>
                             <Button text={"Export"} icon={<RiDownloadCloud2Line />} className={"flex flex-row-reverse bg-[#EAECF0] p-2 rounded-sm items-center gap-2 justify-center"} />
                         </div>
@@ -274,14 +274,14 @@ const Dashboard = () => {
                         </div>
                         <hr className='border-gray-300' />
                         <div className='space-y-4'>
-                            <h3>Upcoming Events</h3>
+                            <h3  className='text-[#344054] text-base font-bold'>Upcoming Events</h3>
                             <div>
                                 <ul className='space-y-4'>
                                     {Events.events.map((e, index) => {
                                         const colorClass = borderColors[index % borderColors.length];
                                         return (
                                         <li key={e.event_id} className={`flex flex-col pl-4 border-l-2 ${colorClass}`} >
-                                            <p>{e.title}</p>
+                                            <p  className='text-[#344054] text-base font-medium'>{e.title}</p>
                                             <p> {e.date}</p>
                                         </li>
                                     )})}
@@ -292,8 +292,8 @@ const Dashboard = () => {
                 </div>
                 <div className='bg-white border-2 border-[#EDDFFF] w-full space-y-4 py-5 rounded-lg'>
                     <div className='flex justify-between items-center px-5'>
-                        <h3>NOTICE BOARD</h3>
-                        <LinksBtn text={"See all"} icon={<FaArrowRight />} className={"flex flex-row-reverse justify-center items-center gap-2 text-nav"} />
+                        <h3 className='text-[#344054] text-base font-bold'>NOTICE BOARD</h3>
+                        <LinksBtn text={"See all"} icon={<FaArrowRight />} className={"flex flex-row-reverse justify-center items-center gap-2 text-nav border-0"} />
                     </div>
                     <div className='flex justify-between items-center px-5'>
                         <div className='flex gap-3 items-center'>
@@ -328,10 +328,10 @@ const Dashboard = () => {
                     </div>
                     <div className='flex justify-end py-3 items-center gap-10 px-5'>
                        <div className='flex gap-3'>
-                            <Button text={"Previous"} className={"border border-gray-400 py-2 px-4 rounded-lg"} />
-                            <Button text={"Next"} className={"border border-gray-400 py-2 px-4 rounded-lg"}/>
+                            <Button text={"Previous"} className={"border text-base font-bold text-gray-700 border-gray-400 py-2 px-4 rounded-lg"} />
+                            <Button text={"Next"} className={"border text-base font-bold text-gray-700 border-gray-400 py-2 px-4 rounded-lg"}/>
                        </div>
-                        <span>Result 1 of 10</span>
+                        <span className={"text-sm font-medium text-gray-700"}>Result 1 of 10</span>
                     </div>
                 </div>
             </section>

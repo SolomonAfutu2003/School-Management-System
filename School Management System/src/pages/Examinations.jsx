@@ -122,50 +122,51 @@ const Examinations = () => {
     </section>
 
     {reorderMenu &&
-      <div className="fixed inset-0 bg-[#0000005e] z-10 flex justify-center items-center">
-        <section>
-          <div className="space-y-5 bg-white p-5 w-[520px] h-[483px] rounded shadow-lg">
-            {/* Header */}
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg font-semibold">Reorder Questions</h4>
-              <Button icon={<IoIosClose className="text-nav w-6 h-6 bg-gray-300 rounded-full cursor-pointer" />} onClick={()=> setReorderMenu(false)} />
-            </div>
+        <div className="fixed inset-0 bg-[#0000005e] z-10 flex justify-center items-center">
+          <section>
+            <div className="space-y-5 bg-white p-5 max-w-[520px] h-fit rounded shadow-lg">
+              {/* Header */}
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg font-semibold">Reorder Questions</h4>
+                <Button icon={<IoIosClose className="text-nav w-6 h-6 bg-gray-300 rounded-full cursor-pointer" />} onClick={()=> setReorderMenu(false)} />
+              </div>
 
-            <hr />
+              <hr className='border border-gray-300' />
 
-            {/* Questions List */}
-            <div>
-              <ol className="list-decimal list-inside space-y-2">
-                {questions.map((q, index) => (
-                  <li key={index}>
-                    <div className="flex justify-center items-center gap-2 pl-2">
-                      <input
-                        type="text"
-                        placeholder="What is force?"
-                        className="w-96 border rounded px-3 py-2"
-                      />
-                      <IoMenu className="w-5 h-5 text-gray-600" />
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
+              {/* Questions List */}
+              <div>
+                <ol className="space-y-5">
+                  {questions.map((q, index) => (
+                    <li className="w-full" key={index}>
+                      <div className="flex justify-between items-center gap-2 pl-2">
+                        <h3>{index + 1}.</h3>
+                        <input
+                          type="text"
+                          placeholder="What is force?"
+                          className="w-96 border border-gray-300 rounded px-3 py-2"
+                        />
+                        <IoMenu className="w-5 h-5 text-gray-600" />
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </div>
 
-            {/* Buttons */}
-            <div className="flex gap-3 justify-end">
-              <Button
-                text="Cancel"
-                className="bg-white text-gray-600 px-10 py-2 border border-gray-300 rounded-sm"
-              />
-              <Button
-                text="Post Quiz"
-                className="bg-nav text-white px-10 py-2 rounded-sm"
-              />
+              {/* Buttons */}
+              <div className="flex gap-3 justify-end">
+                <Button
+                  text="Cancel"
+                  className="bg-white text-gray-600 px-10 py-2 border border-gray-300 rounded-sm"
+                />
+                <Button
+                  text="Post Quiz"
+                  className="bg-nav text-white px-10 py-2 rounded-sm"
+                />
+              </div>
             </div>
-          </div>
-        </section>
-      </div>
-    }
+          </section>
+        </div>
+      }
   </div>
   )
 }

@@ -125,7 +125,7 @@ const Quiz = () => {
       {reorderMenu &&
         <div className="fixed inset-0 bg-[#0000005e] z-10 flex justify-center items-center">
           <section>
-            <div className="space-y-5 bg-white p-5 w-[520px] h-[483px] rounded shadow-lg">
+            <div className="space-y-5 bg-white p-5 max-w-[520px] h-fit rounded shadow-lg">
               {/* Header */}
               <div className="flex items-center justify-between">
                 <h4 className="text-lg font-semibold">Reorder Questions</h4>
@@ -136,10 +136,11 @@ const Quiz = () => {
 
               {/* Questions List */}
               <div>
-                <ol className="list-decimal list-inside space-y-2">
+                <ol className="space-y-5">
                   {questions.map((q, index) => (
-                    <li key={index}>
-                      <div className="flex justify-center items-center gap-2 pl-2">
+                    <li className="w-full" key={index}>
+                      <div className="flex justify-between items-center gap-2 pl-2">
+                        <h3>{index + 1}.</h3>
                         <input
                           type="text"
                           placeholder="What is force?"

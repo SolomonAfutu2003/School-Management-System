@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classes from "../data/Classes.json";
+import StudentsData from "../data/Students.json";
 import Button from '../components/Button';
 import LinkBtn from "../components/LinksBtn";
 import { CiSearch } from "react-icons/ci";
@@ -7,6 +7,8 @@ import { SlOptionsVertical } from "react-icons/sl";
 import { IoEyeOutline } from "react-icons/io5";
 import { FiPlus } from "react-icons/fi";
 import { FaCheck } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
+import { FiEdit } from "react-icons/fi";
 import { VscSettings } from "react-icons/vsc";
 
 const MyStudents = () => {
@@ -16,26 +18,7 @@ const MyStudents = () => {
   const [selectedClass, setSelectedClass] = useState("");
   const [search, setSearch] = useState("");
 
-  // Flatten students from all classes
-  // const allStudents = classes.flatMap(cls => cls.students || []);
 
-  // Filter by name
-  // const searchData = allStudents.filter(student =>
-  //   student.name.toLowerCase().includes(search.toLowerCase())
-  // );
-
-  const filteredStudents = classes.flatMap(cls =>
-    (cls.students || []).map(student => ({
-      ...student,
-      className: cls.name
-    }))
-  ).filter(student => {
-    const genderMatch = selectedGender ? student.gender === selectedGender : true;
-    const classMatch = selectedClass ? student.className === selectedClass : true;
-    const nameMatch = search ? student.name.toLowerCase().includes(search.toLowerCase()) : true;
-
-    return genderMatch && classMatch && nameMatch;
-  });
 
   return (
     <div className='m-4 space-y-5'>
@@ -98,9 +81,9 @@ const MyStudents = () => {
                     onChange={(e) => setSelectedClass(e.target.value)}
                   >
                     <option value="">All Classes</option>
-                    {classes.map((cls) => (
-                      <option key={cls.id} value={cls.name}>
-                        {cls.name}
+                    {StudentsData.students.map((student) => (
+                      <option key={student.student_id} value={student.class}>
+                        {student.class}
                       </option>
                     ))}
                   </select>
@@ -120,6 +103,9 @@ const MyStudents = () => {
             )}
           </div>
         </div>
+        <Button icon={<FiPlus className='w-5 h-5' />}
+          text={"Add New Student"}
+          className={"bg-nav text-white px-3 py-2 rounded-lg flex items-center gap-1"} />
       </section>
 
       {/* Students Table */}
@@ -139,51 +125,52 @@ const MyStudents = () => {
           </ul>
         </div>
 
-        {filteredStudents.map((student) => {
-          const studentClass = classes.find(cls =>
-            (cls.students || []).some(s => s.id === student.id)
-          );
-
-          return (
-            <div key={student.id}>
-              <ul className='grid grid-cols-16 gap-4 text-[15px] p-2'>
-                <li className='col-span-3'>{student.name}</li>
-                <li className='col-span-2'>{student.id}</li>
-                <li className='col-span-2'>{studentClass?.name || "Unknown"}</li>
-                <li className='col-span-2'>{student.gender}</li>
-                <li className='col-span-3'>{student.guardianName}</li>
-                <li className='col-span-3'>{student.phoneNumber}</li>
-                <li className='col-start-16 relative'>
-                  <Button
-                    icon={<SlOptionsVertical />}
-                    onClick={() =>
-                      setActiveDropdown((prev) => (prev === student.id ? null : student.id))
-                    }
-                  />
-                  {activeDropdown === student.id && (
-                    <div className='w-60 bg-white absolute right-0 z-20 shadow-lg shadow-black'>
-                      <div className="flex flex-col justify-between">
-                        <LinkBtn
-                          to={`/view-profile/${student.id}`}
-                          icon={<IoEyeOutline className='w-5 h-5' />}
-                          text={"View Detail"}
-                          className={"py-3 px-4 text-left text-gray-600 flex items-center gap-2"}
-                        />
-                        <hr className='border border-gray-300' />
-                        <Button
-                          icon={<FiPlus className='w-5 h-5' />}
-                          text={"Add student"}
-                          className={"py-3 px-4 text-left text-gray-600 flex items-center gap-2"}
-                        />
-                      </div>
+        {StudentsData.students.map((student) => (
+          <div key={student.student_id}>
+            <ul className='grid grid-cols-16 gap-4 text-[15px] p-2'>
+              <li className='col-span-3'>{student.first_name} {student.last_name}</li>
+              <li className='col-span-2'>{student.student_id}</li>
+              <li className='col-span-2'>{student.class}</li>
+              <li className='col-span-2'>{student.gender}</li>
+              <li className='col-span-3'>{student.parent_guardian.name}</li>
+              <li className='col-span-3'>{student.phone}</li>
+              <li className='col-start-16 relative'>
+                <Button
+                  icon={<SlOptionsVertical />}
+                  onClick={() =>
+                    setActiveDropdown((prev) => (prev === student.student_id ? null : student.student_id))
+                  }
+                />
+                {activeDropdown === student.student_id && (
+                  <div className='w-60 bg-white absolute right-0 z-20 shadow-lg shadow-black'>
+                    <div className="flex flex-col justify-between">
+                      <LinkBtn
+                        to={`/view-detail/${student.student_id}`}
+                        icon={<IoEyeOutline className='w-5 h-5' />}
+                        text={"View Detail"}
+                        className={"py-3 px-4 text-left text-gray-600 flex items-center gap-2"}
+                      />
+                      <hr className='border border-gray-300' />
+                      <Button
+                        icon={<FiEdit className='w-5 h-5' />}
+                        text={"Edit Detail"}
+                        className={"py-3 px-4 text-left text-gray-600 flex items-center gap-2"}
+                      />
+                      <hr className='border border-gray-300' />
+                      <Button
+                        icon={<IoMdClose className='w-5 h-5' />}
+                        text={"Suspend"}
+                        className={"py-3 px-4 text-left text-red-600 flex items-center gap-2"}
+                      />
                     </div>
-                  )}
-                </li>
-              </ul>
-              <hr className='border-gray-300' />
-            </div>
-          );
-        })}
+                  </div>
+                )}
+              </li>
+            </ul>
+            <hr className='border-gray-300' />
+          </div>
+
+        ))}
 
       </section>
     </div>

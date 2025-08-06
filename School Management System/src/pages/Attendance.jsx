@@ -1,70 +1,10 @@
-import React, { useState } from "react";
-import classes from "../data/Classes.json";
+import React from "react";
+import { CiSearch } from "react-icons/ci";
+import AttendancesData from "../data/Attendance.json"
 import Button from "../components/Button";
 
 const Attendance = () => {
-  const [userType, setUserType] = useState("");
-  const [selectedClass, setSelectedClass] = useState("");
-  const [selectedStudent, setSelectedStudent] = useState("");
-  const [selectedMonth, setSelectedMonth] = useState("");
-  const [attendanceData, setAttendanceData] = useState([]);
 
-  const handleUserTypeChange = (e) => {
-    setUserType(e.target.value);
-    setSelectedClass("");
-    setSelectedStudent("");
-    setSelectedMonth("");
-    setAttendanceData([]);
-  };
-
-  const handleClassChange = (e) => {
-    setSelectedClass(e.target.value);
-    setSelectedStudent("");
-    setSelectedMonth("");
-    setAttendanceData([]);
-  };
-
-  const handleStudentChange = (e) => {
-    setSelectedStudent(e.target.value);
-    setSelectedMonth("");
-    setAttendanceData([]);
-  };
-
-  const handleMonthChange = (e) => {
-    setSelectedMonth(e.target.value);
-    setAttendanceData([]);
-  };
-
-  const handleLoadData = () => {
-    const classData = classes.find((cls) => cls.name === selectedClass);
-    const student = classData?.students.find(
-      (s) => s.id === parseInt(selectedStudent)
-    );
-    const records = student?.attendance[selectedMonth] || [];
-    setAttendanceData(records);
-  };
-
-  const handleReset = () => {
-    setUserType("");
-    setSelectedClass("");
-    setSelectedStudent("");
-    setSelectedMonth("");
-    setAttendanceData([]);
-  };
-
-  const handleToggleStatus = (index) => {
-    const updated = [...attendanceData];
-    const current = updated[index];
-    if (current.status === "Present") current.status = "Absent";
-    else if (current.status === "Absent") current.status = "Late";
-    else current.status = "Present";
-    setAttendanceData(updated);
-  };
-
-  const selectedClassData = classes.find((cls) => cls.name === selectedClass);
-  const selectedStudentData = selectedClassData?.students.find(
-    (s) => s.id === parseInt(selectedStudent)
-  );
 
   return (
     <div className="m-4 space-y-5">
@@ -73,8 +13,6 @@ const Attendance = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {/* User Type Dropdown */}
           <select
-            value={userType}
-            onChange={handleUserTypeChange}
             className="border border-gray-400 rounded-sm p-2 w-full"
           >
             <option value="">Select User Type</option>
@@ -85,48 +23,28 @@ const Attendance = () => {
 
           {/* Class Dropdown */}
           <select
-            value={selectedClass}
-            onChange={handleClassChange}
             className="border border-gray-400 rounded-sm p-2 w-full"
-            disabled={!userType}
           >
             <option value="">Select Class</option>
-            {classes.map((cls) => (
-              <option key={cls.id} value={cls.name}>
-                {cls.name}
-              </option>
-            ))}
+
           </select>
 
           {/* Student Dropdown */}
           <select
-            value={selectedStudent}
-            onChange={handleStudentChange}
             className="border border-gray-400 rounded-sm p-2 w-full"
-            disabled={!selectedClass}
           >
             <option value="">Select Student</option>
-            {selectedClassData?.students.map((student) => (
-              <option key={student.id} value={student.id}>
-                {student.name}
-              </option>
-            ))}
+
           </select>
 
           {/* Month Dropdown */}
           <select
-            value={selectedMonth}
-            onChange={handleMonthChange}
+
             className="border border-gray-400 rounded-sm p-2 w-full"
-            disabled={!selectedStudent}
+
           >
             <option value="">Select Month</option>
-            {selectedStudentData &&
-              Object.keys(selectedStudentData.attendance).map((month) => (
-                <option key={month} value={month}>
-                  {month}
-                </option>
-              ))}
+
           </select>
         </div>
 
@@ -134,47 +52,120 @@ const Attendance = () => {
           <Button
             text={"Load Data"}
             className={"bg-nav text-white px-10 py-2 rounded-lg"}
-            onClick={handleLoadData}
           />
           <Button
             text={"Reset"}
             className={"bg-white text-black border border-[#D0D5DD] px-10 py-2 rounded-lg"}
-            onClick={handleReset}
+
           />
         </div>
       </section>
 
       {/* Attendance Table */}
-      <section className="border rounded-2xl border-[#EAECF0] p-5 space-y-5">
-      {attendanceData.length > 0 ? (
-        <section className="border rounded-2xl border-[#EAECF0] p-5 space-y-5">
-          <h2 className="text-xl font-bold">
-            Attendance - {selectedStudentData?.name} ({selectedMonth})
-          </h2>
+      <section className="border rounded-2xl border-[#EAECF0] p-5 space-y-5 ">
+        <div>
+          <div className="flex justify-between items-center" >
+            <h3 className="text-lg font-semibold">Attendance Records</h3>
 
-          <div className="grid grid-cols-[150px_1fr] gap-2">
-            <div className="font-semibold border p-2 bg-gray-100">Date</div>
-            <div className="font-semibold border p-2 bg-gray-100">Status</div>
-
-            {attendanceData.map((record, index) => (
-              <React.Fragment key={`${selectedMonth}-${index}`}>
-                <div className="border p-2">{record.date}</div>
-                <div className="border p-2 flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={record.status === "Present"}
-                    onChange={() => handleToggleStatus(index)}
-                    className="w-4 h-4 accent-green-600 cursor-pointer"
-                  />
-                  <span className="text-sm">{record.status}</span>
-                </div>
-              </React.Fragment>
-            ))}
+            <div className="relative flex gap-3">
+              <input
+                className="border border-gray-400 rounded-sm px-9 py-2 max-w-[603px]"
+                type="search"
+                placeholder="Search"
+              />
+              <div className="absolute left-4 top-3">
+                <CiSearch className="w-5 h-5" />
+              </div>
+              <Button
+                text={"Save"}
+                className={"bg-nav text-white px-10 py-2 rounded-lg"}
+              />
+            </div>
           </div>
-        </section>
-      ):(
-        <h1>No Data</h1>
-      )} 
+        </div>
+        <div>
+          {/* Table Header with Month Controls */}
+          <div className="flex flex-col items-end">
+            <div className="">
+              <div className=" border border-gray-200 text-center px-[371px] py-3">
+                <span className="mr-2 text-sm font-medium text-gray-600">Month</span>
+              </div>
+              <div className="border border-t-0 border-b-0 border-gray-200 text-center px-[371px] py-3">
+                <span className="text-blue-800 font-medium">September 2023</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="flex border border-gray-200 shadow-sm">
+            {/* Fixed Student Names Column */}
+            <div className="">
+              <table className="border-r border-gray-200">
+                <thead className="border-b border-gray-200">
+                  <tr>
+                    <th className="w-48 px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Name
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className=" divide-y divide-gray-200">
+                  {AttendancesData.attendance_records.map((student) => (
+                    <tr key={student.student_id} className="">
+                      <td className="w-48 px-3 py-3.5 whitespace-nowrap text-sm font-medium text-gray-900">
+                        {student.student_name}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Attendance Table */}
+            <div className="overflow-x-auto ">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="">
+                  <tr>
+                    {Array.from({ length: 30 }, (_, i) => {
+                      const day = (i + 1).toString().padStart(2, '0');
+                      return (
+                        <th key={day} className="px-3 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          {day}
+                        </th>
+                      );
+                    })}
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {AttendancesData.attendance_records.map((student) => {
+                    return (
+                      <tr key={student.student_id} className="hover:bg-gray-50">
+                        {Object.entries(student.monthly_attendance["September-2023"]).map(([day, status]) => (
+                          <td
+                            key={`${student.student_id}-${day}`}
+                            className="px-2 py-4 whitespace-nowrap text-sm text-center"
+                          >
+                            {status !== 'weekend' && (
+                              <div className="flex items-center justify-center">
+                                <label className="inline-flex items-center">
+                                  <input
+                                    type="checkbox"
+                                    className="form-checkbox h-4 w-4 text-green-600 transition duration-150 ease-in-out"
+                                    checked={status === 'present'}
+                                  />
+                                </label>
+                              </div>
+                            )}
+                          </td>
+                        ))}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
       </section>
     </div>
   );

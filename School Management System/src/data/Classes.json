@@ -1,355 +1,282 @@
-[
-  {
-    "id": 1,
-    "name": "Class 1A",
-    "studentCount": 25,
-    "teachers": [
-      {
-        "id": 101,
-        "name": "Mrs. Johnson",
-        "subjects": ["Math", "English"]
-      },
-      {
-        "id": 102,
-        "name": "Mr. Smith",
-        "subjects": ["Science", "History"]
-      }
-    ],
-    "students": [
-      {
-        "id": 1001,
-        "name": "Ama Mensah",
-        "gender": "Female",
-        "guardianName": "Mrs. Grace Mensah",
-        "phoneNumber": "+233247890123",
-        "attendance": {
-          "January": [
-            {"date": "02 Jan", "status": "Present"},
-            {"date": "03 Jan", "status": "Present"},
-            {"date": "04 Jan", "status": "Absent"},
-            {"date": "05 Jan", "status": "Present"},
-            {"date": "06 Jan", "status": "Present"},
-            {"date": "09 Jan", "status": "Present"},
-            {"date": "10 Jan", "status": "Present"},
-            {"date": "11 Jan", "status": "Present"},
-            {"date": "12 Jan", "status": "Late"},
-            {"date": "13 Jan", "status": "Present"},
-            {"date": "16 Jan", "status": "Present"},
-            {"date": "17 Jan", "status": "Absent"},
-            {"date": "18 Jan", "status": "Present"},
-            {"date": "19 Jan", "status": "Present"},
-            {"date": "20 Jan", "status": "Present"},
-            {"date": "23 Jan", "status": "Present"},
-            {"date": "24 Jan", "status": "Present"},
-            {"date": "25 Jan", "status": "Present"},
-            {"date": "26 Jan", "status": "Late"},
-            {"date": "27 Jan", "status": "Present"},
-            {"date": "30 Jan", "status": "Present"},
-            {"date": "31 Jan", "status": "Present"}
-          ],
-          "February": [
-            {"date": "01 Feb", "status": "Present"},
-            {"date": "02 Feb", "status": "Present"},
-            {"date": "03 Feb", "status": "Late"},
-            {"date": "06 Feb", "status": "Present"},
-            {"date": "07 Feb", "status": "Present"},
-            {"date": "08 Feb", "status": "Absent"},
-            {"date": "09 Feb", "status": "Present"},
-            {"date": "10 Feb", "status": "Present"},
-            {"date": "13 Feb", "status": "Present"},
-            {"date": "14 Feb", "status": "Present"},
-            {"date": "15 Feb", "status": "Late"},
-            {"date": "16 Feb", "status": "Present"},
-            {"date": "17 Feb", "status": "Present"},
-            {"date": "20 Feb", "status": "Present"},
-            {"date": "21 Feb", "status": "Absent"},
-            {"date": "22 Feb", "status": "Present"},
-            {"date": "23 Feb", "status": "Present"},
-            {"date": "24 Feb", "status": "Present"},
-            {"date": "27 Feb", "status": "Present"},
-            {"date": "28 Feb", "status": "Late"}
-          ],
-          "March": [
-            {"date": "01 Mar", "status": "Present"},
-            {"date": "02 Mar", "status": "Present"},
-            {"date": "03 Mar", "status": "Present"},
-            {"date": "06 Mar", "status": "Absent"},
-            {"date": "07 Mar", "status": "Present"},
-            {"date": "08 Mar", "status": "Present"},
-            {"date": "09 Mar", "status": "Late"},
-            {"date": "10 Mar", "status": "Present"},
-            {"date": "13 Mar", "status": "Present"},
-            {"date": "14 Mar", "status": "Present"},
-            {"date": "15 Mar", "status": "Present"},
-            {"date": "16 Mar", "status": "Absent"},
-            {"date": "17 Mar", "status": "Present"},
-            {"date": "20 Mar", "status": "Present"},
-            {"date": "21 Mar", "status": "Late"},
-            {"date": "22 Mar", "status": "Present"},
-            {"date": "23 Mar", "status": "Present"},
-            {"date": "24 Mar", "status": "Present"},
-            {"date": "27 Mar", "status": "Present"},
-            {"date": "28 Mar", "status": "Absent"},
-            {"date": "29 Mar", "status": "Present"},
-            {"date": "30 Mar", "status": "Present"},
-            {"date": "31 Mar", "status": "Present"}
-          ]
-        }
-      },
-      {
-        "id": 1002,
-        "name": "Kwame Asante",
-        "gender": "Male",
-        "guardianName": "Mr. Kofi Asante",
-        "phoneNumber": "+233244567890",
-        "attendance": {
-          "January": [
-            {"date": "02 Jan", "status": "Present"},
-            {"date": "03 Jan", "status": "Present"},
-            {"date": "04 Jan", "status": "Present"},
-            {"date": "05 Jan", "status": "Late"},
-            {"date": "06 Jan", "status": "Present"},
-            {"date": "09 Jan", "status": "Absent"},
-            {"date": "10 Jan", "status": "Present"},
-            {"date": "11 Jan", "status": "Present"},
-            {"date": "12 Jan", "status": "Present"},
-            {"date": "13 Jan", "status": "Present"},
-            {"date": "16 Jan", "status": "Present"},
-            {"date": "17 Jan", "status": "Present"},
-            {"date": "18 Jan", "status": "Present"},
-            {"date": "19 Jan", "status": "Late"},
-            {"date": "20 Jan", "status": "Present"},
-            {"date": "23 Jan", "status": "Present"},
-            {"date": "24 Jan", "status": "Absent"},
-            {"date": "25 Jan", "status": "Present"},
-            {"date": "26 Jan", "status": "Present"},
-            {"date": "27 Jan", "status": "Present"},
-            {"date": "30 Jan", "status": "Present"},
-            {"date": "31 Jan", "status": "Present"}
-          ],
-          "February": [
-            {"date": "01 Feb", "status": "Present"},
-            {"date": "02 Feb", "status": "Late"},
-            {"date": "03 Feb", "status": "Present"},
-            {"date": "06 Feb", "status": "Present"},
-            {"date": "07 Feb", "status": "Present"},
-            {"date": "08 Feb", "status": "Present"},
-            {"date": "09 Feb", "status": "Absent"},
-            {"date": "10 Feb", "status": "Present"},
-            {"date": "13 Feb", "status": "Present"},
-            {"date": "14 Feb", "status": "Late"},
-            {"date": "15 Feb", "status": "Present"},
-            {"date": "16 Feb", "status": "Present"},
-            {"date": "17 Feb", "status": "Present"},
-            {"date": "20 Feb", "status": "Present"},
-            {"date": "21 Feb", "status": "Present"},
-            {"date": "22 Feb", "status": "Absent"},
-            {"date": "23 Feb", "status": "Present"},
-            {"date": "24 Feb", "status": "Present"},
-            {"date": "27 Feb", "status": "Late"},
-            {"date": "28 Feb", "status": "Present"}
-          ],
-          "March": [
-            {"date": "01 Mar", "status": "Present"},
-            {"date": "02 Mar", "status": "Absent"},
-            {"date": "03 Mar", "status": "Present"},
-            {"date": "06 Mar", "status": "Present"},
-            {"date": "07 Mar", "status": "Present"},
-            {"date": "08 Mar", "status": "Late"},
-            {"date": "09 Mar", "status": "Present"},
-            {"date": "10 Mar", "status": "Present"},
-            {"date": "13 Mar", "status": "Present"},
-            {"date": "14 Mar", "status": "Present"},
-            {"date": "15 Mar", "status": "Absent"},
-            {"date": "16 Mar", "status": "Present"},
-            {"date": "17 Mar", "status": "Present"},
-            {"date": "20 Mar", "status": "Late"},
-            {"date": "21 Mar", "status": "Present"},
-            {"date": "22 Mar", "status": "Present"},
-            {"date": "23 Mar", "status": "Present"},
-            {"date": "24 Mar", "status": "Present"},
-            {"date": "27 Mar", "status": "Absent"},
-            {"date": "28 Mar", "status": "Present"},
-            {"date": "29 Mar", "status": "Present"},
-            {"date": "30 Mar", "status": "Late"},
-            {"date": "31 Mar", "status": "Present"}
-          ]
+{
+  "classes": [
+    {
+      "class_id": "CLS09A",
+      "name": "Grade 9 - Section A",
+      "grade_level": 9,
+      "homeroom_teacher": "Robert Smith",
+      "teacher_id": "TCH001",
+      "academic_year": "2023-2024",
+      "student_count": 25,
+      "subjects": {
+        "MATH": {
+          "teacher": "Robert Smith",
+          "teacher_id": "TCH001",
+          "schedule": "Mon/Wed 9:00-10:00"
+        },
+        "SCI": {
+          "teacher": "Jennifer Williams",
+          "teacher_id": "TCH002",
+          "schedule": "Tue/Thu 9:00-10:00"
+        },
+        "ENG": {
+          "teacher": "Michael Brown",
+          "teacher_id": "TCH003",
+          "schedule": "Mon/Wed 10:30-11:30"
+        },
+        "HIST": {
+          "teacher": "Sarah Johnson",
+          "teacher_id": "TCH004",
+          "schedule": "Fri 10:00-11:30"
+        },
+        "PE": {
+          "teacher": "David Wilson",
+          "teacher_id": "TCH005",
+          "schedule": "Tue/Thu 14:00-15:00"
         }
       }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Class 1B",
-    "studentCount": 28,
-    "teachers": [
-      {
-        "id": 103,
-        "name": "Ms. Davis",
-        "subjects": ["Math", "Science", "English"]
-      }
-    ],
-    "students": [
-      {
-        "id": 1006,
-        "name": "Kofi Mensah",
-        "gender": "Male",
-        "guardianName": "Mr. Yaw Mensah",
-        "phoneNumber": "+233248901234",
-        "attendance": {
-          "January": [
-            {"date": "02 Jan", "status": "Present"},
-            {"date": "03 Jan", "status": "Present"},
-            {"date": "04 Jan", "status": "Absent"},
-            {"date": "05 Jan", "status": "Present"},
-            {"date": "06 Jan", "status": "Present"},
-            {"date": "09 Jan", "status": "Present"},
-            {"date": "10 Jan", "status": "Present"},
-            {"date": "11 Jan", "status": "Present"},
-            {"date": "12 Jan", "status": "Late"},
-            {"date": "13 Jan", "status": "Present"},
-            {"date": "16 Jan", "status": "Present"},
-            {"date": "17 Jan", "status": "Absent"},
-            {"date": "18 Jan", "status": "Present"},
-            {"date": "19 Jan", "status": "Present"},
-            {"date": "20 Jan", "status": "Present"},
-            {"date": "23 Jan", "status": "Present"},
-            {"date": "24 Jan", "status": "Present"},
-            {"date": "25 Jan", "status": "Present"},
-            {"date": "26 Jan", "status": "Late"},
-            {"date": "27 Jan", "status": "Present"},
-            {"date": "30 Jan", "status": "Present"},
-            {"date": "31 Jan", "status": "Present"}
-          ],
-          "February": [
-            {"date": "01 Feb", "status": "Present"},
-            {"date": "02 Feb", "status": "Present"},
-            {"date": "03 Feb", "status": "Absent"},
-            {"date": "06 Feb", "status": "Present"},
-            {"date": "07 Feb", "status": "Late"},
-            {"date": "08 Feb", "status": "Present"},
-            {"date": "09 Feb", "status": "Present"},
-            {"date": "10 Feb", "status": "Present"},
-            {"date": "13 Feb", "status": "Present"},
-            {"date": "14 Feb", "status": "Present"},
-            {"date": "15 Feb", "status": "Absent"},
-            {"date": "16 Feb", "status": "Present"},
-            {"date": "17 Feb", "status": "Present"},
-            {"date": "20 Feb", "status": "Late"},
-            {"date": "21 Feb", "status": "Present"},
-            {"date": "22 Feb", "status": "Present"},
-            {"date": "23 Feb", "status": "Present"},
-            {"date": "24 Feb", "status": "Present"},
-            {"date": "27 Feb", "status": "Present"},
-            {"date": "28 Feb", "status": "Absent"}
-          ],
-          "March": [
-            {"date": "01 Mar", "status": "Present"},
-            {"date": "02 Mar", "status": "Late"},
-            {"date": "03 Mar", "status": "Present"},
-            {"date": "06 Mar", "status": "Present"},
-            {"date": "07 Mar", "status": "Present"},
-            {"date": "08 Mar", "status": "Present"},
-            {"date": "09 Mar", "status": "Absent"},
-            {"date": "10 Mar", "status": "Present"},
-            {"date": "13 Mar", "status": "Present"},
-            {"date": "14 Mar", "status": "Late"},
-            {"date": "15 Mar", "status": "Present"},
-            {"date": "16 Mar", "status": "Present"},
-            {"date": "17 Mar", "status": "Present"},
-            {"date": "20 Mar", "status": "Present"},
-            {"date": "21 Mar", "status": "Absent"},
-            {"date": "22 Mar", "status": "Present"},
-            {"date": "23 Mar", "status": "Present"},
-            {"date": "24 Mar", "status": "Late"},
-            {"date": "27 Mar", "status": "Present"},
-            {"date": "28 Mar", "status": "Present"},
-            {"date": "29 Mar", "status": "Present"},
-            {"date": "30 Mar", "status": "Present"},
-            {"date": "31 Mar", "status": "Absent"}
-          ]
-        }
-      },
-      {
-        "id": 1007,
-        "name": "Abena Agyeman",
-        "gender": "Female",
-        "guardianName": "Mrs. Ama Agyeman",
-        "phoneNumber": "+233249012345",
-        "attendance": {
-          "January": [
-            {"date": "02 Jan", "status": "Present"},
-            {"date": "03 Jan", "status": "Present"},
-            {"date": "04 Jan", "status": "Present"},
-            {"date": "05 Jan", "status": "Late"},
-            {"date": "06 Jan", "status": "Present"},
-            {"date": "09 Jan", "status": "Absent"},
-            {"date": "10 Jan", "status": "Present"},
-            {"date": "11 Jan", "status": "Present"},
-            {"date": "12 Jan", "status": "Present"},
-            {"date": "13 Jan", "status": "Present"},
-            {"date": "16 Jan", "status": "Present"},
-            {"date": "17 Jan", "status": "Present"},
-            {"date": "18 Jan", "status": "Present"},
-            {"date": "19 Jan", "status": "Late"},
-            {"date": "20 Jan", "status": "Present"},
-            {"date": "23 Jan", "status": "Present"},
-            {"date": "24 Jan", "status": "Absent"},
-            {"date": "25 Jan", "status": "Present"},
-            {"date": "26 Jan", "status": "Present"},
-            {"date": "27 Jan", "status": "Present"},
-            {"date": "30 Jan", "status": "Present"},
-            {"date": "31 Jan", "status": "Present"}
-          ],
-          "February": [
-            {"date": "01 Feb", "status": "Present"},
-            {"date": "02 Feb", "status": "Absent"},
-            {"date": "03 Feb", "status": "Present"},
-            {"date": "06 Feb", "status": "Present"},
-            {"date": "07 Feb", "status": "Present"},
-            {"date": "08 Feb", "status": "Late"},
-            {"date": "09 Feb", "status": "Present"},
-            {"date": "10 Feb", "status": "Present"},
-            {"date": "13 Feb", "status": "Present"},
-            {"date": "14 Feb", "status": "Present"},
-            {"date": "15 Feb", "status": "Absent"},
-            {"date": "16 Feb", "status": "Present"},
-            {"date": "17 Feb", "status": "Present"},
-            {"date": "20 Feb", "status": "Present"},
-            {"date": "21 Feb", "status": "Late"},
-            {"date": "22 Feb", "status": "Present"},
-            {"date": "23 Feb", "status": "Present"},
-            {"date": "24 Feb", "status": "Present"},
-            {"date": "27 Feb", "status": "Present"},
-            {"date": "28 Feb", "status": "Absent"}
-          ],
-          "March": [
-            {"date": "01 Mar", "status": "Present"},
-            {"date": "02 Mar", "status": "Present"},
-            {"date": "03 Mar", "status": "Late"},
-            {"date": "06 Mar", "status": "Present"},
-            {"date": "07 Mar", "status": "Present"},
-            {"date": "08 Mar", "status": "Present"},
-            {"date": "09 Mar", "status": "Absent"},
-            {"date": "10 Mar", "status": "Present"},
-            {"date": "13 Mar", "status": "Present"},
-            {"date": "14 Mar", "status": "Present"},
-            {"date": "15 Mar", "status": "Late"},
-            {"date": "16 Mar", "status": "Present"},
-            {"date": "17 Mar", "status": "Present"},
-            {"date": "20 Mar", "status": "Present"},
-            {"date": "21 Mar", "status": "Present"},
-            {"date": "22 Mar", "status": "Absent"},
-            {"date": "23 Mar", "status": "Present"},
-            {"date": "24 Mar", "status": "Present"},
-            {"date": "27 Mar", "status": "Late"},
-            {"date": "28 Mar", "status": "Present"},
-            {"date": "29 Mar", "status": "Present"},
-            {"date": "30 Mar", "status": "Present"},
-            {"date": "31 Mar", "status": "Absent"}
-          ]
+    },
+    {
+      "class_id": "CLS09B",
+      "name": "Grade 9 - Section B",
+      "grade_level": 9,
+      "homeroom_teacher": "Jennifer Williams",
+      "teacher_id": "TCH002",
+      "academic_year": "2023-2024",
+      "student_count": 24,
+      "subjects": {
+        "MATH": {
+          "teacher": "Emily Davis",
+          "teacher_id": "TCH006",
+          "schedule": "Mon/Wed 10:30-11:30"
+        },
+        "SCI": {
+          "teacher": "Jennifer Williams",
+          "teacher_id": "TCH002",
+          "schedule": "Tue/Thu 10:30-11:30"
+        },
+        "ENG": {
+          "teacher": "Michael Brown",
+          "teacher_id": "TCH003",
+          "schedule": "Mon/Wed 9:00-10:00"
+        },
+        "HIST": {
+          "teacher": "Sarah Johnson",
+          "teacher_id": "TCH004",
+          "schedule": "Fri 9:00-10:30"
+        },
+        "PE": {
+          "teacher": "David Wilson",
+          "teacher_id": "TCH005",
+          "schedule": "Tue/Thu 15:00-16:00"
         }
       }
-    ]
-  }
-]
+    },
+    {
+      "class_id": "CLS10A",
+      "name": "Grade 10 - Section A",
+      "grade_level": 10,
+      "homeroom_teacher": "Michael Brown",
+      "teacher_id": "TCH003",
+      "academic_year": "2023-2024",
+      "student_count": 26,
+      "subjects": {
+        "MATH": {
+          "teacher": "Robert Smith",
+          "teacher_id": "TCH001",
+          "schedule": "Mon/Wed 13:00-14:00"
+        },
+        "PHYS": {
+          "teacher": "Emily Davis",
+          "teacher_id": "TCH006",
+          "schedule": "Tue/Thu 13:00-14:00"
+        },
+        "ENG": {
+          "teacher": "Michael Brown",
+          "teacher_id": "TCH003",
+          "schedule": "Mon/Wed 14:30-15:30"
+        },
+        "HIST": {
+          "teacher": "Sarah Johnson",
+          "teacher_id": "TCH004",
+          "schedule": "Fri 13:00-14:30"
+        },
+        "PE": {
+          "teacher": "David Wilson",
+          "teacher_id": "TCH005",
+          "schedule": "Tue/Thu 10:30-11:30"
+        }
+      }
+    },
+    {
+      "class_id": "CLS10B",
+      "name": "Grade 10 - Section B",
+      "grade_level": 10,
+      "homeroom_teacher": "Sarah Johnson",
+      "teacher_id": "TCH004",
+      "academic_year": "2023-2024",
+      "student_count": 23,
+      "subjects": {
+        "MATH": {
+          "teacher": "Emily Davis",
+          "teacher_id": "TCH006",
+          "schedule": "Mon/Wed 14:30-15:30"
+        },
+        "CHEM": {
+          "teacher": "James Martinez",
+          "teacher_id": "TCH007",
+          "schedule": "Tue/Thu 14:30-15:30"
+        },
+        "ENG": {
+          "teacher": "Michael Brown",
+          "teacher_id": "TCH003",
+          "schedule": "Mon/Wed 13:00-14:00"
+        },
+        "HIST": {
+          "teacher": "Sarah Johnson",
+          "teacher_id": "TCH004",
+          "schedule": "Fri 14:30-16:00"
+        },
+        "PE": {
+          "teacher": "David Wilson",
+          "teacher_id": "TCH005",
+          "schedule": "Tue/Thu 9:00-10:00"
+        }
+      }
+    },
+    {
+      "class_id": "CLS11A",
+      "name": "Grade 11 - Science Stream",
+      "grade_level": 11,
+      "homeroom_teacher": "Emily Davis",
+      "teacher_id": "TCH006",
+      "academic_year": "2023-2024",
+      "student_count": 20,
+      "subjects": {
+        "MATH": {
+          "teacher": "Robert Smith",
+          "teacher_id": "TCH001",
+          "schedule": "Mon/Wed 8:00-9:30"
+        },
+        "PHYS": {
+          "teacher": "Emily Davis",
+          "teacher_id": "TCH006",
+          "schedule": "Tue/Thu 8:00-9:30"
+        },
+        "CHEM": {
+          "teacher": "James Martinez",
+          "teacher_id": "TCH007",
+          "schedule": "Mon/Wed 10:00-11:30"
+        },
+        "ENG": {
+          "teacher": "Michael Brown",
+          "teacher_id": "TCH003",
+          "schedule": "Fri 8:00-9:30"
+        },
+        "PE": {
+          "teacher": "David Wilson",
+          "teacher_id": "TCH005",
+          "schedule": "Tue/Thu 15:00-16:30"
+        }
+      }
+    },
+    {
+      "class_id": "CLS11B",
+      "name": "Grade 11 - Arts Stream",
+      "grade_level": 11,
+      "homeroom_teacher": "James Martinez",
+      "teacher_id": "TCH007",
+      "academic_year": "2023-2024",
+      "student_count": 18,
+      "subjects": {
+        "HIST": {
+          "teacher": "Sarah Johnson",
+          "teacher_id": "TCH004",
+          "schedule": "Mon/Wed 8:00-9:30"
+        },
+        "ART": {
+          "teacher": "Olivia Anderson",
+          "teacher_id": "TCH008",
+          "schedule": "Tue/Thu 8:00-10:00"
+        },
+        "ENG": {
+          "teacher": "Michael Brown",
+          "teacher_id": "TCH003",
+          "schedule": "Mon/Wed 10:00-11:30"
+        },
+        "MATH": {
+          "teacher": "Emily Davis",
+          "teacher_id": "TCH006",
+          "schedule": "Fri 8:00-9:30"
+        },
+        "PE": {
+          "teacher": "David Wilson",
+          "teacher_id": "TCH005",
+          "schedule": "Tue/Thu 13:00-14:00"
+        }
+      }
+    },
+    {
+      "class_id": "CLS12A",
+      "name": "Grade 12 - Science Stream",
+      "grade_level": 12,
+      "homeroom_teacher": "Emily Davis",
+      "teacher_id": "TCH006",
+      "academic_year": "2023-2024",
+      "student_count": 22,
+      "subjects": {
+        "MATH": {
+          "teacher": "Robert Smith",
+          "teacher_id": "TCH001",
+          "schedule": "Mon/Wed 13:00-14:30"
+        },
+        "PHYS": {
+          "teacher": "Emily Davis",
+          "teacher_id": "TCH006",
+          "schedule": "Tue/Thu 13:00-14:30"
+        },
+        "CHEM": {
+          "teacher": "James Martinez",
+          "teacher_id": "TCH007",
+          "schedule": "Mon/Wed 15:00-16:30"
+        },
+        "ENG": {
+          "teacher": "Michael Brown",
+          "teacher_id": "TCH003",
+          "schedule": "Fri 13:00-14:30"
+        }
+      }
+    },
+    {
+      "class_id": "CLS12B",
+      "name": "Grade 12 - Arts Stream",
+      "grade_level": 12,
+      "homeroom_teacher": "Sarah Johnson",
+      "teacher_id": "TCH004",
+      "academic_year": "2023-2024",
+      "student_count": 19,
+      "subjects": {
+        "HIST": {
+          "teacher": "Sarah Johnson",
+          "teacher_id": "TCH004",
+          "schedule": "Mon/Wed 13:00-14:30"
+        },
+        "ART": {
+          "teacher": "Olivia Anderson",
+          "teacher_id": "TCH008",
+          "schedule": "Tue/Thu 13:00-15:00"
+        },
+        "ENG": {
+          "teacher": "Michael Brown",
+          "teacher_id": "TCH003",
+          "schedule": "Mon/Wed 15:00-16:30"
+        },
+        "POL_SCI": {
+          "teacher": "Sarah Johnson",
+          "teacher_id": "TCH004",
+          "schedule": "Fri 13:00-14:30"
+        }
+      }
+    }
+  ]
+}

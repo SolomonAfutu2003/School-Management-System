@@ -12,11 +12,6 @@ const MyClasses = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [search, setSearch] = useState("");
 
-  // Filter based on search
-  const searchData = classes.filter((cls) =>
-    cls.name.toLowerCase().includes(search.toLowerCase())
-  );
-
   return (
     <div className='m-4 space-y-5'>
       {/* Top Section */}
@@ -45,37 +40,37 @@ const MyClasses = () => {
 
       {/* Classes List */}
       <section className='border rounded-2xl border-[#EAECF0] p-5 space-y-5'>
-        <h3>Classes</h3>
+        <h3 className='text-[#2D2D31] text-2xl font-bold'>Classes</h3>
 
         {/* Header Row */}
         <div className='p-5 bg-[#F1F4F9]'>
           <ul className='grid grid-cols-8 gap-4'>
-            <li className='col-span-2'>Name</li>
-            <li className='col-span-2'>Number of Pupils</li>
-            <li className='col-span-2'>Teachers</li>
-            <li className='col-start-8'>Action</li>
+            <li className='col-span-2 text-[#242525] font-bold'>Name</li>
+            <li className='col-span-2 text-[#242525] font-bold'>Number of Pupils</li>
+            <li className='col-span-2 text-[#242525] font-bold'>Teachers</li>
+            <li className='col-start-8 text-[#242525] font-bold'>Action</li>
           </ul>
         </div>
 
         {/* Class Data Rows */}
-        {searchData.map((cls) => (
-          <div key={cls.id}>
+        {classes.classes.map((cls) => (
+          <div key={cls.class_id}>
             <ul className='grid grid-cols-8 gap-4 text-[17px] p-5'>
               <li className='col-span-2'>{cls.name}</li>
-              <li className='col-span-2'>{cls.studentCount}</li>
-              <li className='col-span-2'>{cls.teachers.map((t) => t.name).join(", ")}</li>
+              <li className='col-span-2'>{cls.student_count}</li>
+              <li className='col-span-2'>{cls.homeroom_teacher}</li>
               <li className='col-start-8 relative'>
                 <Button
                   icon={<SlOptionsVertical />}
                   onClick={() =>
-                    setActiveDropdown((prev) => (prev === cls.id ? null : cls.id))
+                    setActiveDropdown((prev) => (prev === cls.class_id ? null : cls.class_id))
                   }
                 />
-                {activeDropdown === cls.id && (
-                  <div className='w-60 bg-white absolute right-0 z-20 shadow-lg shadow-black'>
+                {activeDropdown === cls.class_id && (
+                  <div className='w-60 bg-white absolute right-0 z-20 shadow-2xl shadow-[#10182886]'>
                     <div className="flex flex-col justify-between">
                       <LinkBtn
-                        to={`/view-detail/${cls.id}`}
+                        to={`/view-profile/${cls.class_id}`}
                         icon={<IoEyeOutline className='w-5 h-5' />}
                         text={"View Detail"}
                         className={"py-3 px-4 text-left text-gray-600 flex items-center gap-2"}

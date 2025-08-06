@@ -12,7 +12,7 @@ const Assignments = () => {
   return (
     <div className='m-4 space-y-5'>
       <section className='flex justify-between'>
-        <LinksBtn to="/my-subjects" text={"Back"} className={"text-base text-gray-600 font-medium flex gap-2 items-center"} icon={<FaArrowLeft className=' w-5 h-5' />} />
+        <LinksBtn to="/my-subjects" text={"Back"} className={"border-0 text-base text-gray-600 font-medium flex gap-2 items-center"} icon={<FaArrowLeft className=' w-5 h-5' />} />
         <Button text={"Post Assignment"} className={"bg-nav text-white px-10 py-2 rounded-lg"} />
       </section>
 
