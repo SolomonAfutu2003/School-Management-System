@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Students from "../../data/Students.json";
 import Teachers from "../../data/Teachers.json";
+import GuardiansData from "../../data/Guardians.json";
 import Profile from "../../assets/images/e5009c87a1c6691336f8e40ae3133dd6b70357d7.jpg"
 import { useParams } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
@@ -19,6 +20,7 @@ const AdminViewProfile = () => {
     const isStudentView = !!Students.students.find((student) => student.student_id === id);
     const studentData = Students.students.find((student) => student.student_id === id);
     const teacherData = Teachers.teachers.find((teacher) => teacher.teacher_id === id);
+    const guardianData = GuardiansData.guardians.find((guardian) => guardian.guardian_id === id);
 
     const [isSuspended, setIsSuspended] = useState(false);
 
@@ -26,31 +28,46 @@ const AdminViewProfile = () => {
         setIsSuspended((prev) => !prev);
     };
 
-    if (!studentData && !teacherData) {
-        return <div className="p-4">No student or teacher found with this ID</div>;
+    if (!studentData && !teacherData && !guardianData) {
+        return <div className="p-4">No student, teacher, or guardian found with this ID</div>;
     }
 
     return (
         <div className="m-5 space-y-10">
             <section className='flex justify-between items-center'>
                 <LinksBtn
-                    to={isStudentView ? "/admin/students" : "/admin/teachers"}
+                    to={
+                        isStudentView
+                            ? "/admin/students"
+                            : guardianData
+                                ? "/admin/guardians"
+                                : "/admin/teachers"
+                    }
                     text="Back"
                     className="text-base text-gray-600 font-medium flex gap-2 items-center"
                     icon={<FaArrowLeft className='w-5 h-5' />}
                 />
                 <div className='flex gap-5'>
-                    <Button
-                        text={isSuspended ? "Suspend" : "Remove Suspension"}
-                        onClick={handleClick}
-                        className="text-base text-[#B42318] border border-[#B42318] font-medium px-8 py-2 rounded-sm"
-                    />
+                    {(teacherData || studentData) && (
+                        <Button
+                            text={isSuspended ? "Remove Suspension" : "Suspend"}
+                            onClick={handleClick}
+                            className="text-base text-[#B42318] border border-[#B42318] font-medium px-8 py-2 rounded-sm"
+                        />
+                    )}
+
                     <LinksBtn
                         icon={<FiEdit className='w-5 h-5' />}
-                        to={`/admin/edit-detail/${isStudentView ? studentData.student_id : teacherData.teacher_id}`}
+                        to={`/admin/edit-detail/${isStudentView
+                            ? studentData.student_id
+                            : guardianData
+                                ? guardianData.guardian_id
+                                : teacherData.teacher_id
+                            }`}
                         text={"Edit Detail"}
                         className={"py-2 px-5 text-left bg-nav text-white flex items-center gap-2 rounded-sm"}
                     />
+
                 </div>
             </section>
 
@@ -223,6 +240,180 @@ const AdminViewProfile = () => {
                             <div>
                                 <h2 className="text-sm font-normal text-gray-400">ADDRESS</h2>
                                 <p className="text-lg font-medium font-text">{studentData.address}</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>}
+
+            {guardianData && <section className='space-y-5'>
+                <div>
+                    <h2 className="font-semibold">STUDENT INFO</h2>
+                    <hr className="my-4 border-gray-300" />
+                    <div className='flex justify-between items-center'>
+                        <section>
+                            <div className="w-[200px] h-[200px] rounded-full overflow-hidden">
+                                <img className="w-full h-full object-cover" src={Profile} alt="Profile" />
+                            </div>
+                        </section>
+                        <section className='grid grid-cols-5 gap-4 px-8'>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">FIRST NAME</h2>
+                                <p className="text-lg font-medium font-text">{guardianData.first_name}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">LAST NAME</h2>
+                                <p className="text-lg font-medium font-text">{guardianData.last_name}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">OTHER NAME(S)</h2>
+                                <p className="text-lg font-medium font-text">{guardianData.other_names ? guardianData.other_names : "None"}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">ID</h2>
+                                <p className="text-lg font-medium font-text">{guardianData.guardian_id}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">ADDRESS</h2>
+                                <p className="text-lg font-medium font-text">{guardianData.address}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">GENDER</h2>
+                                <p className="text-lg font-medium font-text">{guardianData.gender}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">CLASS</h2>
+                                <p className="text-lg font-medium font-text">{guardianData.class}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">DATE OF BIRTH</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">RELIGION</h2>
+                                <p className="text-lg font-medium font-text">{guardianData.religion ? guardianData.religion : "None"}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">ADMISSION DATE</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">ATTENDANCE</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">HEIGHT (CM)</h2>
+                                <p className="text-lg font-medium font-text">{guardianData.height ? guardianData.height : "_"}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">WEIGHT (KG)</h2>
+                                <p className="text-lg font-medium font-text">{guardianData.weight ? guardianData.weight : "_"}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">REPORT CARD</h2>
+                                <LinksBtn
+                                    to={"#"}
+                                    text={"View"}
+                                    className={"text-lg font-text text-nav border-b border-nav font-medium"}
+                                />
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div>
+                    <h2 className="font-semibold">GUARDING 1 INFO</h2>
+                    <hr className="my-4 border-gray-300" />
+                    <div className='flex justify-between '>
+                        <section className='flex flex-row items-start'>
+                            <div className='w-20 h-20 rounded-full overflow-hidden'>
+                                <img className='w-full h-full object-cover' src={Profile} alt="" />
+                            </div>
+                        </section>
+                        <section className='grid grid-cols-6 gap-4 px-10'>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">FIRST NAME</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">LAST NAME</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">OTHER NAME(S)</h2>
+                                <p className="text-lg font-medium font-text">{"None"}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">RELATION</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">PHONE NUMBER</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">EMAIL ADDRESS</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">RELIGION</h2>
+                                <p className="text-lg font-medium font-text">{"None"}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">ADMISSION DATE</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">ADDRESS</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div>
+                    <h2 className="font-semibold">GUARDING 2 INFO</h2>
+                    <hr className="my-4 border-gray-300" />
+                    <div className='flex justify-between '>
+                        <section className='flex flex-row items-start'>
+                            <div className='w-20 h-20 rounded-full overflow-hidden'>
+                                <img className='w-full h-full object-cover' src={Profile} alt="" />
+                            </div>
+                        </section>
+                        <section className='grid grid-cols-6 gap-4 px-10'>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">FIRST NAME</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">LAST NAME</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">OTHER NAME(S)</h2>
+                                <p className="text-lg font-medium font-text">{"None"}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">RELATION</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">PHONE NUMBER</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">EMAIL ADDRESS</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">RELIGION</h2>
+                                <p className="text-lg font-medium font-text">{"None"}</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">ADMISSION DATE</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
+                            </div>
+                            <div>
+                                <h2 className="text-sm font-normal text-gray-400">ADDRESS</h2>
+                                <p className="text-lg font-medium font-text">{ }</p>
                             </div>
                         </section>
                     </div>

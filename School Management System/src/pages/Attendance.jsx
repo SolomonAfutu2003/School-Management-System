@@ -87,10 +87,10 @@ const Attendance = () => {
           {/* Table Header with Month Controls */}
           <div className="flex flex-col items-end">
             <div className="">
-              <div className=" border border-gray-200 text-center px-[371px] py-3">
+              <div className=" border border-gray-200 text-center px-[372px] py-3">
                 <span className="mr-2 text-sm font-medium text-gray-600">Month</span>
               </div>
-              <div className="border border-t-0 border-b-0 border-gray-200 text-center px-[371px] py-3">
+              <div className="border border-t-0 border-b-0 border-gray-200 text-center px-[372px] py-3">
                 <span className="text-blue-800 font-medium">September 2023</span>
               </div>
             </div>
@@ -128,21 +128,21 @@ const Attendance = () => {
                     {Array.from({ length: 30 }, (_, i) => {
                       const day = (i + 1).toString().padStart(2, '0');
                       return (
-                        <th key={day} className="px-3 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        <th key={day} className="px-3 py-2 border-r border-r-gray-200 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                           {day}
                         </th>
                       );
                     })}
                   </tr>
                 </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
+                <tbody className="bg-white divide-y  divide-gray-200">
                   {AttendancesData.attendance_records.map((student) => {
                     return (
                       <tr key={student.student_id} className="hover:bg-gray-50">
                         {Object.entries(student.monthly_attendance["September-2023"]).map(([day, status]) => (
                           <td
                             key={`${student.student_id}-${day}`}
-                            className="px-2 py-4 whitespace-nowrap text-sm text-center"
+                            className="px-2 py-4 border-r border-r-gray-200 whitespace-nowrap text-sm text-center"
                           >
                             {status !== 'weekend' && (
                               <div className="flex items-center justify-center">

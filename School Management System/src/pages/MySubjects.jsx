@@ -5,6 +5,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import { LuClipboardPenLine } from "react-icons/lu";
 import { LuClipboardList } from "react-icons/lu";
 import { BsPatchQuestion } from "react-icons/bs";
+import { IoMdClose } from "react-icons/io";
 import { HiMenu } from "react-icons/hi";
 import { HiMiniSquares2X2 } from "react-icons/hi2";
 import { SlOptionsVertical } from "react-icons/sl";
@@ -130,7 +131,7 @@ const MySubjects = () => {
                           />
                           <hr className='border border-gray-300' />
                           <Button
-                            icon={<FiPlus className='w-5 h-5' />}
+                            icon={<IoMdClose className='w-5 h-5' />}
                             text={"Delete"}
                             className={"py-3 px-4 text-left text-red-600 flex items-center gap-2"}
                           />

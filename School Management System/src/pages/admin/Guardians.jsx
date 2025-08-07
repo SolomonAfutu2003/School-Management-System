@@ -92,7 +92,7 @@ const Guardians = () => {
 
       {/* Students Table */}
       <section className='border rounded-2xl border-[#EAECF0] p-5 space-y-5'>
-        <h3 className='text-2xl font-semibold'>Teachers</h3>
+        <h3 className='text-2xl font-semibold'>Parents</h3>
 
         {/* Header Row */}
         <div className='p-5 bg-[#F1F4F9]'>
