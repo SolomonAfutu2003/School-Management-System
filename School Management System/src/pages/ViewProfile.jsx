@@ -38,51 +38,51 @@ const ViewProfile = () => {
                 <div className="grid grid-cols-5 gap-4">
                     <div>
                         <h3 className="text-sm font-normal text-gray-400">CLASS NAME</h3>
-                        <p className="text-lg font-medium font-text">{classData.name}</p>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.name}</p>
                     </div>
                     <div>
-                        <h3 className="text-sm font-normal text-gray-400">NUMBER OF PUPILS</h3>
-                        <p className="text-lg font-medium font-text">{classData.student_count}</p>
+                        <h3 className="text-sm font-normal text-gray-400">CLASS MASTER</h3>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.homeroom_teacher}</p>
                     </div>
                     <div>
-                        <h3 className="text-sm font-normal text-gray-400">HOMEROOM TEACHER</h3>
-                        <p className="text-lg font-medium font-text">{classData.homeroom_teacher}</p>
+                        <h3 className="text-sm font-normal text-gray-400">ENGLISH TEACHER</h3>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.homeroom_teacher}</p>
                     </div>
                     <div>
-                        <h3 className="text-sm font-normal text-gray-400">CLASS ID</h3>
-                        <p className="text-lg font-medium font-text">{classData.class_id}</p>
+                        <h3 className="text-sm font-normal text-gray-400">MATHEMATICS TEACHER</h3>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.homeroom_teacher}</p>
                     </div>
                     <div>
-                        <h3 className="text-sm font-normal text-gray-400">CLASS ID</h3>
-                        <p className="text-lg font-medium font-text">{classData.homeroom_teacher}</p>
+                        <h3 className="text-sm font-normal text-gray-400">SOCIAL STUDIES TEACHER</h3>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.homeroom_teacher}</p>
                     </div>
                     <div>
-                        <h3 className="text-sm font-normal text-gray-400">CLASS ID</h3>
-                        <p className="text-lg font-medium font-text">{classData.homeroom_teacher}</p>
+                        <h3 className="text-sm font-normal text-gray-400">RME TEACHER</h3>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.homeroom_teacher}</p>
                     </div>
                     <div>
-                        <h3 className="text-sm font-normal text-gray-400">CLASS ID</h3>
-                        <p className="text-lg font-medium font-text">{classData.homeroom_teacher}</p>
+                        <h3 className="text-sm font-normal text-gray-400">TWI TEACHER</h3>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.homeroom_teacher}</p>
                     </div>
                     <div>
-                        <h3 className="text-sm font-normal text-gray-400">CLASS ID</h3>
-                        <p className="text-lg font-medium font-text">{classData.homeroom_teacher}</p>
+                        <h3 className="text-sm font-normal text-gray-400">GA TEACHER</h3>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.homeroom_teacher}</p>
                     </div>
                     <div>
-                        <h3 className="text-sm font-normal text-gray-400">CLASS ID</h3>
-                        <p className="text-lg font-medium font-text">{classData.homeroom_teacher}</p>
+                        <h3 className="text-sm font-normal text-gray-400">PRE-TECH TEACHER</h3>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.homeroom_teacher}</p>
                     </div>
                     <div>
-                        <h3 className="text-sm font-normal text-gray-400">CLASS ID</h3>
-                        <p className="text-lg font-medium font-text">{classData.homeroom_teacher}</p>
+                        <h3 className="text-sm font-normal text-gray-400">HOME-ECONOMICS TEACHER</h3>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.homeroom_teacher}</p>
                     </div>
                     <div>
-                        <h3 className="text-sm font-normal text-gray-400">CLASS ID</h3>
-                        <p className="text-lg font-medium font-text">{classData.homeroom_teacher}</p>
+                        <h3 className="text-sm font-normal text-gray-400">VISUAL ART TEACHER</h3>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.homeroom_teacher}</p>
                     </div>
                     <div>
-                        <h3 className="text-sm font-normal text-gray-400">CLASS ID</h3>
-                        <p className="text-lg font-medium font-text">{classData.homeroom_teacher}</p>
+                        <h3 className="text-sm font-normal text-gray-400">FRENCH TEACHER</h3>
+                        <p className="text-lg font-medium font-text text-nav underline">{classData.homeroom_teacher}</p>
                     </div>
                 </div>
             </div>
