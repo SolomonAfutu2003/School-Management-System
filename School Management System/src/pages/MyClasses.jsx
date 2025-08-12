@@ -31,7 +31,8 @@ const MyClasses = () => {
           </div>
           <VscSettings className='w-10 h-10 p-2 rotate-90 rounded-sm border border-gray-400' />
         </div>
-        <Button
+        <LinkBtn
+          to="/view-table"
           icon={<IoCalendarOutline className='w-5 h-5' />}
           text={"View Timetable"}
           className={"bg-nav text-white px-3 py-2 rounded-lg flex items-center gap-1"}

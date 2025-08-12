@@ -1,0 +1,116 @@
+{
+    "administrators": [
+      {
+        "admin_id": "ADM001",
+        "first_name": "Sarah",
+        "last_name": "Johnson",
+        "email": "s.johnson@school.edu",
+        "phone": "(555) 0100",
+        "role": "Principal",
+        "permissions": [
+          "dashboard",
+          "students",
+          "teachers",
+          "attendance",
+          "grades",
+          "timetable",
+          "finance",
+          "reports",
+          "settings"
+        ],
+        "last_login": "2023-11-15T08:42:23Z",
+        "account_status": "active"
+      },
+      {
+        "admin_id": "ADM002",
+        "first_name": "Michael",
+        "last_name": "Brown",
+        "email": "m.brown@school.edu",
+        "phone": "(555) 0101",
+        "role": "Vice Principal (Academics)",
+        "permissions": [
+          "dashboard",
+          "students",
+          "teachers",
+          "attendance",
+          "grades",
+          "timetable",
+          "reports"
+        ],
+        "last_login": "2023-11-14T14:30:10Z",
+        "account_status": "active"
+      },
+      {
+        "admin_id": "ADM003",
+        "first_name": "Emily",
+        "last_name": "Davis",
+        "email": "e.davis@school.edu",
+        "phone": "(555) 0102",
+        "role": "Registrar",
+        "permissions": [
+          "dashboard",
+          "students",
+          "attendance",
+          "grades"
+        ],
+        "last_login": "2023-11-15T09:15:45Z",
+        "account_status": "active"
+      },
+      {
+        "admin_id": "ADM004",
+        "first_name": "David",
+        "last_name": "Wilson",
+        "email": "d.wilson@school.edu",
+        "phone": "(555) 0103",
+        "role": "Finance Administrator",
+        "permissions": [
+          "dashboard",
+          "finance",
+          "reports"
+        ],
+        "last_login": "2023-11-13T11:20:30Z",
+        "account_status": "active"
+      },
+      {
+        "admin_id": "ADM005",
+        "first_name": "Olivia",
+        "last_name": "Anderson",
+        "email": "o.anderson@school.edu",
+        "phone": "(555) 0104",
+        "role": "IT Administrator",
+        "permissions": [
+          "dashboard",
+          "settings",
+          "system_logs"
+        ],
+        "last_login": "2023-11-15T10:05:12Z",
+        "account_status": "active"
+      }
+    ],
+    "available_permissions": [
+      "dashboard",
+      "students",
+      "teachers",
+      "attendance",
+      "grades",
+      "timetable",
+      "finance",
+      "reports",
+      "settings",
+      "system_logs"
+    ],
+    "login_history": [
+      {
+        "admin_id": "ADM001",
+        "timestamp": "2023-11-15T08:42:23Z",
+        "ip_address": "192.168.1.100",
+        "device": "Desktop Chrome"
+      },
+      {
+        "admin_id": "ADM002",
+        "timestamp": "2023-11-14T14:30:10Z",
+        "ip_address": "192.168.1.101",
+        "device": "Mac Safari"
+      }
+    ]
+  }

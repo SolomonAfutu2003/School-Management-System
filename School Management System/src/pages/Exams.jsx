@@ -8,12 +8,12 @@ import { HiMiniSquares2X2 } from "react-icons/hi2";
 import { SlOptionsVertical } from "react-icons/sl";
 import { IoMenu } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
-import Exams from "../data/Exam.json"
+import ExamsData from "../data/Exam.json"
 // import LinksBtn from '../components/LinksBtn';
 import Button from '../components/Button';
 
 
-const MySubjects = () => {
+const Exams = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [reorderMenu, setReorderMenu] = useState(false)
   const [viewMode, setViewMode] = useState("list")
@@ -53,7 +53,7 @@ const MySubjects = () => {
               className="border border-gray-400 rounded-sm p-2 w-full"
             >
               <option value="">Select subject</option>
-              {Exams.exams.map((exam) => (
+              {ExamsData.exams.map((exam) => (
                 <option key={exam.id} value={exam.subject}>
                   {exam.subject}
                 </option>
@@ -69,7 +69,7 @@ const MySubjects = () => {
               className="border border-gray-400 rounded-sm p-2 w-full"
             >
               <option value="">Select exam type</option>
-              {Exams.exams.map((exam) => (
+              {ExamsData.exams.map((exam) => (
                 <option key={exam.id} value={exam.examType}>
                   {exam.examType}
                 </option>
@@ -158,7 +158,7 @@ const MySubjects = () => {
                 </ul>
               </div>
 
-              {Exams.exams.map((exam) => (
+              {ExamsData.exams.map((exam) => (
                 <ul className='grid grid-cols-14 gap-4 text-[17px] p-5' key={exam.id}>
                   <li className='col-span-3 text-[#242525] font-semibold'>
                     {exam.subject}
@@ -200,7 +200,7 @@ const MySubjects = () => {
               <FullCalendar
                 plugins={[timeGridPlugin, dayGridPlugin]}
                 height={600}
-                events={Exams.exams.map(exam => ({
+                events={ExamsData.exams.map(exam => ({
                   title: `${exam.subject} (${exam.examType})`,
                   start: `${exam.date}T${exam.startTime}`,
                   end: calculateEndTime(exam.date, exam.startTime, exam.duration),
@@ -239,7 +239,7 @@ const MySubjects = () => {
                         className="border border-gray-400 rounded-sm p-2 w-full"
                       >
                         <option value="">Select subject</option>
-                        {Exams.exams.map((exam) => (
+                        {ExamsData.exams.map((exam) => (
                           <option key={exam.id} value={exam.subject}>
                             {exam.subject}
                           </option>
@@ -255,7 +255,7 @@ const MySubjects = () => {
                         className="border border-gray-400 rounded-sm p-2 w-full"
                       >
                         <option value="">Select exam type</option>
-                        {Exams.exams.map((exam) => (
+                        {ExamsData.exams.map((exam) => (
                           <option key={exam.id} value={exam.examType}>
                             {exam.examType}
                           </option>
@@ -315,4 +315,4 @@ const MySubjects = () => {
   )
 }
 
-export default MySubjects
+export default Exams

@@ -9,8 +9,10 @@ import { SlOptionsVertical } from "react-icons/sl";
 import { GoDotFill } from "react-icons/go";
 import { FaArrowRight } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
+import { BsChatQuote } from "react-icons/bs";
 import { VscSettings } from "react-icons/vsc";
 import { CiStar } from "react-icons/ci";
+import { IoIosClose } from "react-icons/io";
 import Button from '../components/Button';
 import LinksBtn from "../components/LinksBtn"
 import Grades from "../data/Grades.json"
@@ -30,6 +32,7 @@ import Day from '../components/Day';
 
 const Dashboard = () => {
     const [randomQuote, setRandomQuote] = useState(quotes.quotes[0])
+    const [closeQuote, setCloseQuote] = useState(false)
 
     const subjectColors = {
         "Mathematics": "#3e95cd",
@@ -43,7 +46,7 @@ const Dashboard = () => {
         'border-l-green-400',
         'border-l-blue-300',
         'border-l-amber-400'
-      ];
+    ];
 
     const studentsData = Students.students;
 
@@ -173,12 +176,16 @@ const Dashboard = () => {
 
     return (
         <div className='m-4 flex flex-col gap-9'>
-            <section className='bg-[#F4EBFF] border-2 border-[#EDDFFF] flex items-center rounded-lg px-10 py-5'>
-                <div className='flex flex-col'>
-                    <h2 className='text-sm font-bold text-nav'>"{randomQuote.text}"</h2>
-                    <h3 className='text-sm font-normal text-nav'>- {randomQuote.author}</h3>
+            {!closeQuote && <section className='bg-[#F4EBFF] border-2 border-[#EDDFFF] flex justify-between items-center rounded-lg px-10 py-4'>
+                <div className='flex items-center gap-4'>
+                    <BsChatQuote className='w-7.5 h-7.5 text-nav' />
+                    <div className='flex flex-col'>
+                        <h2 className='text-sm font-bold text-nav'>"{randomQuote.text}"</h2>
+                        <h3 className='text-sm font-normal text-nav'>- {randomQuote.author}</h3>
+                    </div>
                 </div>
-            </section>
+                <Button icon={<IoIosClose className='w-7.5 h-7.5 text-nav' />} onClick={() => setCloseQuote(true)} />
+            </section>}
 
             <section className='grid grid-cols-3 gap-6'>
                 <div className='bg-white flex justify-between items-center border-2 border-[#EDDFFF] px-4 py-5 rounded-lg'>
@@ -188,10 +195,10 @@ const Dashboard = () => {
                     <div className='flex flex-col items-end'>
                         <h3 className='text-xs text-[#848199] font-medium font-text'>MY STUDENTS</h3>
                         <div className='flex justify-center items-center gap-1'>
-                            <div className='px-3 py-2 bg-[#D1FADF] rounded-lg'>
+                            <div className='px-3.5 py-2 bg-[#D1FADF] border border-[#A6F4C5] rounded-lg'>
                                 <IoMdArrowRoundUp className='w-2.5 h-2.5 text-[#027A48]' />
                             </div>
-                            <span className='text-[28px]'>50</span>
+                            <span className='text-[28px] text-[#344054] font-bold'>50</span>
                         </div>
                     </div>
                 </div>
@@ -201,8 +208,8 @@ const Dashboard = () => {
                     </div>
                     <div className='flex flex-col items-end'>
                         <h3 className='text-xs text-[#848199] font-medium font-text'>MY CLASSES</h3>
-                        <div className='flex justify-center items-center gap-1'>
-                            <span className='text-[28px]'>50</span>
+                        <div className='flex gap-1'>
+                            <span className='text-[28px] text-[#344054] font-bold'>50</span>
                         </div>
                     </div>
                 </div>
@@ -213,10 +220,10 @@ const Dashboard = () => {
                     <div className='flex flex-col items-end'>
                         <h3 className='text-xs text-[#848199] font-medium font-text'>PERCENTAGE PASSES</h3>
                         <div className='flex justify-center items-center gap-1'>
-                            <div className='px-3 py-2 bg-[#D1FADF] rounded-lg'>
+                            <div className='px-3.5 py-2 bg-[#D1FADF] border border-[#A6F4C5] rounded-lg'>
                                 <IoMdArrowRoundUp className='w-2.5 h-2.5 text-[#027A48]' />
                             </div>
-                            <span className='text-[28px]'>50%</span>
+                            <span className='text-[28px] text-[#344054] font-bold'>50%</span>
                         </div>
                     </div>
                 </div>
@@ -228,7 +235,7 @@ const Dashboard = () => {
                         <h3 className='text-[#344054] text-base font-bold'>GRADE DISTRIBUTION</h3>
                         <div className='flex gap-5'>
                             <Button text={"Export"} icon={<RiDownloadCloud2Line />} className={"flex flex-row-reverse bg-[#EAECF0] p-2 rounded-sm items-center gap-2 justify-center"} />
-                            <Button icon={<SlOptionsVertical />} />
+                            <Button icon={<SlOptionsVertical className='text-gray-600' />} />
                         </div>
                     </div>
                     <hr className='border-gray-300' />
@@ -241,7 +248,7 @@ const Dashboard = () => {
                 </div>
                 <div className='bg-white border-2 border-[#EDDFFF] rounded-lg'>
                     <div className='flex justify-between items-center px-6 py-5'>
-                        <h3  className='text-[#344054] text-base font-bold'>SEX</h3>
+                        <h3 className='text-[#344054] text-base font-bold'>SEX</h3>
                         <div className='flex gap-5'>
                             <Button text={"Export"} icon={<RiDownloadCloud2Line />} className={"flex flex-row-reverse bg-[#EAECF0] p-2 rounded-sm items-center gap-2 justify-center"} />
                         </div>
@@ -255,7 +262,7 @@ const Dashboard = () => {
             </section>
 
             <section className='flex gap-8'>
-                <div className='bg-white border-2 border-[#EDDFFF] p-3 rounded-lg'>
+                <div className='bg-white border-2 border-[#EDDFFF] p-5 rounded-lg'>
                     <div className='space-y-3'>
                         <Day />
                         <div className="flex gap-3">
@@ -274,17 +281,18 @@ const Dashboard = () => {
                         </div>
                         <hr className='border-gray-300' />
                         <div className='space-y-4'>
-                            <h3  className='text-[#344054] text-base font-bold'>Upcoming Events</h3>
+                            <h3 className='text-[#344054] text-base font-bold'>Upcoming Events</h3>
                             <div>
                                 <ul className='space-y-4'>
                                     {Events.events.map((e, index) => {
                                         const colorClass = borderColors[index % borderColors.length];
                                         return (
-                                        <li key={e.event_id} className={`flex flex-col pl-4 border-l-2 ${colorClass}`} >
-                                            <p  className='text-[#344054] text-base font-medium'>{e.title}</p>
-                                            <p> {e.date}</p>
-                                        </li>
-                                    )})}
+                                            <li key={e.event_id} className={`flex flex-col pl-4 border-l-2 ${colorClass}`} >
+                                                <p className='text-[#344054] text-base font-medium'>{e.title}</p>
+                                                <p> {e.date}</p>
+                                            </li>
+                                        )
+                                    })}
                                 </ul>
                             </div>
                         </div>
@@ -296,41 +304,49 @@ const Dashboard = () => {
                         <LinksBtn text={"See all"} icon={<FaArrowRight />} className={"flex flex-row-reverse justify-center items-center gap-2 text-nav border-0"} />
                     </div>
                     <div className='flex justify-between items-center px-5'>
-                        <div className='flex gap-3 items-center'>
+                        <div className='flex gap-3.5 items-center'>
                             <div className='relative'>
                                 <input
-                                    className='border border-gray-300 rounded-sm px-9 py-2 w-[450px]'
+                                    className='border border-gray-300 rounded-lg px-9 py-2 w-[450px]'
                                     type="search"
                                     placeholder='Search for notice'
                                 />
-                                <div className='absolute left-4 top-3'>
-                                    <CiSearch className='w-5 h-5' />
+                                <div className='absolute left-4 top-3.5'>
+                                    <CiSearch className='w-4 h-4 text-gray-400' />
                                 </div>
                             </div>
                         </div>
-                        <VscSettings className='w-10 h-10 p-2 rotate-90 rounded-sm border border-gray-300' />
+                        <div className='p-2 rotate-90 rounded-lg border border-gray-300'>
+                            <VscSettings className='w-4 h-4' />
+                        </div>
                     </div>
                     <div>
                         <ul className='space-y-4'>
                             {Notices.notices.map((notice) => (
                                 <div key={notice.notice_id}>
-                                    <li className='flex justify-between items-center space-y-4 p-5' >
-                                        <CiStar />
-                                        <p className='font-bold'>{notice.assigned_teacher}</p>
-                                        <p></p>
-                                        <p className='w-64 truncate overflow-hidden whitespace-nowrap text-[#202224]'>{notice.content}</p>
-                                        <span className='text-[#202224]'>{new Date(notice.due_date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                                    <li className='flex justify-between items-center pt-[3px] pb-[18px] px-4' >
+                                       <div className='flex items-center gap-7'>
+                                            <CiStar />
+                                            <p className='font-bold'>{notice.assigned_teacher}</p>
+                                       </div>
+                                        <div className='flex items-center gap-2.5 w-80'>
+                                            <div className='bg-[#F4EBFF] text-[10px] text-nav rounded-lg py-1 px-3'>
+                                                <span>mail_type</span>
+                                            </div>
+                                            <p className=' truncate overflow-hidden whitespace-nowrap text-[12px] text-[#202224] font-normal'>{notice.content}</p>
+                                        </div>
+                                        <span className='text-[#202224] text-[12px] font-normal'>{new Date(notice.due_date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
                                     </li>
                                     <hr className='border-gray-300' />
                                 </div>
                             ))}
-                        </ul> 
+                        </ul>
                     </div>
                     <div className='flex justify-end py-3 items-center gap-10 px-5'>
-                       <div className='flex gap-3'>
+                        <div className='flex gap-3'>
                             <Button text={"Previous"} className={"border text-base font-bold text-gray-700 border-gray-400 py-2 px-4 rounded-lg"} />
-                            <Button text={"Next"} className={"border text-base font-bold text-gray-700 border-gray-400 py-2 px-4 rounded-lg"}/>
-                       </div>
+                            <Button text={"Next"} className={"border text-base font-bold text-gray-700 border-gray-400 py-2 px-4 rounded-lg"} />
+                        </div>
                         <span className={"text-sm font-medium text-gray-700"}>Result 1 of 10</span>
                     </div>
                 </div>

@@ -17,6 +17,7 @@ import Assignments from './pages/Assignments'
 import Quiz from './pages/Quiz'
 import Examinations from './pages/Examinations'
 import ViewDetail from "./pages/ViewDetail"
+import ViewTable from "./pages/ViewTable"
 import ViewProfile from "./pages/ViewProfile"
 import AdminViewProfile from "./pages/admin/AdminViewProfile"
 import ProtectRoute from './components/ProtectRoute'
@@ -61,6 +62,7 @@ function App() {
           <Route path='/examination' element={<Examinations />} />
           <Route path='/view-detail/:id' element={<ViewDetail />} />
           <Route path='/view-profile/:id' element={<ViewProfile />} />
+          <Route path='/view-table' element={<ViewTable />} />
           <Route path='/admin/dashboard' element={<AdminDashboard />} />
           <Route path='/admin/admin-page' element={<Admin />} />
           <Route path='/admin/exams' element={<AdminExams />} />

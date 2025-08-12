@@ -259,11 +259,11 @@ const AdminViewProfile = () => {
                         <section className='grid grid-cols-5 gap-4 px-8'>
                             <div>
                                 <h2 className="text-sm font-normal text-gray-400">FIRST NAME</h2>
-                                <p className="text-lg font-medium font-text">{guardianData.first_name}</p>
+                                <p className="text-lg font-medium font-text">{guardianData.students.map((student) => student.first_name).join(", ")}</p>
                             </div>
                             <div>
                                 <h2 className="text-sm font-normal text-gray-400">LAST NAME</h2>
-                                <p className="text-lg font-medium font-text">{guardianData.last_name}</p>
+                                <p className="text-lg font-medium font-text">{guardianData.students.map((student) => student.last_name).join(", ")}</p>
                             </div>
                             <div>
                                 <h2 className="text-sm font-normal text-gray-400">OTHER NAME(S)</h2>
@@ -271,7 +271,7 @@ const AdminViewProfile = () => {
                             </div>
                             <div>
                                 <h2 className="text-sm font-normal text-gray-400">ID</h2>
-                                <p className="text-lg font-medium font-text">{guardianData.guardian_id}</p>
+                                <p className="text-lg font-medium font-text">{guardianData.students.map((student) => student.student_id).join(", ")}</p>
                             </div>
                             <div>
                                 <h2 className="text-sm font-normal text-gray-400">ADDRESS</h2>
@@ -279,15 +279,15 @@ const AdminViewProfile = () => {
                             </div>
                             <div>
                                 <h2 className="text-sm font-normal text-gray-400">GENDER</h2>
-                                <p className="text-lg font-medium font-text">{guardianData.gender}</p>
+                                <p className="text-lg font-medium font-text">{guardianData.students.map((student) => student.gender).join(", ")}</p>
                             </div>
                             <div>
                                 <h2 className="text-sm font-normal text-gray-400">CLASS</h2>
-                                <p className="text-lg font-medium font-text">{guardianData.class}</p>
+                                <p className="text-lg font-medium font-text">{guardianData.students.map((student) => student.class).join(", ")}</p>
                             </div>
                             <div>
                                 <h2 className="text-sm font-normal text-gray-400">DATE OF BIRTH</h2>
-                                <p className="text-lg font-medium font-text">{ }</p>
+                                <p className="text-lg font-medium font-text">{ guardianData.students.map((student) => student.date_of_birth).join(", ")}</p>
                             </div>
                             <div>
                                 <h2 className="text-sm font-normal text-gray-400">RELIGION</h2>

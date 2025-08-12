@@ -151,6 +151,7 @@ const Attendance = () => {
                                     type="checkbox"
                                     className="form-checkbox h-4 w-4 text-green-600 transition duration-150 ease-in-out"
                                     checked={status === 'present'}
+                                    readOnly
                                   />
                                 </label>
                               </div>

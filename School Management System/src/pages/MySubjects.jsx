@@ -45,43 +45,43 @@ const MySubjects = () => {
   return (
     <div className='m-4 flex flex-col gap-4'>
       <section className='border border-[#EAECF0] rounded-2xl flex flex-col gap-3 p-8'>
-        <h1 className='text-[#242525] text-2xl font-bold'>Post New...</h1>
+        <h1 className='text-[#242525] text-2xl font-bold'>Post New ...</h1>
         <div className='grid grid-cols-3 gap-5'>
           <LinksBtn
-            className='text-[#242525] text-base font-medium group border border-[#D0D5DD] hover:bg-[#ECE5FF] hover:border-nav flex items-center gap-3 rounded-2xl px-5 py-4 '
-            text={"Assignment"}
+            className='text-[#242525] text-base font-medium font-text group border border-[#D0D5DD] hover:bg-[#ECE5FF] hover:border-nav hover:text-nav flex items-center gap-3 rounded-2xl px-5 py-4 '
+            text={"ASSIGNMENTS"}
             icon={<LuClipboardPenLine className='w-10 h-10 rounded-full p-2 bg-nav-text text-nav group-hover:text-white group-hover:bg-nav' />}
             to="/assignment"
           />
 
           <LinksBtn
-            className='text-[#242525] text-base font-medium group border border-[#D0D5DD] hover:bg-[#ECE5FF] hover:border-nav flex items-center gap-3 rounded-2xl px-5 py-4 '
-            text={"Quiz"}
+            className='text-[#242525] text-base font-medium font-text group border border-[#D0D5DD] hover:bg-[#ECE5FF] hover:border-nav hover:text-nav flex items-center gap-3 rounded-2xl px-5 py-4 '
+            text={"QUIZ"}
             icon={<LuClipboardList className='w-10 h-10 rounded-full p-2 bg-nav-text text-nav group-hover:text-white group-hover:bg-nav' />}
             to="/quiz"
           />
 
           <LinksBtn
-            className='text-[#242525] text-base font-medium group border border-[#D0D5DD] hover:bg-[#ECE5FF] hover:border-nav flex items-center gap-3 rounded-2xl px-5 py-4 '
-            text={"Examination"}
+            className='text-[#242525] text-base font-medium font-text group border border-[#D0D5DD] hover:bg-[#ECE5FF] hover:border-nav hover:text-nav flex items-center gap-3 rounded-2xl px-5 py-4 '
+            text={"EXAMINATIONS"}
             icon={<BsPatchQuestion className='w-10 h-10 rounded-full p-2 bg-nav-text text-nav group-hover:text-white group-hover:bg-nav' />}
             to="/examination"
           />
         </div>
       </section>
 
-      <section className='border rounded-2xl border-[#EAECF0] p-5 space-y-5'>
-        <div className='flex justify-between'>
+      <section className='border rounded-2xl border-[#EAECF0] space-y-5'>
+        <div className='flex justify-between p-5'>
           <h1 className='text-[#242525] text-2xl font-bold'>All Exam Schedule</h1>
           <div className='flex gap-3'>
             <Button
-              className={'group w-10 h-10 p-2 border border-[#E7E7E7] hover:border-nav cursor-pointer rounded-sm'}
+              className={'group w-10 h-10 p-2 border border-[#E7E7E7] hover:border-nav cursor-pointer rounded-md'}
               onClick={() => setViewMode("list")}
               icon={<HiMenu className='w-6 h-6 text-gray-400 group-hover:text-nav' />}
             />
 
             <Button
-              className={'group w-10 h-10 p-2 border border-[#E7E7E7] hover:border-nav cursor-pointer rounded-sm'}
+              className={'group w-10 h-10 p-2 border border-[#E7E7E7] hover:border-nav cursor-pointer rounded-md'}
               onClick={() => setViewMode("calendar")}
               icon={<HiMiniSquares2X2 className='w-6 h-6 text-gray-400 group-hover:text-nav' />}
             />
@@ -90,61 +90,68 @@ const MySubjects = () => {
 
 
 
-        <div className='divide-y divide-[#9797973D]'>
+        <div>
           {viewMode === "list" ? (
-            <>
-              <div className='p-5 bg-[#F1F4F9]'>
-                <ul className='grid grid-cols-14 gap-4 '>
-                  <li className='col-span-3 text-[#242525] font-bold'>Subject Name</li>
-                  <li className='col-span-2 text-[#242525] font-bold'>Exam Type</li>
-                  <li className='col-span-3 text-[#242525] font-bold'>Date & time</li>
-                  <li className='col-span-2 text-[#242525] font-bold'>Duration</li>
-                  <li className='col-span-2 text-[#242525] font-bold'>Classes</li>
-                  <li className='col-start-14 text-[#242525] font-bold'>Action</li>
-                </ul>
+            <div className='pr-5'>
+              <table className="w-full">
+                <thead>
+                  <tr className="text-[#242525] font-bold">
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9] rounded-l-lg ">Subject Name</th>
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9]">Exam Type</th>
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9]">Date & time</th>
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9]">Duration</th>
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9]">Classes</th>
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9] rounded-r-lg">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {Exams.exams.map((exam) => (
+                    <tr className="border-b border-gray-200 hover:bg-gray-50" key={exam.id}>
+                      <td className="px-6 py-4 text-gray-900 text-sm font-semibold">{exam.subject}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm">{exam.examType}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm">{exam.date} | {exam.startTime}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm">{exam.duration}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm">{exam.classes}</td>
+                      <td className="px-6 py-4 text-gray-900 relative">
+                        <Button
+                          icon={<SlOptionsVertical />}
+                          onClick={() =>
+                            setActiveDropdown((prev) => (prev === exam.id ? null : exam.id))
+                          }
+                        />
+                        {activeDropdown === exam.id && (
+                          <div className='w-60 bg-white absolute right-0 z-20 shadow-lg shadow-black'>
+                            <div className="flex flex-col justify-between">
+                              <LinksBtn
+                                to={`/view-detail/${exam.id}`}
+                                icon={<IoEyeOutline className='w-5 h-5' />}
+                                text={"Edit Detail"}
+                                className={"py-3 px-4 text-left text-gray-600 flex items-center gap-2"}
+                              />
+                              <hr className='border border-gray-300' />
+                              <Button
+                                icon={<IoMdClose className='w-5 h-5' />}
+                                text={"Delete"}
+                                className={"py-3 px-4 text-left text-red-600 flex items-center gap-2"}
+                              />
+                            </div>
+                          </div>
+                        )}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className='flex justify-end  items-center gap-10 px-5 py-4.5'>
+                <div className='flex gap-3'>
+                  <Button text={"Previous"} className={"border text-base font-bold text-gray-700 border-gray-400 py-2 px-4 rounded-lg"} />
+                  <Button text={"Next"} className={"border text-base font-bold text-gray-700 border-gray-400 py-2 px-4 rounded-lg"} />
+                </div>
+                <span className={"text-sm font-medium text-gray-700"}>Result 1 of 10</span>
               </div>
-
-              {Exams.exams.map((exam) => (
-                <ul className='grid grid-cols-14 gap-4 text-[17px] p-5' key={exam.id}>
-                  <li className='col-span-3 text-[#242525] font-semibold'>
-                    {exam.subject}
-                  </li>
-                  <li className='col-span-2 text-[#242525] font-normal'>{exam.examType}</li>
-                  <li className='col-span-3 text-[#242525] font-normal'>{exam.date} | {exam.startTime}</li>
-                  <li className='col-span-2 text-[#242525] font-normal'>{exam.duration}</li>
-                  <li className='col-span-2 text-[#242525] font-normal'>{exam.classes}</li>
-                  <li className='col-start-14 relative'>
-                    <Button
-                      icon={<SlOptionsVertical />}
-                      onClick={() =>
-                        setActiveDropdown((prev) => (prev === exam.id ? null : exam.id))
-                      }
-                    />
-                    {activeDropdown === exam.id && (
-                      <div className='w-60 bg-white absolute right-0 z-20 shadow-lg shadow-black'>
-                        <div className="flex flex-col justify-between">
-                          <LinksBtn
-                            to={`/view-detail/${exam.id}`}
-                            icon={<IoEyeOutline className='w-5 h-5' />}
-                            text={"Edit Detail"}
-                            className={"py-3 px-4 text-left text-gray-600 flex items-center gap-2"}
-                          />
-                          <hr className='border border-gray-300' />
-                          <Button
-                            icon={<IoMdClose className='w-5 h-5' />}
-                            text={"Delete"}
-                            className={"py-3 px-4 text-left text-red-600 flex items-center gap-2"}
-                          />
-                        </div>
-                      </div>
-                    )}
-                  </li>
-                </ul>
-              ))}
-            </>
+            </div>
           )
             :
-            <div>
+            <div className='p-5'>
               <FullCalendar
                 plugins={[timeGridPlugin, dayGridPlugin]}
                 height={600}
