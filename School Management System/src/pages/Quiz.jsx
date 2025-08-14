@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useRef, useEffect } from 'react'
 import LinksBtn from '../components/LinksBtn'
 import Button from '../components/Button'
 import { FaArrowLeft } from "react-icons/fa";
@@ -9,38 +9,53 @@ import { IoMenu } from "react-icons/io5";
 
 const Quiz = () => {
   const [show, setShow] = useState(false)
+  const [showNew, setShowNew] = useState(false)
+  const dropdownRef = useRef(null);
   const [reorderMenu, setReorderMenu] = useState(false)
   const questions = ["", "", "", ""];
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShow(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className='m-4 space-y-5'>
       <section className='flex justify-between'>
         <LinksBtn to="/my-subjects" text={"Back"} className={"text-base text-gray-600 font-medium flex gap-2 items-center"} icon={<FaArrowLeft className=' w-5 h-5' />} />
-        <Button text={"Post Quiz"} className={"bg-nav text-white px-10 py-2 rounded-lg"} />
+        <Button text={"Post Quiz"} className={"bg-nav text-white text-base font-semibold font-text px-10 py-2 rounded-lg"} />
       </section>
 
-      <section className='space-y-7'>
-        <h3>Post Quiz</h3>
+      <section className='space-y-5'>
+        <h3 className="text-2xl font-bold">Post Quiz</h3>
         <form onSubmit={(e) => e.preventDefault()} action="" className='space-y-5'>
           <section className='flex flex-col space-y-3'>
-            <div className='flex flex-col'>
-              <label htmlFor="">Question 1</label>
-              <input className='border border-gray-300 outline-0 text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='Enter question' />
+            <div className='flex flex-col gap-0.5'>
+              <label htmlFor="" className="text-[#667085] text-xs font-normal">QUESTION 1</label>
+              <input className='border border-gray-300 outline-[#42307D] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='Enter question' />
             </div>
 
-            <div className='flex flex-col'>
-              <label htmlFor="">Possible Answers</label>
+            <div className='flex flex-col gap-0.5'>
+              <label htmlFor="" className="text-[#667085] text-xs font-normal">POSSIBLE ANSWERS</label>
               <div className='flex flex-col gap-3'>
-                <input className='border border-gray-300 outline-0 w-[451px] text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='First Option' />
-                <input className='border border-gray-300 outline-0 w-[451px] text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='Second Option' />
-                <input className='border border-gray-300 outline-0 w-[451px] text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='Third Option' />
-                <input className='border border-gray-300 outline-0 w-[451px] text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='Fourth Option' />
+                <input className='border border-gray-300 outline-[#42307D] w-[451px] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='First Option' />
+                <input className='border border-gray-300 outline-[#42307D] w-[451px] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='Second Option' />
+                <input className='border border-gray-300 outline-[#42307D] w-[451px] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='Third Option' />
+                <input className='border border-gray-300 outline-[#42307D] w-[451px] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='Fourth Option' />
               </div>
             </div>
 
-            <div className='flex flex-col'>
-              <label htmlFor="">Select Answer</label>
-              <select name="" id="" className='border border-gray-300 outline-0 w-[451px] text-gray-700 p-3 rounded-sm'>
+            <div className='flex flex-col gap-0.5'>
+              <label htmlFor="" className="text-[#667085] text-xs font-normal">SELECT ANSWER</label>
+              <select name="" id="" className='border border-gray-300 w-[451px] text-gray-700 px-3 py-2 rounded-md'>
                 <option value=""></option>
                 <option value=""></option>
                 <option value=""></option>
@@ -49,7 +64,7 @@ const Quiz = () => {
             </div>
             <Button onClick={() => setShow(prev => !prev)} icon={<HiOutlinePlus className='w-3.5 h-3.5' />} text={"Add..."} className={"flex gap-1 justify-end text-nav items-center w-[451px] font-semibold"} />
             {show &&
-              <div className='w-60 bg-white absolute left-[736px] top-[678px] shadow-lg shadow-black'>
+              <div ref={dropdownRef} className='w-60 bg-white absolute left-[670px] top-[650px] shadow-xl shadow-[#1018283B]'>
                 <div className="flex flex-col justify-between">
                   <Button text={"Image"} className={"py-3 px-4 text-left text-gray-600"} />
                   <hr className='border border-gray-300' />
@@ -61,14 +76,14 @@ const Quiz = () => {
           <hr className='text-gray-300' />
 
           <section className='flex flex-col space-y-3'>
-            <div className='flex flex-col'>
-              <label htmlFor="">Question 2</label>
-              <input className='border border-gray-300 outline-0 text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='Enter question' />
+            <div className='flex flex-col gap-0.5'>
+              <label htmlFor="" className="text-[#667085] text-xs font-normal">QUESTION 2</label>
+              <input className='border border-gray-300 outline-[#42307D] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='Enter question' />
             </div>
 
-            <div className='flex flex-col'>
-              <label htmlFor="">Enter Answer</label>
-              <input className='border border-gray-300 outline-0 text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='Enter answer' />
+            <div className='flex flex-col gap-0.5'>
+              <label htmlFor="" className="text-[#667085] text-xs font-normal">ENTER ANSWER</label>
+              <input className='border border-gray-300 outline-[#42307D] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='Enter answer' />
             </div>
             <Button icon={<HiOutlinePlus className='w-3.5 h-3.5' />} text={"Add..."} className={"flex gap-1 justify-end text-nav items-center font-semibold"} />
           </section>
@@ -76,24 +91,24 @@ const Quiz = () => {
           <hr className='text-gray-300' />
 
           <section className='flex flex-col space-y-3'>
-            <div className='flex flex-col'>
-              <label htmlFor="">Question 1</label>
-              <input className='border border-gray-300 outline-0 text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='Enter question' />
+            <div className='flex flex-col gap-0.5'>
+              <label htmlFor="" className="text-[#667085] text-xs font-normal">QUESTION 1</label>
+              <input className='border border-gray-300 outline-[#42307D] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='Enter question' />
             </div>
 
-            <div className='flex flex-col'>
-              <label htmlFor="">Possible Answers</label>
+            <div className='flex flex-col gap-0.5'>
+              <label htmlFor="" className="text-[#667085] text-xs font-normal">POSSIBLE ANSWERS</label>
               <div className='flex flex-col gap-3'>
-                <input className='border border-gray-300 outline-0 w-[451px] text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='First Option' />
-                <input className='border border-gray-300 outline-0 w-[451px] text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='Second Option' />
-                <input className='border border-gray-300 outline-0 w-[451px] text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='Third Option' />
-                <input className='border border-gray-300 outline-0 w-[451px] text-gray-700 p-3 rounded-sm' type="text" name="" id="" placeholder='Fourth Option' />
+                <input className='border border-gray-300 outline-[#42307D] w-[451px] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='First Option' />
+                <input className='border border-gray-300 outline-[#42307D] w-[451px] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='Second Option' />
+                <input className='border border-gray-300 outline-[#42307D] w-[451px] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='Third Option' />
+                <input className='border border-gray-300 outline-[#42307D] w-[451px] text-gray-700 p-3 rounded-md' type="text" name="" id="" placeholder='Fourth Option' />
               </div>
             </div>
 
-            <div className='flex flex-col'>
-              <label htmlFor="">Select Answer</label>
-              <select name="" id="" className='border border-gray-300 outline-0 w-[451px] text-gray-700 p-3 rounded-sm'>
+            <div className='flex flex-col gap-0.5'>
+              <label htmlFor="" className="text-[#667085] text-xs font-normal">SELECT ANSWER</label>
+              <select name="" id="" className='border border-gray-300 outline-0 w-[451px] text-gray-700 p-3 rounded-md'>
                 <option value=""></option>
                 <option value=""></option>
                 <option value=""></option>
@@ -104,16 +119,16 @@ const Quiz = () => {
           </section>
 
         </form>
-        <section className='flex justify-end gap-3'>
+        <section className='flex justify-end gap-3 relative'>
           <Button text={"Reorder Questions"} onClick={() => setReorderMenu(prev => !prev)} />
-          <Button onClick={() => setShow(prev => !prev)} icon={<HiOutlinePlus className='w-5 h-5' />} text={"New Question"} className={"flex gap-1 items-center border border-nav rounded-sm px-10 py-2 text-nav font-semibold"} />
-          {show &&
-            <div className='w-60 h-36 bg-white absolute right-36 top-[1488px] shadow-lg shadow-black'>
+          <Button onClick={() => setShowNew(prev => !prev)} icon={<HiOutlinePlus className='w-5 h-5' />} text={"New Question"} className={"flex gap-1 items-center border border-nav rounded-sm px-10 py-2 text-nav font-semibold"} />
+          {showNew &&
+            <div className='w-60 h-36 bg-white absolute right-32 top-[42px] shadow-xl shadow-[#1018283B]'>
               <div className="flex flex-col justify-between">
                 <Button text={"Fill in"} className={"py-3 px-4 text-left text-gray-600"} />
-                <hr className='border border-gray-300'/>
+                <hr className='border border-gray-300' />
                 <Button text={"Answer One"} className={"py-3 px-4 text-left text-gray-600"} />
-                <hr className='border border-gray-300'/>
+                <hr className='border border-gray-300' />
                 <Button text={"Multiple Answer"} className={"py-3 px-4 text-left text-gray-600"} />
               </div>
             </div>}
@@ -129,7 +144,7 @@ const Quiz = () => {
               {/* Header */}
               <div className="flex items-center justify-between">
                 <h4 className="text-lg font-semibold">Reorder Questions</h4>
-                <Button icon={<IoIosClose className="text-nav w-6 h-6 bg-gray-300 rounded-full cursor-pointer" />} onClick={()=> setReorderMenu(false)} />
+                <Button icon={<IoIosClose className="text-nav w-6 h-6 bg-gray-300 rounded-full cursor-pointer" />} onClick={() => setReorderMenu(false)} />
               </div>
 
               <hr className='border border-gray-300' />

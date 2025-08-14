@@ -22,12 +22,8 @@ import Notices from "../data/Notice.json"
 
 import { Chart as ChartJs } from "chart.js/auto"
 
-
 import { Pie, Line } from "react-chartjs-2"
 import Day from '../components/Day';
-
-
-
 
 
 const Dashboard = () => {

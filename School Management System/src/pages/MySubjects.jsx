@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -7,6 +7,7 @@ import { LuClipboardList } from "react-icons/lu";
 import { BsPatchQuestion } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
 import { HiMenu } from "react-icons/hi";
+import { FiEdit } from "react-icons/fi";
 import { HiMiniSquares2X2 } from "react-icons/hi2";
 import { SlOptionsVertical } from "react-icons/sl";
 import { IoEyeOutline } from "react-icons/io5";
@@ -18,6 +19,7 @@ import Button from '../components/Button';
 
 const MySubjects = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const dropdownRef = useRef(null);
   const [viewMode, setViewMode] = useState("list")
 
   const calculateEndTime = (date, startTime, durationMinutes) => {
@@ -40,7 +42,18 @@ const MySubjects = () => {
     return colors[examType] || '#9CA3AF';
   };
 
+ useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setActiveDropdown(null);
+      }
+    };
 
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className='m-4 flex flex-col gap-4'>
@@ -112,7 +125,7 @@ const MySubjects = () => {
                       <td className="px-6 py-4 text-gray-900 text-sm">{exam.date} | {exam.startTime}</td>
                       <td className="px-6 py-4 text-gray-900 text-sm">{exam.duration}</td>
                       <td className="px-6 py-4 text-gray-900 text-sm">{exam.classes}</td>
-                      <td className="px-6 py-4 text-gray-900 relative">
+                      <td className="px-6 py-4 text-gray-900 relative" ref={dropdownRef}>
                         <Button
                           icon={<SlOptionsVertical />}
                           onClick={() =>
@@ -120,19 +133,19 @@ const MySubjects = () => {
                           }
                         />
                         {activeDropdown === exam.id && (
-                          <div className='w-60 bg-white absolute right-0 z-20 shadow-lg shadow-black'>
+                          <div className='w-60 bg-white absolute right-0 z-20 rounded-lg shadow-lg shadow-[#1018283B]'>
                             <div className="flex flex-col justify-between">
                               <LinksBtn
                                 to={`/view-detail/${exam.id}`}
-                                icon={<IoEyeOutline className='w-5 h-5' />}
-                                text={"Edit Detail"}
-                                className={"py-3 px-4 text-left text-gray-600 flex items-center gap-2"}
+                                icon={<FiEdit className='w-[15px] h-[15px]' />}
+                                text={"Edit Exam"}
+                                className={"py-3 px-4 text-gray-600 flex items-center gap-2"}
                               />
-                              <hr className='border border-gray-300' />
+                              <hr className=' text-[#F0F0F0]' />
                               <Button
-                                icon={<IoMdClose className='w-5 h-5' />}
+                                icon={<IoMdClose className='w-[15px] h-[15px]' />}
                                 text={"Delete"}
-                                className={"py-3 px-4 text-left text-red-600 flex items-center gap-2"}
+                                className={"py-3 px-4 text-red-600 flex items-center gap-2"}
                               />
                             </div>
                           </div>
