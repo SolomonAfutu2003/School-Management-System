@@ -35,7 +35,7 @@ const ViewDetail = () => {
           icon={<FiEdit className='w-5 h-5' />}
           to={`/attendance`}
           text={"Edit Attendance"}
-          className={"py-2 px-5 text-left bg-nav text-white flex items-center gap-2 rounded-sm"}
+          className={"py-2 px-5 text-left bg-[#6941C6] text-base font-semibold text-white flex items-center gap-2 rounded-lg"}
         />
       </section >
 
@@ -44,7 +44,7 @@ const ViewDetail = () => {
 
       <section className='space-y-5'>
         <div>
-          <h2 className="font-semibold">STUDENT INFO</h2>
+          <h2 className="font-semibold text-[#344054]">STUDENT INFO</h2>
           <hr className="my-4 border-gray-300" />
           <div className='flex justify-between items-center'>
             <section>
@@ -55,55 +55,55 @@ const ViewDetail = () => {
             <section className='grid grid-cols-5 gap-4 px-8'>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">FIRST NAME</h2>
-                <p className="text-lg font-medium font-text">{studentData.first_name}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.first_name}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">LAST NAME</h2>
-                <p className="text-lg font-medium font-text">{studentData.last_name}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.last_name}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">OTHER NAME(S)</h2>
-                <p className="text-lg font-medium font-text">{studentData.other_names ? studentData.other_names : "None"}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.other_names ? studentData.other_names : "None"}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">ID</h2>
-                <p className="text-lg font-medium font-text">{studentData.student_id}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.student_id}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">ADDRESS</h2>
-                <p className="text-lg font-medium font-text">{studentData.address}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.address}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">GENDER</h2>
-                <p className="text-lg font-medium font-text">{studentData.gender}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.gender}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">CLASS</h2>
-                <p className="text-lg font-medium font-text">{studentData.class}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.class}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">DATE OF BIRTH</h2>
-                <p className="text-lg font-medium font-text">{studentData.date_of_birth}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.date_of_birth}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">RELIGION</h2>
-                <p className="text-lg font-medium font-text">{studentData.religion ? studentData.religion : "None"}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.religion ? studentData.religion : "None"}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">ADMISSION DATE</h2>
-                <p className="text-lg font-medium font-text">{studentData.enrollment_date}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.enrollment_date}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">ATTENDANCE</h2>
-                <p className="text-lg font-medium font-text">{studentData.enrollment_date}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.enrollment_date}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">HEIGHT (CM)</h2>
-                <p className="text-lg font-medium font-text">{studentData.height ? studentData.height : "_"}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.height ? studentData.height : "_"}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">WEIGHT (KG)</h2>
-                <p className="text-lg font-medium font-text">{studentData.weight ? studentData.weight : "_"}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.weight ? studentData.weight : "_"}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">REPORT CARD</h2>
@@ -117,7 +117,7 @@ const ViewDetail = () => {
           </div>
         </div>
         <div>
-          <h2 className="font-semibold">GUARDING 1 INFO</h2>
+          <h2 className="font-semibold text-[#344054]">GUARDING 1 INFO</h2>
           <hr className="my-4 border-gray-300" />
           <div className='flex justify-between '>
             <section className='flex flex-row items-start'>
@@ -128,45 +128,45 @@ const ViewDetail = () => {
             <section className='grid grid-cols-6 gap-4 px-10'>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">FIRST NAME</h2>
-                <p className="text-lg font-medium font-text">{studentData.parent_guardian.name.split(" ")[0]}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.parent_guardian.name.split(" ")[0]}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">LAST NAME</h2>
-                <p className="text-lg font-medium font-text">{studentData.parent_guardian.name.split(" ")[1]}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.parent_guardian.name.split(" ")[1]}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">OTHER NAME(S)</h2>
-                <p className="text-lg font-medium font-text">{studentData.other_names ? studentData.other_names : "None"}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.other_names ? studentData.other_names : "None"}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">RELATION</h2>
-                <p className="text-lg font-medium font-text">{studentData.parent_guardian.relationship}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.parent_guardian.relationship}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">PHONE NUMBER</h2>
-                <p className="text-lg font-medium font-text">{studentData.parent_guardian.phone}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.parent_guardian.phone}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">EMAIL ADDRESS</h2>
-                <p className="text-lg font-medium font-text">{studentData.parent_guardian.email}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.parent_guardian.email}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">RELIGION</h2>
-                <p className="text-lg font-medium font-text">{studentData.religion ? studentData.religion : "None"}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.religion ? studentData.religion : "None"}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">ADMISSION DATE</h2>
-                <p className="text-lg font-medium font-text">{studentData.enrollment_date}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.enrollment_date}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">ADDRESS</h2>
-                <p className="text-lg font-medium font-text">{studentData.address}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.address}</p>
               </div>
             </section>
           </div>
         </div>
         <div>
-          <h2 className="font-semibold">GUARDING 2 INFO</h2>
+          <h2 className="font-semibold text-[#344054]">GUARDING 2 INFO</h2>
           <hr className="my-4 border-gray-300" />
           <div className='flex justify-between '>
             <section className='flex flex-row items-start'>
@@ -177,39 +177,39 @@ const ViewDetail = () => {
             <section className='grid grid-cols-6 gap-4 px-10'>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">FIRST NAME</h2>
-                <p className="text-lg font-medium font-text">{studentData.parent_guardian.name.split(" ")[0]}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.parent_guardian.name.split(" ")[0]}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">LAST NAME</h2>
-                <p className="text-lg font-medium font-text">{studentData.parent_guardian.name.split(" ")[1]}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.parent_guardian.name.split(" ")[1]}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">OTHER NAME(S)</h2>
-                <p className="text-lg font-medium font-text">{studentData.other_names ? studentData.other_names : "None"}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.other_names ? studentData.other_names : "None"}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">RELATION</h2>
-                <p className="text-lg font-medium font-text">{studentData.parent_guardian.relationship}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.parent_guardian.relationship}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">PHONE NUMBER</h2>
-                <p className="text-lg font-medium font-text">{studentData.parent_guardian.phone}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.parent_guardian.phone}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">EMAIL ADDRESS</h2>
-                <p className="text-lg font-medium font-text">{studentData.parent_guardian.email}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.parent_guardian.email}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">RELIGION</h2>
-                <p className="text-lg font-medium font-text">{studentData.religion ? studentData.religion : "None"}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.religion ? studentData.religion : "None"}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">ADMISSION DATE</h2>
-                <p className="text-lg font-medium font-text">{studentData.enrollment_date}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.enrollment_date}</p>
               </div>
               <div>
                 <h2 className="text-sm font-normal text-gray-400">ADDRESS</h2>
-                <p className="text-lg font-medium font-text">{studentData.address}</p>
+                <p className="text-lg font-medium font-text text-[#344054]">{studentData.address}</p>
               </div>
             </section>
           </div>

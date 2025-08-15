@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import StudentsData from "../data/Students.json";
 import Button from '../components/Button';
 import LinkBtn from "../components/LinksBtn";
@@ -15,11 +15,28 @@ import { VscSettings } from "react-icons/vsc";
 const MyStudents = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeFilterMenu, setActiveFilterMenu] = useState(null);
+  const dropdownRefs = useRef({});
   const [selectedGender, setSelectedGender] = useState("");
   const [selectedClass, setSelectedClass] = useState("");
   const [search, setSearch] = useState("");
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      Object.keys(dropdownRefs.current).forEach((id) => {
+        if (
+          dropdownRefs.current[id] &&
+          !dropdownRefs.current[id].contains(event.target)
+        ) {
+          if (activeDropdown === id) setActiveDropdown(null);
+        }
+      });
+    };
 
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [activeDropdown]);
 
   return (
     <div className='m-4 space-y-5'>
@@ -137,7 +154,7 @@ const MyStudents = () => {
                   <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{student.gender}</td>
                   <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{student.parent_guardian.name}</td>
                   <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{student.phone}</td>
-                  <td className="px-6 py-4 text-gray-900 relative">
+                  <td className="px-6 py-4 text-gray-900 relative" ref={(el) => (dropdownRefs.current[student.student_id] = el)}>
                     <Button
                       icon={<SlOptionsVertical />}
                       onClick={() =>
