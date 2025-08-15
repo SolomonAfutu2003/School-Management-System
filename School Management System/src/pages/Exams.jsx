@@ -195,7 +195,10 @@ const Exams = () => {
                           <div className='w-60 bg-white absolute right-0 z-20 rounded-lg shadow-lg shadow-[#1018283B]'>
                             <div className="flex flex-col justify-between">
                               <Button
-                                onClick={() => setReorderMenu(prev => !prev)}
+                                onClick={() => {
+                                  setReorderMenu(prev => !prev)
+                                  setActiveDropdown(null);
+                                }}
                                 icon={<FiEdit className='w-[15px] h-[15px]' />}
                                 text={"Edit Exam"}
                                 className={"py-3 px-4 text-gray-600 flex items-center gap-2"}
@@ -244,7 +247,7 @@ const Exams = () => {
               {/* Header */}
               <div className="flex items-center justify-between">
                 <h4 className="text-lg font-semibold">Edit Exam</h4>
-                <Button icon={<IoIosClose className='w-5 h-5'  />} onClick={() => setReorderMenu(false)} className="text-[#475467] p-1 bg-[#EAECF0] rounded-full cursor-pointer"/>
+                <Button icon={<IoIosClose className='w-5 h-5' />} onClick={() => setReorderMenu(false)} className="text-[#475467] p-1 bg-[#EAECF0] rounded-full cursor-pointer" />
               </div>
 
               <hr className='border border-gray-300' />
