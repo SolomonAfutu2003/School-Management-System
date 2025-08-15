@@ -88,7 +88,7 @@ const MyClasses = () => {
           <table className="w-full" >
             <thead>
               <tr className="text-[#242525] font-bold">
-                <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9] rounded-l-lg ">Name</th>
+                <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9] rounded-l-lg">Name</th>
                 <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9]">Number of Pupils</th>
                 <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9]">Teachers</th>
                 <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9] rounded-r-lg">Action</th>
@@ -98,7 +98,7 @@ const MyClasses = () => {
               {Classes.classes.map((cls) => (
                 <tr className="border-b border-gray-200 hover:bg-gray-50" key={cls.class_id}>
                   <td className="px-6 py-4 text-gray-900 text-sm font-semibold">{cls.name}</td>
-                  <td className="px-6 py-4 text-gray-900 text-sm">{cls.student_count}</td>
+                  <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{cls.student_count}</td>
                   <td className="px-6 py-4 text-gray-900 text-sm">
                     <div className='flex'>
                       {ProfilePics.map((profile, index) => (

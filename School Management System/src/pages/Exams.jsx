@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -11,13 +11,33 @@ import { IoIosClose } from "react-icons/io";
 import ExamsData from "../data/Exam.json"
 // import LinksBtn from '../components/LinksBtn';
 import Button from '../components/Button';
+import LinksBtn from '../components/LinksBtn';
 
 
 const Exams = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [reorderMenu, setReorderMenu] = useState(false)
   const [viewMode, setViewMode] = useState("list")
+  const dropdownRefs = useRef({});
   // const questions = ["", "", "", ""];
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      Object.keys(dropdownRefs.current).forEach((id) => {
+        if (
+          dropdownRefs.current[id] &&
+          !dropdownRefs.current[id].contains(event.target)
+        ) {
+          if (activeDropdown === id) setActiveDropdown(null);
+        }
+      });
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [activeDropdown]);
 
   const calculateEndTime = (date, startTime, durationMinutes) => {
     const [hours, minutes] = startTime.split(':').map(Number);
@@ -44,13 +64,13 @@ const Exams = () => {
   return (
     <div className='m-4 flex flex-col gap-4'>
       <section className="border rounded-2xl border-[#EAECF0] p-5 space-y-5">
-        <h3 className="text-lg font-semibold">Create Exam</h3>
-        <div className="grid grid-cols-3  gap-5">
+        <h3 className="text-2xl font-bold">Create Exam</h3>
+        <div className="grid grid-cols-3 gap-5">
           {/* User Type Dropdown */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700">SUBJECT</label>
+          <div className='flex flex-col gap-2'>
+            <label className="text-sm font-medium text-[#667085]">SUBJECT</label>
             <select
-              className="border border-gray-400 rounded-sm p-2 w-full"
+              className="border border-[#D1D5DB] rounded-md p-2 w-full"
             >
               <option value="">Select subject</option>
               {ExamsData.exams.map((exam) => (
@@ -63,10 +83,10 @@ const Exams = () => {
           </div>
 
           {/* Class Dropdown */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700">EXAM TYPE</label>
+          <div className='flex flex-col gap-2'>
+            <label className="text-sm font-medium text-[#667085]">EXAM TYPE</label>
             <select
-              className="border border-gray-400 rounded-sm p-2 w-full"
+              className="border border-[#D1D5DB] rounded-md p-2 w-full"
             >
               <option value="">Select exam type</option>
               {ExamsData.exams.map((exam) => (
@@ -78,33 +98,33 @@ const Exams = () => {
           </div>
 
           {/* Student Dropdown */}
-          <div>
-            <label htmlFor="start-date" className="block text-sm font-medium text-gray-700">START DATE & TIME</label>
+          <div className='flex flex-col gap-2'>
+            <label htmlFor="start-date" className="text-sm font-medium text-[#667085]">START DATE & TIME</label>
             <input
               id="start-date"
               name="startDate"
               type="date"
-              className="border border-gray-400 rounded-sm p-2 w-full"
+              className="border border-[#D1D5DB] rounded-md p-2 w-full"
               placeholder="Select start date and time"
             />
           </div>
 
           {/* Month Dropdown */}
-          <div>
-            <label htmlFor="end-date" className="block text-sm font-medium text-gray-700">END DATE & TIME</label>
+          <div className='flex flex-col gap-2'>
+            <label htmlFor="end-date" className="text-sm font-medium text-[#667085]">END DATE & TIME</label>
             <input
               id="end-date"
               name="endDate"
               type="date"
-              className="border border-gray-400 rounded-sm p-2 w-full"
+              className="border border-[#D1D5DB] rounded-md p-2 w-full"
               placeholder="Select end date and time"
             />
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700">SELECT CLASS</label>
+          <div className='flex flex-col gap-2'>
+            <label className="text-sm font-medium text-[#667085]">SELECT CLASS</label>
             <select
-              className="border border-gray-400 rounded-sm p-2 w-full"
+              className="border border-[#D1D5DB] rounded-md p-2 w-full"
             >
               <option value="">Select class</option>
 
@@ -115,17 +135,17 @@ const Exams = () => {
         <div className="flex flex-row-reverse gap-5">
           <Button
             text={"Create"}
-            className={"bg-nav text-white px-10 py-2 rounded-lg"}
+            className={"bg-[#6941C6] text-sm font-semibold text-white px-10 py-2 rounded-lg"}
           />
           <Button
             text={"Reset"}
-            className={"bg-white text-black border border-[#D0D5DD] px-10 py-2 rounded-lg"}
+            className={"bg-white text-sm font-semibold text-[#6941C6] border border-[#6941C6] px-10 py-2 rounded-lg"}
           />
         </div>
       </section>
 
-      <section className='border rounded-2xl border-[#EAECF0] p-5 space-y-5'>
-        <div className='flex justify-between'>
+      <section className='border rounded-2xl border-[#EAECF0] space-y-5'>
+        <div className='flex justify-between p-5'>
           <h1 className='text-[#242525] text-2xl font-bold'>All Exam Schedule</h1>
           <div className='flex gap-3'>
             <Button
@@ -142,61 +162,62 @@ const Exams = () => {
           </div>
         </div>
 
-
-
-        <div className='divide-y divide-[#9797973D]'>
+        <div>
           {viewMode === "list" ? (
-            <>
-              <div className='p-5 bg-[#F1F4F9]'>
-                <ul className='grid grid-cols-14 gap-4 '>
-                  <li className='col-span-3 text-[#242525] font-bold'>Subject Name</li>
-                  <li className='col-span-2 text-[#242525] font-bold'>Exam Type</li>
-                  <li className='col-span-3 text-[#242525] font-bold'>Date & time</li>
-                  <li className='col-span-2 text-[#242525] font-bold'>Duration</li>
-                  <li className='col-span-2 text-[#242525] font-bold'>Classes</li>
-                  <li className='col-start-14 text-[#242525] font-bold'>Action</li>
-                </ul>
+            <div className='pr-5'>
+              <table className="w-full">
+                <thead>
+                  <tr className="text-[#242525] font-bold">
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9] rounded-l-lg ">Subject Name</th>
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9]">Exam Type</th>
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9]">Date & time</th>
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9]">Duration</th>
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9]">Classes</th>
+                    <th scope="col" className="px-6 py-4 text-left bg-[#F1F4F9] rounded-r-lg">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ExamsData.exams.map((exam) => (
+                    <tr className="border-b border-gray-200 hover:bg-gray-50" key={exam.id}>
+                      <td className="px-6 py-4 text-gray-900 text-sm font-semibold">{exam.subject}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{exam.examType}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{exam.date} | {exam.startTime}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{exam.duration}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{exam.classes}</td>
+                      <td className="px-6 py-4 text-gray-900 relative" ref={(el) => (dropdownRefs.current[exam.id] = el)}>
+                        <Button
+                          icon={<SlOptionsVertical />}
+                          onClick={() =>
+                            setActiveDropdown((prev) => (prev === exam.id ? null : exam.id))
+                          }
+                        />
+                        {activeDropdown === exam.id && (
+                          <div className='w-60 bg-white absolute right-0 z-20 rounded-lg shadow-lg shadow-[#1018283B]'>
+                            <div className="flex flex-col justify-between">
+                              <Button
+                                onClick={() => setReorderMenu(prev => !prev)}
+                                icon={<FiEdit className='w-[15px] h-[15px]' />}
+                                text={"Edit Exam"}
+                                className={"py-3 px-4 text-gray-600 flex items-center gap-2"}
+                              />
+                            </div>
+                          </div>
+                        )}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className='flex justify-end  items-center gap-10 px-5 py-4.5'>
+                <div className='flex gap-3'>
+                  <Button text={"Previous"} className={"border text-base font-bold text-gray-700 border-gray-400 py-2 px-4 rounded-lg"} />
+                  <Button text={"Next"} className={"border text-base font-bold text-gray-700 border-gray-400 py-2 px-4 rounded-lg"} />
+                </div>
+                <span className={"text-sm font-medium text-gray-700"}>Result 1 of 10</span>
               </div>
-
-              {ExamsData.exams.map((exam) => (
-                <ul className='grid grid-cols-14 gap-4 text-[17px] p-5' key={exam.id}>
-                  <li className='col-span-3 text-[#242525] font-semibold'>
-                    {exam.subject}
-                  </li>
-                  <li className='col-span-2 text-[#242525] font-normal'>{exam.examType}</li>
-                  <li className='col-span-3 text-[#242525] font-normal'>{exam.date} | {exam.startTime}</li>
-                  <li className='col-span-2 text-[#242525] font-normal'>{exam.duration}</li>
-                  <li className='col-span-2 text-[#242525] font-normal'>{exam.classes}</li>
-                  <li className='col-start-14 relative'>
-                    <Button
-                      icon={<SlOptionsVertical />}
-                      onClick={() =>
-                        setActiveDropdown((prev) => (prev === exam.id ? null : exam.id))
-                      }
-                    />
-                    {activeDropdown === exam.id && (
-                      <div className='w-60 bg-white absolute right-0 z-20 shadow-md shadow-black'>
-                        <div className="flex">
-                          <Button
-                            onClick={() => {
-                              setActiveDropdown(null);
-                              setReorderMenu(prev => !prev)
-                            }}
-                            icon={<FiEdit className='w-5 h-5' />}
-                            text={"Edit Detail"}
-                            className={"py-3 px-4 text-left text-gray-600 flex items-center gap-2"}
-                          />
-                          <hr className='border border-gray-300' />
-                        </div>
-                      </div>
-                    )}
-                  </li>
-                </ul>
-              ))}
-            </>
+            </div>
           )
             :
-            <div>
+            <div className='p-5'>
               <FullCalendar
                 plugins={[timeGridPlugin, dayGridPlugin]}
                 height={600}
@@ -219,11 +240,11 @@ const Exams = () => {
       {reorderMenu &&
         <div className="fixed inset-0 bg-[#0000005e] z-10 flex justify-center items-center">
           <section>
-            <div className="space-y-5 bg-white p-5 w-[464px] h-fit rounded shadow-lg">
+            <div className="space-y-5 bg-white p-5 w-[464px] h-fit rounded-[14px] shadow-lg">
               {/* Header */}
               <div className="flex items-center justify-between">
                 <h4 className="text-lg font-semibold">Edit Exam</h4>
-                <Button icon={<IoIosClose className="text-nav w-6 h-6 bg-gray-300 rounded-full cursor-pointer" />} onClick={() => setReorderMenu(false)} />
+                <Button icon={<IoIosClose className='w-5 h-5'  />} onClick={() => setReorderMenu(false)} className="text-[#475467] p-1 bg-[#EAECF0] rounded-full cursor-pointer"/>
               </div>
 
               <hr className='border border-gray-300' />
@@ -234,9 +255,9 @@ const Exams = () => {
                   <div className="grid grid-rows-1 gap-5">
                     {/* User Type Dropdown */}
                     <div>
-                      <label className="block text-sm font-medium text-gray-700">SUBJECT</label>
+                      <label className="block text-sm font-medium text-[#667085]">SUBJECT</label>
                       <select
-                        className="border border-gray-400 rounded-sm p-2 w-full"
+                        className="border border-[#D1D5DB] rounded-md p-2 w-full"
                       >
                         <option value="">Select subject</option>
                         {ExamsData.exams.map((exam) => (
@@ -250,9 +271,9 @@ const Exams = () => {
 
                     {/* Class Dropdown */}
                     <div>
-                      <label className="block text-sm font-medium text-gray-700">EXAM TYPE</label>
+                      <label className="block text-sm font-medium text-[#667085]">EXAM TYPE</label>
                       <select
-                        className="border border-gray-400 rounded-sm p-2 w-full"
+                        className="border border-[#D1D5DB] rounded-md p-2 w-full"
                       >
                         <option value="">Select exam type</option>
                         {ExamsData.exams.map((exam) => (
@@ -265,32 +286,32 @@ const Exams = () => {
 
                     {/* Student Dropdown */}
                     <div>
-                      <label htmlFor="start-date" className="block text-sm font-medium text-gray-700">START DATE & TIME</label>
+                      <label htmlFor="start-date" className="block text-sm font-medium text-[#667085]">START DATE & TIME</label>
                       <input
                         id="start-date"
                         name="startDate"
                         type="date"
-                        className="border border-gray-400 rounded-sm p-2 w-full"
+                        className="border border-[#D1D5DB] rounded-md p-2 w-full"
                         placeholder="Select start date and time"
                       />
                     </div>
 
                     {/* Month Dropdown */}
                     <div>
-                      <label htmlFor="end-date" className="block text-sm font-medium text-gray-700">END DATE & TIME</label>
+                      <label htmlFor="end-date" className="block text-sm font-medium text-[#667085]">END DATE & TIME</label>
                       <input
                         id="end-date"
                         name="endDate"
                         type="date"
-                        className="border border-gray-400 rounded-sm p-2 w-full"
+                        className="border border-[#D1D5DB] rounded-md p-2 w-full"
                         placeholder="Select end date and time"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700">SELECT CLASS</label>
+                      <label className="block text-sm font-medium text-[#667085]">SELECT CLASS</label>
                       <select
-                        className="border border-gray-400 rounded-sm p-2 w-full"
+                        className="border border-[#D1D5DB] rounded-md p-2 w-full"
                       >
                         <option value="">Select class</option>
 
@@ -304,7 +325,7 @@ const Exams = () => {
               <div className="flex gap-3 justify-end">
                 <Button
                   text="Save"
-                  className="bg-nav text-white px-10 py-2 rounded-sm"
+                  className="bg-[#6941C6] text-white text-sm font-semibold px-10 py-2 rounded-lg"
                 />
               </div>
             </div>

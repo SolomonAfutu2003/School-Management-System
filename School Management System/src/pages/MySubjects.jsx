@@ -121,10 +121,10 @@ const MySubjects = () => {
                   {Exams.exams.map((exam) => (
                     <tr className="border-b border-gray-200 hover:bg-gray-50" key={exam.id}>
                       <td className="px-6 py-4 text-gray-900 text-sm font-semibold">{exam.subject}</td>
-                      <td className="px-6 py-4 text-gray-900 text-sm">{exam.examType}</td>
-                      <td className="px-6 py-4 text-gray-900 text-sm">{exam.date} | {exam.startTime}</td>
-                      <td className="px-6 py-4 text-gray-900 text-sm">{exam.duration}</td>
-                      <td className="px-6 py-4 text-gray-900 text-sm">{exam.classes}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{exam.examType}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{exam.date} | {exam.startTime}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{exam.duration}</td>
+                      <td className="px-6 py-4 text-gray-900 text-sm font-normal font-text">{exam.classes}</td>
                       <td className="px-6 py-4 text-gray-900 relative" ref={dropdownRef}>
                         <Button
                           icon={<SlOptionsVertical />}
